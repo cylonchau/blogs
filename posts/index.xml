@@ -6,8 +6,28 @@
     <description>Recent content in Posts on Cylon&#39;s Collection</description>
     <generator>Hugo -- 0.125.7</generator>
     <language>zh</language>
-    <lastBuildDate>Thu, 05 Dec 2024 23:00:36 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 06 Jan 2025 23:10:36 +0800</lastBuildDate>
     <atom:link href="https://www.oomkill.com/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>filebeat helm chart多配置文件配置</title>
+      <link>https://www.oomkill.com/2025/01/filebeat/</link>
+      <pubDate>Thu, 02 Jan 2025 00:00:00 +0000</pubDate>
+      <guid>https://www.oomkill.com/2025/01/filebeat/</guid>
+      <description>filebeat helm chart 在配置 filebeatConfig 想配置成多配置文件模式，但是网上没有找到对应配置，单配置文件模式如下所示
+yaml 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 filebeatConfig: filebeat.yml: | filebeat.inputs: - type: container paths: - /var/log/containers/*.log processors: - add_kubernetes_metadata: host: ${NODE_NAME} matchers: - logs_path: logs_path: &amp;#34;/var/log/containers/&amp;#34; output.elasticsearch: host: &amp;#39;${NODE_NAME}&amp;#39; hosts: &amp;#39;[&amp;#34;https://${ELASTICSEARCH_HOSTS:elasticsearch-master:9200}&amp;#34;]&amp;#39; username: &amp;#39;${ELASTICSEARCH_USERNAME}&amp;#39; password: &amp;#39;${ELASTICSEARCH_PASSWORD}&amp;#39; protocol: https ssl.certificate_authorities: [&amp;#34;/usr/share/filebeat/certs/ca.crt&amp;#34;] 在网上有找到一个配置 [1] 是讲启用 filebeat module
+yaml 1 2 3 4 5 6 7 8 9 10 11 12 13 filebeatConfig: filebeat.</description>
+    </item>
+    <item>
+      <title>grafana loki的理解与配置(2.9)</title>
+      <link>https://www.oomkill.com/2024/12/grafana-loki-2-9/</link>
+      <pubDate>Wed, 25 Dec 2024 00:00:00 +0000</pubDate>
+      <guid>https://www.oomkill.com/2024/12/grafana-loki-2-9/</guid>
+      <description>loki的部署模式 grafana loki 在 helm 中版本变化很大，理解部署模式有助于快速 run 一组 loki 服务；loki 服务是一个单体二进制文件运行的微服务架构模式，具体运行的角色通过 -target 参数来区分运行什么组件。
+单体模式 单体模式又称整体模式，源自官网 (Monolithic mode)，这个模式指的是 -target=all 时运行的服务。需要注意的是单体模式下，每天读写量为 20GB.
+Monolithic mode is useful for getting started quickly to experiment with Loki, as well as for small read/write volumes of up to approximately 20GB per day. [1]
+该模式下loki 所有的组件都为二进制文件或者容器作为单一进程运行。
+SSD SSD (Simple Scalable deployment mode) 简单可扩展部署模式，是 loki 对内部组件进行分类，当参数 target 我i -target=write , -target=read, -target=backend 时，是作为 SSD mode 启动。其中 write 和 backend 是有状态服务，read 是无状态服务。</description>
+    </item>
     <item>
       <title>Hugo博客添加标签云</title>
       <link>https://www.oomkill.com/2024/11/hugo-add-tag-cloud/</link>
