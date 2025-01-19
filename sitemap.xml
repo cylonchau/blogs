@@ -6,7 +6,25 @@
   <url>
     <loc>https://www.oomkill.com/</loc>
     
-    <lastmod>2025-01-06T23:10:36+08:00</lastmod>
+    <lastmod>2025-01-09T23:00:36+08:00</lastmod>
+    
+    
+  </url>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <url>
+    <loc>https://www.oomkill.com/2025/01/kind-wsl2-windows10-installation/</loc>
     
     
   </url>
@@ -20,10 +38,6 @@
     
     
   </url>
-  
-  
-  
-  
   
   
   
@@ -60,6 +74,14 @@
   </url>
   
   
+  
+  <url>
+    <loc>https://www.oomkill.com/2024/11/k8s-auth-and-regenerate-cert/</loc>
+    
+    <lastmod>2024-11-30T23:00:36+08:00</lastmod>
+    
+    
+  </url>
   
   
   
@@ -649,8 +671,6 @@
   
   
   
-  
-  
   <url>
     <loc>https://www.oomkill.com/2023/09/ingress-nginx-default-backend-status-code/</loc>
     
@@ -859,16 +879,6 @@
     <loc>https://www.oomkill.com/2023/05/awesome-kubernetes/</loc>
     
     <lastmod>2024-12-03T23:00:36+08:00</lastmod>
-    
-    
-  </url>
-  
-  
-  
-  <url>
-    <loc>https://www.oomkill.com/2023/04/k8s-auth-and-regenerate-cert/</loc>
-    
-    <lastmod>2024-11-30T23:00:36+08:00</lastmod>
     
     
   </url>
@@ -1104,8 +1114,6 @@
   <url>
     <loc>https://www.oomkill.com/2022/11/ch34-auditing/</loc>
     
-    <lastmod>2022-11-28T23:00:36+08:00</lastmod>
-    
     
   </url>
   
@@ -1113,8 +1121,6 @@
   
   <url>
     <loc>https://www.oomkill.com/2022/11/ch32-authorization/</loc>
-    
-    <lastmod>2022-11-28T23:00:36+08:00</lastmod>
     
     
   </url>
@@ -1125,8 +1131,6 @@
   
   <url>
     <loc>https://www.oomkill.com/2022/11/ch31-authentication/</loc>
-    
-    <lastmod>2022-11-28T23:00:36+08:00</lastmod>
     
     
   </url>
@@ -1327,8 +1331,6 @@
   
   <url>
     <loc>https://www.oomkill.com/2022/07/ch33-admission-webhook/</loc>
-    
-    <lastmod>2022-11-28T23:00:36+08:00</lastmod>
     
     
   </url>
@@ -1532,8 +1534,6 @@
     
     
   </url>
-  
-  
   
   
   
@@ -2118,7 +2118,7 @@
   <url>
     <loc>https://www.oomkill.com/2021/01/linux-network-command/</loc>
     
-    <lastmod>2023-03-22T23:00:36+08:00</lastmod>
+    <lastmod>2025-01-09T23:00:36+08:00</lastmod>
     
     
   </url>

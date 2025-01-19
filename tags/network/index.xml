@@ -6,7 +6,7 @@
     <description>Recent content in Network on Cylon&#39;s Collection</description>
     <generator>Hugo -- 0.125.7</generator>
     <language>zh</language>
-    <lastBuildDate>Thu, 26 Oct 2023 23:00:36 +0800</lastBuildDate>
+    <lastBuildDate>Thu, 09 Jan 2025 23:00:36 +0800</lastBuildDate>
     <atom:link href="https://www.oomkill.com/tags/network/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Linux网络子系统中的计数器</title>
@@ -225,7 +225,8 @@ SSH隧道类型 在ssh连接的基础上，指定 ssh client 或 ssh server 的�
       <link>https://www.oomkill.com/2021/01/linux-network-command/</link>
       <pubDate>Mon, 18 Jan 2021 00:00:00 +0000</pubDate>
       <guid>https://www.oomkill.com/2021/01/linux-network-command/</guid>
-      <description>Overview 作为系统管理员或程序员，经常需要诊断分析和解决网络问题，而配置、监控与保护网络有助于发现问题并在事情范围扩大前得意解决，并且网络的性能与安全也是管理与诊断网络的重要部分。本文将总结常用与Linux网络管理的命令与使用示例，保持长期更新与更正。
+      <description>[toc]
+Overview 作为系统管理员或程序员，经常需要诊断分析和解决网络问题，而配置、监控与保护网络有助于发现问题并在事情范围扩大前得意解决，并且网络的性能与安全也是管理与诊断网络的重要部分。本文将总结常用与Linux网络管理的命令与使用示例，保持长期更新与更正。
 IP iproute2 包含网络、路由、ARP缓存等的管理与配置的ip命令，用来取代传统的 ifconfig 与 route；ip 使用第二个参数，指定在对象执行的操作（例如，add delete show）。
 ip 命令是配置网络接口的强大工具，任何 Linux 系统管理员都应该知道。它用于启动或关闭接口、分配和删除地址和路由、管理 ARP 缓存等等。
 ip 常用的子命令有：

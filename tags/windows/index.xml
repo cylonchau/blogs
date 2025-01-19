@@ -9,6 +9,17 @@
     <lastBuildDate>Sun, 24 Sep 2023 23:10:36 +0800</lastBuildDate>
     <atom:link href="https://www.oomkill.com/tags/windows/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>使用WSL2安装kind (Windows10 &amp; Docker Desktop)</title>
+      <link>https://www.oomkill.com/2025/01/kind-wsl2-windows10-installation/</link>
+      <pubDate>Sun, 12 Jan 2025 00:00:00 +0000</pubDate>
+      <guid>https://www.oomkill.com/2025/01/kind-wsl2-windows10-installation/</guid>
+      <description>本文说明如何使用 Windows 10 创建单节点的 kind 集群。
+先提条件 条件 版本 操作系统：Windows 10 或 Windows 11 May 2020 Update (build 19041) Docker in WSL2 推荐安装Docker Desktop WSL2 distro 镜像 这里采用Debian 内存 至少 8GB 内存 安装windows子系统 安装windows子系统步骤可以参考 [1]
+启用子系统 Open PowerShell as Administrator (Start menu &amp;gt; PowerShell &amp;gt; right-click &amp;gt; Run as Administrator) and enter this command:
+bash 1 dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all /norestart 查看 wsl 状态
+bash 1 2 3 4 5 6 7 8 9 10 PS C:\Windows\system32&amp;gt; wsl --status 默认分发：docker-desktop 默认版本：2 适用于 Linux 的 Windows 子系统最后更新于 2023/8/3 适用于 Linux 的 Windows 子系统内核可以使用“wsl --update”手动更新，但由于你的系统设置，无法进行自动更新。 若要接收自动内核更新，请启用 Windows 更新设置:“在更新 Windows 时接收其他 Microsoft 产品的更新”。 有关详细信息，请访问https://aka.</description>
+    </item>
+    <item>
       <title>Ceph对象存储 - windows上安装s3cmd</title>
       <link>https://www.oomkill.com/2023/09/05-4-s3cmd-in-windows/</link>
       <pubDate>Sun, 24 Sep 2023 00:00:00 +0000</pubDate>

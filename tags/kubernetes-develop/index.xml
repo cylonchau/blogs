@@ -132,9 +132,8 @@ go 1 2 3 4 serviceIPRange, apiServerServiceIP, err := master.ServiceIPRange(s.Pr
       <link>https://www.oomkill.com/2022/11/ch34-auditing/</link>
       <pubDate>Thu, 24 Nov 2022 00:00:00 +0000</pubDate>
       <guid>https://www.oomkill.com/2022/11/ch34-auditing/</guid>
-      <description>Overview 本文是关于Kubernetes 4A解析的第四章
-深入理解Kubernetes 4A - Authentication源码解析 深入理解Kubernetes 4A - Authorization源码解析 深入理解Kubernetes 4A - Admission Control源码解析 深入理解Kubernetes 4A - Audit源码解析 所有关于Kubernetes 4A四部分代码上传至仓库 github.com/cylonchau/hello-k8s-4A
-审计是信息系统中非常重要的一部分，Kubernetes 1.11中也增加了审计 (Auditing) 功能，通过审计功能获得 deployment, ns,等资源操作的事件。
+      <description>本文是关于Kubernetes 4A解析的第4章 深入理解Kubernetes 4A - Authentication源码解析 深入理解Kubernetes 4A - Authorization源码解析 深入理解Kubernetes 4A - Admission Control源码解析 深入理解Kubernetes 4A - Audit源码解析 TLS Everywhere - 解密kubernetes集群的安全认证 所有关于Kubernetes 4A部分代码上传至仓库 github.com/cylonchau/hello-k8s-4A
+Overview 审计是信息系统中非常重要的一部分，Kubernetes 1.11中也增加了审计 (Auditing) 功能，通过审计功能获得 deployment, ns,等资源操作的事件。
 objective：
 从设计角度了解Auditing在kubernets中是如何实现的 了解kubernetes auditing webhook 完成实验，通过webhook来收集审计日志 如有错别字或理解错误地方请多多担待，代码是以1.24进行整理，实验是以1.19环境进行，差别不大。
 Kubernetes Auditing 根据Kubernetes官方描述审计在kubernetes中是有控制平面 kube-apiserver 中产生的一个事件，记录了集群中所操作的资源，审计围绕下列几个维度来记录事件的：
@@ -148,22 +147,20 @@ go 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 type Event struct { metav1.</
       <link>https://www.oomkill.com/2022/11/ch32-authorization/</link>
       <pubDate>Thu, 24 Nov 2022 00:00:00 +0000</pubDate>
       <guid>https://www.oomkill.com/2022/11/ch32-authorization/</guid>
-      <description>Overview 在 Kubernetes 中，当一个访问请求通过了登录阶段（Authentication），必须还需要请求拥有该对象的访问权限，而授权部分也是Kubernetes API 访问控制中的第二个部分 Authorization .
+      <description>本文是关于Kubernetes 4A解析的第2章 深入理解Kubernetes 4A - Authentication源码解析 深入理解Kubernetes 4A - Authorization源码解析 深入理解Kubernetes 4A - Admission Control源码解析 深入理解Kubernetes 4A - Audit源码解析 TLS Everywhere - 解密kubernetes集群的安全认证 所有关于Kubernetes 4A部分代码上传至仓库 github.com/cylonchau/hello-k8s-4A Overview 在 Kubernetes 中，当一个访问请求通过了登录阶段（Authentication），必须还需要请求拥有该对象的访问权限，而授权部分也是Kubernetes API 访问控制中的第二个部分 Authorization .
 Authorization 在 Kubernetes中是以评估发起请求的用户，根据其身份特性评估这次请求是被 ”拒绝“ 还是 “允许”，同访问控制三部曲中其他两个插件 (Authentication, Adminssion Control) 一样，Authorization 也可以同时配置多个，当收到用户的请求时，会依次检查这个阶段配置的所有模块，如果任何一个模块对该请求授予权限（拒绝或允许），那么该阶段会直接返回，当所有模块都没有该用户所属的权限时，默认是拒绝，在Kubernetes中，被该插件拒绝的用户显示为HTTP 403。
 如有错别字或理解错误地方请多多担待，代码是以1.24进行整理，实验是以1.19环境进行，差别不大
 objective：
 了解kubernetes Authorization机制 了解授权系统的设计 完成实验，使用 OPA 作为 Kubernetes 外部用户，权限认证模型 RBAC 的替代品 Kubernetes是如何对用户授权的 kubernetes对用户授权需要遵守的shema必须拥有下列属性，代码位于pkg\apis\authorization\types.go
-go 1 2 3 4 5 6 7 8 9 type SubjectAccessReview struct { // API必须实现的部分 metav1.TypeMeta metav1.ObjectMeta // 请求需要遵守的属性 Spec SubjectAccessReviewSpec // 请求被授权的状态 Status SubjectAccessReviewStatus } 这里可以看到数据模型是
-go 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 type SubjectAccessReviewSpec struct { // ResourceAttributes describes information for a resource access request ResourceAttributes *ResourceAttributes // NonResourceAttributes describes information for a non-resource access request NonResourceAttributes *NonResourceAttributes // 请求的用户，必填 // 如果只传递 User，而没有Group，那么权限必须与用户对应，例如rolebinding/clusterrolebing // 如果传递了User与Group，那么rolebinding/clusterrolebing权限最大为Group，最小为User User string // Groups是用户所属组，可以有多个 Groups []string // Extra corresponds to the user.</description>
+go 1 2 3 4 5 6 7 8 9 type SubjectAccessReview struct { // API必须实现的部分 metav1.</description>
     </item>
     <item>
       <title>深入理解Kubernetes 4A - Authentication源码解析</title>
       <link>https://www.oomkill.com/2022/11/ch31-authentication/</link>
       <pubDate>Wed, 16 Nov 2022 00:00:00 +0000</pubDate>
       <guid>https://www.oomkill.com/2022/11/ch31-authentication/</guid>
-      <description>Overview 本文是关于Kubernetes 4A解析的第一章
-深入理解Kubernetes 4A - Authentication源码解析 深入理解Kubernetes 4A - Authorization源码解析 深入理解Kubernetes 4A - Admission Control源码解析 深入理解Kubernetes 4A - Audit源码解析 所有关于Kubernetes 4A部分代码上传至仓库 github.com/cylonchau/hello-k8s-4A
-本章主要简单阐述kubernetes 认证相关原理，最后以实验来阐述kubernetes用户系统的思路
+      <description>本文是关于Kubernetes 4A解析的第1章 深入理解Kubernetes 4A - Authentication源码解析 深入理解Kubernetes 4A - Authorization源码解析 深入理解Kubernetes 4A - Admission Control源码解析 深入理解Kubernetes 4A - Audit源码解析 TLS Everywhere - 解密kubernetes集群的安全认证 所有关于Kubernetes 4A部分代码上传至仓库 github.com/cylonchau/hello-k8s-4A
+Overview 本章主要简单阐述kubernetes 认证相关原理，最后以实验来阐述kubernetes用户系统的思路
 objective：
 了解kubernetes 各种认证机制的原理 了解kubernetes 用户的概念 了解kubernetes authentication webhook 完成实验，如何将其他用户系统接入到kubernetes中的一个思路 如有错别字或理解错误地方请多多担待，代码是以1.24进行整理，实验是以1.19环境进行，差别不大。
 Kubernetes 认证 在Kubernetes apiserver对于认证部分所描述的，对于所有用户访问Kubernetes API（通过任何客户端，客户端库，kubectl 等）时都会经历 验证 (Authentication) , 授权 (Authorization), 和准入控制 (Admission control) 三个阶段来完成对 “用户” 进行授权，整个流程正如下图所示
@@ -171,8 +168,7 @@ Kubernetes 认证 在Kubernetes apiserver对于认证部分所描述的，对于
 其中在大多数教程中，在对这三个阶段所做的工作大致上为：
 Authentication 阶段所指用于确认请求访问Kubernetes API 用户是否为合法用户，拒绝为401
 Authorization 阶段所指的将是这个用户是否有对操作的资源的权限，拒绝为403
-Admission control 阶段所指控制对请求资源进行控制，通俗来说，就是一票否决权，即使前两个步骤完成
-到这里了解到了Kubernetes API实际上做的工作就是 “人类用户” 与 “kubernetes service account&amp;quot; [2]；那么就引出了一个重要概念就是 “用户” 在Kubernetes中是什么，以及用户在认证中的也是本章节的中心。</description>
+Admission control 阶段所指控制对请求资源进行控制，通俗来说，就是一票否决权，即使前两个步骤完成</description>
     </item>
     <item>
       <title>基于Prometheus的Kubernetes网络调度器</title>
@@ -226,8 +222,7 @@ kubernetes的调度策略 Kubernetes 1.21之前版本可以在代码 kubernetes\
       <link>https://www.oomkill.com/2022/07/ch33-admission-webhook/</link>
       <pubDate>Mon, 11 Jul 2022 00:00:00 +0000</pubDate>
       <guid>https://www.oomkill.com/2022/07/ch33-admission-webhook/</guid>
-      <description>本文是关于Kubernetes 4A解析的第三章
-深入理解Kubernetes 4A - Authentication源码解析 深入理解Kubernetes 4A - Authorization源码解析 深入理解Kubernetes 4A - Admission Control源码解析 深入理解Kubernetes 4A - Audit源码解析 所有关于Kubernetes 4A部分代码上传至仓库 github.com/cylonchau/hello-k8s-4A
+      <description>本文是关于Kubernetes 4A解析的第3章 深入理解Kubernetes 4A - Authentication源码解析 深入理解Kubernetes 4A - Authorization源码解析 深入理解Kubernetes 4A - Admission Control源码解析 深入理解Kubernetes 4A - Audit源码解析 TLS Everywhere - 解密kubernetes集群的安全认证 所有关于Kubernetes 4A部分代码上传至仓库 github.com/cylonchau/hello-k8s-4A
 如有错别字或理解错误地方请多多担待，代码是以1.24进行整理，实验是以1.19环境进行，差别不大
 BACKGROUND admission controllers的特点：
 可定制性：准入功能可针对不同的场景进行调整。 可预防性：审计则是为了检测问题，而准入控制器可以预防问题发生 可扩展性：在kubernetes自有的验证机制外，增加了另外的防线，弥补了RBAC仅能对资源提供安全保证。 下图，显示了用户操作资源的流程，可以看出 admission controllers 作用是在通过身份验证资源持久化之前起到拦截作用。在准入控制器的加入会使kubernetes增加了更高级的安全功能。
