@@ -14,7 +14,7 @@
       <pubDate>Fri, 02 Nov 2018 00:00:00 +0000</pubDate>
       <guid>https://www.oomkill.com/2018/11/elk-collect-java/</guid>
       <description>Java日志多由多行行组成，初始行之后的每一行以空格开头，如下例所示：在这种情况下，需要在将事件数据output之前处理多行事件。
-log [ERROR] - 2018-09-21 04:19:57.685 (SocketTransfer.java:73) - Socket交互遇到错误Exception in thread &amp;#34;main&amp;#34; java.lang.NullPointerExceptionat com.example.myproject.Book.getTitle(Book.java:16)at com.example.myproject.Author.getBookTitles(Author.java:25)at com.example.myproject.Bootstrap.main(Bootstrap.java:14) 配置multiline参数如下：Multiline codec plugin
+text 1 2 3 4 5 [ERROR] - 2018-09-21 04:19:57.685 (SocketTransfer.java:73) - Socket交互遇到错误 Exception in thread &amp;#34;main&amp;#34; java.lang.NullPointerException at com.example.myproject.Book.getTitle(Book.java:16) at com.example.myproject.Author.getBookTitles(Author.java:25) at com.example.myproject.Bootstrap.main(Bootstrap.java:14) 配置multiline参数如下：Multiline codec plugin
 参数 说明 pattern 指定正则表达式。与指定正则表达式匹配的行被视为前一行的延续或新多行事件的开始。 what previous或next。该previous值指定与pattern选项中的值匹配的行是上一行的一部分。该next值指定与pattern选项中的值匹配的行是以下行的一部分 negate true或false（默认为false）。如果true，与pattern模式不匹配的消息将构成多行过滤器的匹配what并将应用。 sh 1 2 3 4 5 6 7 8 9 10 11 12 input { file { path =&amp;gt; &amp;#34;/root/apache-tomcat-8.5.34/logs/catalina.out&amp;#34; type =&amp;gt; &amp;#34;sk&amp;#34; start_position =&amp;gt; &amp;#34;beginning&amp;#34; codec =&amp;gt; multiline { pattern =&amp;gt; &amp;#34;^\[&amp;#34; negate =&amp;gt; &amp;#34;true&amp;#34; what =&amp;gt; &amp;#34;previous&amp;#34; } } } 如上列日志格式为</description>
     </item>
     <item>
