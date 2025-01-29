@@ -6,14 +6,14 @@
     <description>Recent content in Kubernetes on Cylon&#39;s Collection</description>
     <generator>Hugo -- 0.125.7</generator>
     <language>zh</language>
-    <lastBuildDate>Mon, 20 Jan 2025 23:00:36 +0800</lastBuildDate>
+    <lastBuildDate>Wed, 29 Jan 2025 23:00:36 +0800</lastBuildDate>
     <atom:link href="https://www.oomkill.com/tags/kubernetes/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>使用WSL2安装kind (Windows10 &amp; Docker Desktop)</title>
       <link>https://www.oomkill.com/2025/01/kind-wsl2-windows10-installation/</link>
       <pubDate>Sun, 12 Jan 2025 00:00:00 +0000</pubDate>
       <guid>https://www.oomkill.com/2025/01/kind-wsl2-windows10-installation/</guid>
-      <description>本文说明如何使用 Windows 10 创建单节点的 kind 集群。
+      <description>本文说明如何使用 Windows 10 创建单节点的 kind 集群 (KinD Kubernetes in Docker)。
 先提条件 条件 版本 操作系统：Windows 10 或 Windows 11 May 2020 Update (build 19041) Docker in WSL2 推荐安装Docker Desktop WSL2 distro 镜像 这里采用Debian 内存 至少 8GB 内存 安装windows子系统 安装windows子系统步骤可以参考 [1]
 启用子系统 Open PowerShell as Administrator (Start menu &amp;gt; PowerShell &amp;gt; right-click &amp;gt; Run as Administrator) and enter this command:
 bash 1 dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all /norestart 查看 wsl 状态

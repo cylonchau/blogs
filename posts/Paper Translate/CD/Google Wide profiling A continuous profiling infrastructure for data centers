@@ -1,0 +1,47 @@
+---
+title: 论文翻译 - Google Wide profiling: A continuous profiling infrastructure for data centers
+author: cylon
+date: 2018-07-22
+lastmod: 2020-08-02T23:00:36+08:00
+slug: update openssh in centos6
+tags:
+  - Paper translation
+categories:
+  - Paper translation
+keywords: 
+  - Google Wide profiling: A continuous profiling infrastructure for data centers
+  - ssh
+---
+
+# Google-Wide Profiling: 数据中心的持续性能分析基础设施
+
+随着云计算的普及和规模的扩大，了解数据中心应用的性能和资源利用特性变得至关重要，因为即使是微小的性能改进也能带来巨大的成本节约。传统的性能分析通常需要隔离基准测试，但在现代数据中心应用中，这种方法可能过于复杂甚至不可行。相比之下，监控在实际流量下运行的数据中心应用更容易且更具代表性。然而，应用所有者无法容忍超过几个百分点的延迟增加，因此这些工具必须具备非侵入性且极低的性能开销。
+
+与所有性能分析工具一样，为了实现有意义的分析，必须尽量减少观察者干扰。（有关相关技术的更多信息，请参阅“从单一系统到数据中心的性能分析” 侧边栏。）
+
+基于采样的工具可以将开销和失真控制在可接受的范围内，因此它们非常适合用于数据中心的性能监控。传统情况下，采样工具运行在单台机器上，监控特定进程或整个系统。性能分析可以按需启动以分析特定性能问题，也可以持续运行。
+
+Google-Wide Profiling（GWP）在理论上可以被视为 Digital Continuous Profiling Infrastructure（DCPI）在数据中心的扩展。GWP 是一种持续性能分析基础设施，它在多个数据中心的机器中进行采样，收集各种事件数据——例如堆栈跟踪、硬件事件、锁争用分析、堆内存分析和内核事件——并允许与作业调度数据、特定应用数据以及来自数据中心的其他信息进行交叉关联。
+
+GWP 每天从数千台服务器上运行的数千个应用程序中收集性能分析数据，并且压缩后的分析数据库每天都会增长数千兆字节。在如此规模下进行性能分析带来了单台机器上不存在的重大挑战。由于工作负载具有动态性，验证分析数据的准确性既重要又充满挑战。同时，管理性能分析的开销变得更加重要，因为任何不必要的分析开销都可能导致数百万美元的额外资源成本。最后，使性能分析数据具有通用可访问性是另一个挑战。GWP 本身也是一个云应用程序，因此也面临着自身的可扩展性和性能问题。
+
+借助这些数据，我们可以回答关于数据中心应用程序的典型性能问题，包括以下内容：
+
+- 哪些是最“热点”的进程、例程或代码区域？
+- 不同软件版本之间的性能有何差异？
+- 哪些锁的争用最为严重？
+- 哪些进程是内存“吞噬者”？
+- 某种特定的内存分配方案是否对某类应用程序有利？
+- 跨平台的应用程序每指令周期数（CPI）是多少？
+
+此外，我们还可以推导出更高层次的数据，以回答更复杂但有趣的问题，例如：在整个集群中使用了哪些编译器、运行的应用程序中是 32 位的更多还是 64 位的更多，以及由于次优的作业调度导致了多少资源利用率的损失。
+
+## Infrastructure
+
+图1提供了整个GWP系统的概述。
+
+![image-20250121001352258](https://cdn.jsdelivr.net/gh/cylonchau/blogs@img/img/image-20250121001352258.png)
+
+<center>Figure 1：Google-Wide Profiling (GWP) 基础设施概述： 整个系统由收集器、符号化器、性能数据库、Web 服务器和其他组件组成。</center>
+
+<center><em>Source：</em>https://research.google/pubs/google-wide-profiling-a-continuous-profiling-infrastructure-for-data-centers/</center><br>
