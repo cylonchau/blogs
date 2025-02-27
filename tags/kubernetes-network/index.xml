@@ -6,22 +6,30 @@
     <description>Recent content in Kubernetes Network on Cylon&#39;s Collection</description>
     <generator>Hugo -- 0.125.7</generator>
     <language>zh</language>
-    <lastBuildDate>Wed, 21 Jun 2023 23:33:36 +0800</lastBuildDate>
+    <lastBuildDate>Sat, 22 Feb 2025 23:00:36 +0800</lastBuildDate>
     <atom:link href="https://www.oomkill.com/tags/kubernetes-network/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>深入理解Kubernetes Pod网络原理 - CNI</title>
+      <link>https://www.oomkill.com/2025/deep-dive-k8s-network-cni/</link>
+      <pubDate>Sun, 02 Feb 2025 00:00:00 +0000</pubDate>
+      <guid>https://www.oomkill.com/2025/deep-dive-k8s-network-cni/</guid>
+      <description>本文是关于深入理解Kubernetes网络原理系列第3章 深入理解Kubernetes Pod网络原理 - 网络名称空间 深入理解Kubernetes Pod网络原理 - Linux虚拟网络技术 深入理解Kubernetes Pod网络原理 - CNI 深入理解Kubernetes Pod网络原理 - 跟随 flannel 学习CNI原理 深入理解Kubernetes Pod网络原理 - 跟随 flannel + multus 剖析 Chained Plugins 深入理解Kubernetes Pod网络原理 - 从零实现一个 CNI Plugin part 1 (Shell) 深入理解Kubernetes Pod网络原理 - 从零实现一个 CNI Plugin part 2 (libcni) 深入理解Kubernetes Pod网络原理 - Kubernetes网络模型 1 深入理解Kubernetes Pod网络原理 - Kubernetes网络模型 2 深入理解Kubernetes Pod网络原理 - Pod网络排错思路 概述 这是我在 kubernetes 网络之旅中的中的第4部分，主要学习 CNI 规范（5要素，旧版本是4要素）。要深深记住这些，在后面旅程中常常被用到。
+Notes 本文讲解均按照 1.</description>
+    </item>
+    <item>
       <title>在Kubernetes集群上安装 Calico cni 的注意事项</title>
-      <link>https://www.oomkill.com/2023/06/calico-cni-deplyment/</link>
+      <link>https://www.oomkill.com/2023/calico-cni-deplyment/</link>
       <pubDate>Wed, 21 Jun 2023 00:00:00 +0000</pubDate>
-      <guid>https://www.oomkill.com/2023/06/calico-cni-deplyment/</guid>
+      <guid>https://www.oomkill.com/2023/calico-cni-deplyment/</guid>
       <description>开始前的实验环境 Resources controller worker-1 worker-2 OS CentOS 7.9 CentOS 7.9 CentOS 7.9 Storage 20GB 20GB 20GB vCPU 2 2 2 RAM 4GB 4GB 4GB NIC 10.0.0.4 10.0.0.4 10.0.0.4 Kubernetes Version 1.19.10 1.19.10 1.19.10 选择匹配 Kubernetes 版本的 Calico 版本 通常情况下，查看 Calico 所支持的 Kubernetes 版本，可以通过路径 Install Calico ==&amp;gt; Kubernetes ==&amp;gt; System requirements 可以找到自己的 Kubernetes 集群所支持的 Calico 版本。
 例如在实验环境中，Kubernetes 1.19 版本所支持的版本有 Calico 3.20，这个时候直接 apply 这个版本提供的资源清单即可
 如何开启纯 BGP 模式 默认情况下下，Calico 使用的是 full mesh 和 IPIP， 如果想通过在部署时就修改关闭 IPIP 模式，可以通过修改资源清单中的环境变量来关闭 CALICO_IPV4POOL_IPIP: Never。</description>
     </item>
     <item>
       <title>Linux网络栈</title>
-      <link>https://www.oomkill.com/2022/10/network-stack/</link>
+      <link>https://www.oomkill.com/2022/network-stack/</link>
       <pubDate>Fri, 28 Oct 2022 00:00:00 +0000</pubDate>
-      <guid>https://www.oomkill.com/2022/10/network-stack/</guid>
+      <guid>https://www.oomkill.com/2022/network-stack/</guid>
       <description>Linux 架构概述 [1] 本章节简单阐述Linux系统的结构，并讨论子系统中的模块之间以及与其他子系统之间的关系。
 Linux内核本身鼓励无用，是作为一个操作系统的一部分参与的，只有为一个整体时他才是一个有用的实体，下图展示了Linux操作系统的分层
 图：Linux子系统分层图 Source：https://docs.huihoo.com/linux/kernel/a1/index.html
@@ -42,9 +50,9 @@ Linux内核主要为五个子系统组成：
     </item>
     <item>
       <title>为什么网络是分层的</title>
-      <link>https://www.oomkill.com/2022/10/network-unit-in-osi/</link>
+      <link>https://www.oomkill.com/2022/network-unit-in-osi/</link>
       <pubDate>Fri, 28 Oct 2022 00:00:00 +0000</pubDate>
-      <guid>https://www.oomkill.com/2022/10/network-unit-in-osi/</guid>
+      <guid>https://www.oomkill.com/2022/network-unit-in-osi/</guid>
       <description>Overview [1] 协议数据单元 Protocol Data Unit (PDU) 是应用于OSI模型中的数据结构，在OSI模型中每一层都会被添加一个header，tailer进行封装，header, tailer加原始报文的组合就是PDU。
 在每层中，PDU的名称都是不同的，这也是很多人的疑问，一会数据报文称为数据包，一会数据报文成为数据帧，该文介绍网络中的单元，以了解之间的区别
 物理层 物理层数据的呈现方式是以 “位” (bit) 为单位的，即0 1，在该层中数据以二进制形式进行传输
@@ -64,47 +72,24 @@ Linux内核主要为五个子系统组成：
     </item>
     <item>
       <title>Kubernetes Pod网络排错思路</title>
-      <link>https://www.oomkill.com/2022/08/pod-network-troubleshooting/</link>
+      <link>https://www.oomkill.com/2022/pod-network-troubleshooting/</link>
       <pubDate>Wed, 17 Aug 2022 00:00:00 +0000</pubDate>
-      <guid>https://www.oomkill.com/2022/08/pod-network-troubleshooting/</guid>
-      <description>Overview 本文将引入一个思路：“在Kubernetes集群发生网络异常时如何排查”。文章将引入Kubernetes 集群中网络排查的思路，包含网络异常模型，常用工具，并且提出一些案例以供学习。
-Pod常见网络异常分类 网络排查工具 Pod网络异常排查思路及流程模型 CNI网络异常排查步骤 案例学习 Pod网络异常 网络异常大概分为如下几类：
-网络不可达，主要现象为ping不通，其可能原因为：
-源端和目的端防火墙（iptables, selinux）限制 网络路由配置不正确 源端和目的端的系统负载过高，网络连接数满，网卡队列满 网络链路故障 端口不可达：主要现象为可以ping通，但telnet端口不通，其可能原因为：
-源端和目的端防火墙限制 源端和目的端的系统负载过高，网络连接数满，网卡队列满，端口耗尽 目的端应用未正常监听导致（应用未启动，或监听为127.0.0.1等） DNS解析异常：主要现象为基础网络可以连通，访问域名报错无法解析，访问IP可以正常连通。其可能原因为
-Pod的DNS配置不正确 DNS服务异常 pod与DNS服务通讯异常 大数据包丢包：主要现象为基础网络和端口均可以连通，小数据包收发无异常，大数据包丢包。可能原因为：
-数据包的大小超过了 dockero，CNI 插件，或者宿主机网卡的 MTU 值。 可使用 ping -s 指定数据包大小进行测试 CNI异常：主要现象为Node可以通，但Pod无法访问集群地址，可能原因有：
-kube-proxy 服务异常，没有生成 iptables 策略或者 ipvs 规则导致无法访问 CIDR耗尽，无法为Node注入 PodCIDR 导致 CNI 插件异常 其他 CNI 插件问题 那么整个Pod网络异常分类可以如下图所示：
-图：Pod network trouble hirarchy
-总结一下，Pod最常见的网络故障有，网络不可达（ping不通）；端口不可达（telnet不通）；DNS解析异常（域名不通）与大数据包丢失（大包不通）。
-常用网络排查工具 在了解到常见的网络异常后，在排查时就需要使用到一些网络工具才可以很有效的定位到网络故障原因，下面会介绍一些网络排查工具。
-tcpdump [1] tcpdump网络嗅探器，将强大和简单结合到一个单一的命令行界面中，能够将网络中的报文抓取，输出到屏幕或者记录到文件中。
-各系统下的安装
-Ubuntu/Debian: tcpdump ；apt-get install -y tcpdump Centos/Fedora: tcpdump ；yum install -y tcpdump Apline：tcpdump ；apk add tcpdump --no-cache 查看指定接口上的所有通讯</description>
+      <guid>https://www.oomkill.com/2022/pod-network-troubleshooting/</guid>
+      <description>本文是关于深入理解Kubernetes网络原理系列第4章 深入理解Kubernetes Pod网络原理 - 网络名称空间 深入理解Kubernetes Pod网络原理 - Linux虚拟网络技术 深入理解Kubernetes Pod网络原理 - CNI 深入理解Kubernetes Pod网络原理 - 跟随 flannel 学习CNI原理 深入理解Kubernetes Pod网络原理 - 跟随 flannel + multus 剖析 Chained Plugins 深入理解Kubernetes Pod网络原理 - 从零实现一个 CNI Plugin part 1 (Shell) 深入理解Kubernetes Pod网络原理 - 从零实现一个 CNI Plugin part 2 (libcni) 深入理解Kubernetes Pod网络原理 - Kubernetes网络模型 1 深入理解Kubernetes Pod网络原理 - Kubernetes网络模型 2 深入理解Kubernetes Pod网络原理 - Pod网络排错思路 Overview 本文将引入一个思路：“在Kubernetes集群发生网络异常时如何排查”。文章将引入Kubernetes 集群中网络排查的思路，包含网络异常模型，常用工具，并且提出一些案例以供学习。
+Pod常见网络异常分类 网络排查工具 Pod网络异常排查思路及流程模型 CNI网络异常排查步骤 案例学习 Pod网络异常 网络异常大概分为如下几类：</description>
     </item>
     <item>
-      <title>详述Kubernetes网络模型</title>
-      <link>https://www.oomkill.com/2022/08/kubernetes-network-model/</link>
+      <title>深入理解Kubernetes Pod网络原理 - Kubernetes网络模型 1</title>
+      <link>https://www.oomkill.com/2022/kubernetes-network-model-part1/</link>
       <pubDate>Wed, 17 Aug 2022 00:00:00 +0000</pubDate>
-      <guid>https://www.oomkill.com/2022/08/kubernetes-network-model/</guid>
-      <description>Overview 本文将深入探讨Kubernetes中的网络模型，以及对各种网络模型进行分析。
-Underlay Network Model 什么是Underlay Network 底层网络 Underlay Network 顾名思义是指网络设备基础设施，如交换机，路由器, DWDM 使用网络介质将其链接成的物理网络拓扑，负责网络之间的数据包传输。
-图：Underlay network topology Source：https://community.cisco.com/t5/data-center-switches/understanding-underlay-and-overlay-networks/td-p/4295870
-underlay network 可以是二层，也可以是三层；二层 underlay network 的典型例子是以太网 Ethernet，三层是 underlay network 的典型例子是互联网 Internet。
-而工作与二层的技术是 vlan，工作在三层的技术是由 OSPF, BGP 等协议组成
-kubernetes中的underlay network 在kubernetes中，underlay network 是将宿主机作为路由器设备而，Pod 的网络则通过学习成路由条目从而实现跨节点通讯。
-图：underlay network topology in kubernetes
-这种模型下典型的有 flannel 的 host-gw 模式与 calico BGP 模式。
-flannel host-gw [1] flannel host-gw 模式中每个Node需要在同一个二层网络中，并将Node作为一个路由器，跨节点通讯将通过路由表方式进行，这样方式下将网络模拟成一个underlay network。
-图：layer2 ethernet topology Source：https://www.auvik.com/franklyit/blog/layer-3-switches-layer-2/
-Notes：因为是通过路由方式，集群的cidr至少要配置16，因为这样可以保证，跨节点的Node作为一层网络，同节点的Pod作为一个网络。如果不是这种用情况，路由表处于相同的网络中，会存在网络不可达
-Calico BGP [2] BGP（Border Gateway Protocol）是去中心化自治路由协议。它是通过维护IP路由表或&amp;rsquo;前缀&amp;rsquo;表来实现AS （Autonomous System）之间的可访问性，属于向量路由协议。</description>
+      <guid>https://www.oomkill.com/2022/kubernetes-network-model-part1/</guid>
+      <description>本文是关于深入理解Kubernetes网络原理系列第4章 深入理解Kubernetes Pod网络原理 - 网络名称空间 深入理解Kubernetes Pod网络原理 - Linux虚拟网络技术 深入理解Kubernetes Pod网络原理 - CNI 深入理解Kubernetes Pod网络原理 - 跟随 flannel 学习CNI原理 深入理解Kubernetes Pod网络原理 - 跟随 flannel + multus 剖析 Chained Plugins 深入理解Kubernetes Pod网络原理 - 从零实现一个 CNI Plugin part 1 (Shell) 深入理解Kubernetes Pod网络原理 - 从零实现一个 CNI Plugin part 2 (libcni) 深入理解Kubernetes Pod网络原理 - Kubernetes网络模型 1 深入理解Kubernetes Pod网络原理 - Kubernetes网络模型 2 深入理解Kubernetes Pod网络原理 - Pod网络排错思路 概述 本文将简述探讨 Kubernetes 中常见的网络模型，以及对这些网络模型的 route path 进行分析。本章节是作为CNI 原理的前置条件，也为后续的练习提供一些基础知识。</description>
     </item>
     <item>
       <title>calico网络策略</title>
-      <link>https://www.oomkill.com/2021/02/calico-network-policy/</link>
+      <link>https://www.oomkill.com/2021/calico-network-policy/</link>
       <pubDate>Mon, 15 Feb 2021 00:00:00 +0000</pubDate>
-      <guid>https://www.oomkill.com/2021/02/calico-network-policy/</guid>
+      <guid>https://www.oomkill.com/2021/calico-network-policy/</guid>
       <description>什么是网络策略 在Kubernetes平台中，要实现零信任网络的安全架构，Calico与istio是在Kubernetes集群中构建零信任网络必不可少的组件。
 而建立和维护整个集群中的“零信任网络”中，网络策略的功能在操作上大致可以总结为使用资源配置模板来管理控制平面数据流。说白了讲网络策略就是用来控制Pod间流量的规则。
 在Calico中如何编写网络策略 要使用网络策略就需要先了解Calico功能**：NetworkPolicy和GlobalNetworkPolicy**。
@@ -115,9 +100,9 @@ NetworkPolicy与GlobalNetworkPolicy的构成 yaml 1 2 3 4 5 6 7 8 9 10 11 12 13 
     </item>
     <item>
       <title>基于混合云模式的calico部署</title>
-      <link>https://www.oomkill.com/2021/02/calico-deploy-on-hybrid-cloud/</link>
+      <link>https://www.oomkill.com/2021/calico-deploy-on-hybrid-cloud/</link>
       <pubDate>Mon, 15 Feb 2021 00:00:00 +0000</pubDate>
-      <guid>https://www.oomkill.com/2021/02/calico-deploy-on-hybrid-cloud/</guid>
+      <guid>https://www.oomkill.com/2021/calico-deploy-on-hybrid-cloud/</guid>
       <description>开始前准备 确定calico数据存储
 Calico同时支持kubernetes api和etcd数据存储。官方给出的建议是在本地部署中使用K8S API，仅支持Kubernetes模式。而官方给出的etcd则是混合部署（Calico作为Kubernetes和OpenStack的网络插件运行）的最佳数据存储。
 使用etcd作为calico数据存储的好处：
@@ -130,9 +115,9 @@ calico的IP分配范围 Calico IPAM从ipPool分配IP地址。修改Pod的默认I
     </item>
     <item>
       <title>calico network cni网络方案</title>
-      <link>https://www.oomkill.com/2021/01/calico-network-cni/</link>
+      <link>https://www.oomkill.com/2021/calico-network-cni/</link>
       <pubDate>Mon, 18 Jan 2021 00:00:00 +0000</pubDate>
-      <guid>https://www.oomkill.com/2021/01/calico-network-cni/</guid>
+      <guid>https://www.oomkill.com/2021/calico-network-cni/</guid>
       <description>Calico针对容器、虚拟机的开源网络和网络安全解决方案。是纯三层的数据中心网络方案。
 Calico在每一个计算节点利用Linux Kernel实现了一个高效的虚拟路由器vRouter来负责数据转发，而每个vRouter通过BGP协议负责把自己上运行的workload的路由信息向整个Calico网络内传播。（小规模部署可以直接互联 BGP full mesh，大规模下可通过指定的BGP route reflector来完成）。 这样保证最终所有的workload之间的数据流量都是通过IP路由的方式完成互联的。Calico节点组网可以直接利用数据中心的网络结构（无论是L2或者L3），不需要额外的NAT，隧道或者Overlay Network。
 Calico还基于iptables还提供了丰富而灵活的网络Policy，保证通过各个节点上的ACLs来提供Workload的多租户隔离、安全组以及其他可达性限制等功能。
@@ -148,27 +133,18 @@ Calico同时支持kubernetes api和etcd数据存储。官方给出的建议是�
 text 1 2 curl https://docs.projectcalico.org/manifests/calico.yaml -O kubectl apply -f calico.</description>
     </item>
     <item>
-      <title>Linux虚拟网络技术</title>
-      <link>https://www.oomkill.com/2021/01/virtual-networking/</link>
+      <title>深入理解Kubernetes Pod网络原理 - Linux虚拟网络技术</title>
+      <link>https://www.oomkill.com/2021/virtual-networking/</link>
       <pubDate>Mon, 18 Jan 2021 00:00:00 +0000</pubDate>
-      <guid>https://www.oomkill.com/2021/01/virtual-networking/</guid>
-      <description>Overview 本文将介绍Kubernetes中使用的相关虚拟网络功能，目的是为了任何无相关网络背景经历的人都可以了解这些技术在kubernetes中式如何应用的。
-VLAN VLAN (Virtual local area networks)是逻辑上的LAN而不受限于同一物理网络交换机上。同样的VLAN也可以将同一台交换机/网桥下的设备/划分为不同的子网。
-VLAN 区分的广播域的标准是VLAN ID，此功能是Linux内核3.8中引入的
-在Linux中创建一个VLAN
-bash 1 ip link add link eth0 name eth0.2 type vlan id 2 VETH [1] VETH (Virtual Ethernet device)，是一个本地的以太网隧道，创建出的设备是成对的，通常会存在两个名称空间内，例如在docker中创建出的设备一端在root名称空间内，一端被挂在到容器的名称空间内。
-图：veth topology Source：https://medium.com/@arpitkh96/basics-of-container-networking-with-linux-part-1-3a3cdc64c87a
-bash 1 ip link add &amp;lt;p1-name&amp;gt; type veth peer name &amp;lt;p2-name&amp;gt; Bridge 目的 Linux bridge（又称为网桥、VLAN交换机）是Linux内核中集成的功能，用来做tcp/ip做二层协议交换的设备，虽然是软件实现的，但它与普通的二层物理交换机功能一样。bridge 就是为了解决虚拟机网卡连接问题。可以添加若干个网络设备到 bridge 上作为其接口，添加到 bridge 上的设备被设置为只接受二层数据帧并且转发所有收到的数据包到 bridge 中。
-由于 Linux bridge 是二层设备，故数据包是根据MAC地址而不是IP转发的。因此所有协议都可以透明地通过网桥。Linux bridge 广泛用于虚拟机，名称空间等。
-图：Linux Bridge Source：https://kbespalov.medium.com/linux-linux-bridge-7e0e887edd01
-MACVLAN [2] MACVLAN 允许在一个物理接口创建多个子接口，并且每个子接口都拥有一个随机生成的MAC地址，与IP地址。
-MACVLAN 中子接口不能与与父接口直接通讯，例如在虚拟化环境中，容器是不能ping通宿主机的IP，如果子接口需要和父接口进行通讯，需要将子接口分配给父接口。</description>
+      <guid>https://www.oomkill.com/2021/virtual-networking/</guid>
+      <description>本文是关于深入理解Kubernetes网络原理系列第2章 深入理解Kubernetes Pod网络原理 - 网络名称空间 深入理解Kubernetes Pod网络原理 - Linux虚拟网络技术 深入理解Kubernetes Pod网络原理 - CNI 深入理解Kubernetes Pod网络原理 - 跟随 flannel 学习CNI原理 深入理解Kubernetes Pod网络原理 - 跟随 flannel + multus 剖析 Chained Plugins 深入理解Kubernetes Pod网络原理 - 从零实现一个 CNI Plugin part 1 (Shell) 深入理解Kubernetes Pod网络原理 - 从零实现一个 CNI Plugin part 2 (libcni) 深入理解Kubernetes Pod网络原理 - Kubernetes网络模型 1 深入理解Kubernetes Pod网络原理 - Kubernetes网络模型 2 深入理解Kubernetes Pod网络原理 - Pod网络排错思路 Overview 本文将介绍Kubernetes中使用的相关虚拟网络功能，目的是为了任何无相关网络背景经历的人都可以了解这些技术在kubernetes中式如何应用的。
+VLAN VLAN (Virtual local area networks)是逻辑上的LAN而不受限于同一物理网络交换机上。同样的VLAN也可以将同一台交换机/网桥下的设备/划分为不同的子网。</description>
     </item>
     <item>
       <title>使用eNSP构建calico BGP网络</title>
-      <link>https://www.oomkill.com/2021/01/ensp-calico-bgp/</link>
+      <link>https://www.oomkill.com/2021/ensp-calico-bgp/</link>
       <pubDate>Mon, 18 Jan 2021 00:00:00 +0000</pubDate>
-      <guid>https://www.oomkill.com/2021/01/ensp-calico-bgp/</guid>
+      <guid>https://www.oomkill.com/2021/ensp-calico-bgp/</guid>
       <description>实验文件： [calico BGP.zip](https://cdn.jsdelivr.net/gh/cylonchau/blogs@img/img/calico BGP.zip)
 R1
 text 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 system-view sysname R1 interface l0 ip address 1.1.1.1 32 interface g0/0/0 ip address 10.1.0.1 24 interface g0/0/1 ip address 10.3.0.1 24 bgp 100 router-id 1.1.1.1 peer 10.1.0.2 as-number 123 peer 10.3.0.2 as-number 456 dis this dis ip interface b R2
@@ -176,9 +152,9 @@ text 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 system-view sysname R2 interface 
     </item>
     <item>
       <title>网络隧道技术</title>
-      <link>https://www.oomkill.com/2021/01/network-tunnel-technology/</link>
+      <link>https://www.oomkill.com/2021/network-tunnel-technology/</link>
       <pubDate>Mon, 18 Jan 2021 00:00:00 +0000</pubDate>
-      <guid>https://www.oomkill.com/2021/01/network-tunnel-technology/</guid>
+      <guid>https://www.oomkill.com/2021/network-tunnel-technology/</guid>
       <description>隧道技术概要 隧道技术（Tunneling）是网络基础设置在网络之间传递数据的方式，使用隧道技术传递可以是不同协议的数据包，隧道协议将这些其他协议的数据包重新封装在新的包头中发送。被封装的数据包在隧道的两个端点之间通过网络进行路由，被封装数据包在网络上传递时所经历的逻辑路径称为隧道。
 简单来说，隧道技术是一类网络协议，是将一个数据包封装在另一个数据包中进行传输的技术；**使用隧道的原因是在不兼容的网络上传输数据，或在不安全网络上提供一个安全路径。**通过网络隧道技术，可以使隧道两端的网络组成一个更大的内部网络。（把不支持的协议数据包打包成支持的协议数据包之后进行传输）。
 隧道协议 要创建隧道，隧道的客户机和服务器双方必须使用相同的隧道技术，隧道协议有二层隧道协议与三层隧道协议两类。

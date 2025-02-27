@@ -188,5 +188,5 @@ func ServiceIPRange(passedServiceClusterIPRange net.IPNet) (net.IPNet, net.IP, e
 有了对 service 更好的理解后，接下来开始本系列第二节[深入理解Kubernetes service - kube-proxy软件架构分析](https://cylonchau.github.io/kubernetes-without-service.html)
 
 >**Reference**
->
-><sup id="1">[1]</sup> [*dual-stack service*](https://kubernetes.io/docs/concepts/services-networking/dual-stack/)
+
+​	<sup id="1">[1]</sup> [*dual-stack service*](https://kubernetes.io/docs/concepts/services-networking/dual-stack/)
