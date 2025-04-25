@@ -10,9 +10,9 @@
     <atom:link href="https://www.oomkill.com/tags/docker/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>使用docker管理谷歌物件仓库gcr上的镜像</title>
-      <link>https://www.oomkill.com/2024/docker-push-gcr/</link>
+      <link>https://www.oomkill.com/docker-push-gcr/</link>
       <pubDate>Sat, 01 Jun 2024 00:00:00 +0000</pubDate>
-      <guid>https://www.oomkill.com/2024/docker-push-gcr/</guid>
+      <guid>https://www.oomkill.com/docker-push-gcr/</guid>
       <description>创建服务账户 首先可以到「 IAM管理 -&amp;gt; 服务帐户」新增帐户。在新增完成后，会得到一把 key，将它下载后请妥善保管，因为所有相关的身份认证都会用到，这个 key 在下载后就无法继续下载了。
 授权 接着到「IAM -&amp;gt; 新增」成员，并且选择角色，这里选择「Cloud Storage -&amp;gt; 储存空间物件检视者」，让此帐户具备有 read（读取） storage 的功能。
 登录 bash 1 2 cat KEY-FILE | docker login -u KEY-TYPE --password-stdin \ https://LOCATION-docker.pkg.dev GCP 的 KEY-TYPE 通为 json_key，但这里包含两种类型 _json_key 和 _json_key_base64
@@ -22,9 +22,9 @@ yaml 1 2 3 4 5 6 7 8 9 10 11 12 13 { &amp;#34;type&amp;#34;: &amp;#34;service_ac
     </item>
     <item>
       <title>Docker中的多进程管理 s6-overlay</title>
-      <link>https://www.oomkill.com/2023/multi-process-management/</link>
+      <link>https://www.oomkill.com/multi-process-management/</link>
       <pubDate>Thu, 18 May 2023 00:00:00 +0000</pubDate>
-      <guid>https://www.oomkill.com/2023/multi-process-management/</guid>
+      <guid>https://www.oomkill.com/multi-process-management/</guid>
       <description>什么是容器中的多进程管理 在容器中的主进程 (main running process) 是指 Dockerfile中 ENTRYPOINT 或 CMD 指定运行的命令，通常情况下一个进程（服务）为一个容器；也存在一种场景，就是主进程会fork多个子进程，例如nginx，不过这种多进程通常为nginx主进程进行管理。而一些场景下，我们的业务本身就需要多个启用独立的多个进程。
 在Docker官方提到了在容器中运行多个服务的方式，官方提出，应该避免这种情况
 but to get the most benefit out of Docker, avoid one container being responsible for multiple aspects of your overall application.
@@ -36,16 +36,16 @@ Use a process manager 进程管理器，通常情况下大家想到的就是顶�
     </item>
     <item>
       <title>alpine安装网络工具</title>
-      <link>https://www.oomkill.com/2023/alpine-network-tools/</link>
+      <link>https://www.oomkill.com/alpine-network-tools/</link>
       <pubDate>Wed, 22 Mar 2023 23:00:36 +0800</pubDate>
-      <guid>https://www.oomkill.com/2023/alpine-network-tools/</guid>
+      <guid>https://www.oomkill.com/alpine-network-tools/</guid>
       <description> telnet：busybox-extras net-tools: net-tools tcpdump: tcpdump wget: wget dig nslookup: bind-tools curl: curl nmap: nmap wget ifconfig nc traceroute.. : busybox ssh: openssh-client ss iptables: iproute2 ethtool: ethtool yaml 1 2 3 4 5 6 7 8 9 10 11 12 13 14 FROM alpine MAINTAINER RUN sed -i &amp;#39;s@http://dl-cdn.alpinelinux.org/@https://mirrors.aliyun.com/@g&amp;#39; /etc/apk/repositories RUN apk add --no-cache --virtual .persistent-deps \ curl \ tcpdump \ iproute2 \ bind-tools \ ethtool \ busybox-extras \ libressl \ openssh-client \ busybox CMD [ &amp;#34;tail&amp;#34;, &amp;#34;-f&amp;#34; ] </description>
     </item>
     <item>
       <title>windows下Docker Desktop安装管理</title>
-      <link>https://www.oomkill.com/2020/windows10-install-docker/</link>
+      <link>https://www.oomkill.com/windows10-install-docker/</link>
       <pubDate>Fri, 02 Oct 2020 00:00:00 +0000</pubDate>
-      <guid>https://www.oomkill.com/2020/windows10-install-docker/</guid>
+      <guid>https://www.oomkill.com/windows10-install-docker/</guid>
       <description>检查要求 Windows 10 企业版、专业版或教育版 （必须windows10 1903版本以上）版本号 18362.1049+ 或 18363.1049+ ，次版本＃大于.1049。最好是最新版（新版windows可以hype-v wsl2 vmvare共存，但安卓模拟器目前还没稳定的共存版本）。建议使用wsl2，安装包容量会比起hype-v小很多 。 Windows开启wsl2，建议 Windows 10 2004（版本号不低于 19041.264），可wsl2与vmvare共存。 CPU 支持并开启虚拟化（Intel VT-c 或 AMD SVM）。 最少 4 GB 内存。 对于专业版、企业版、教育版可以使用docker desktop wsl2模式，此处无需开启Hype-v
 对于Win10 家庭版，Win10 19041.264之前版本，及 Win7 8用户，可以使用docker desktop Hype-v 后端。
 修改安装盘 Docker Desktop 默认安装到 C:\Program Files\Docker 并不可更改，这样很不友好，可以通过软连接的方式改变Docker Desktop 默认安装盘。
@@ -54,9 +54,9 @@ text 1 mklink /J &amp;#34;C:\Program Files\Docker&amp;#34; &amp;#34;D:\Program F
     </item>
     <item>
       <title>docker Registry使用</title>
-      <link>https://www.oomkill.com/2018/docker-registry/</link>
+      <link>https://www.oomkill.com/docker-registry/</link>
       <pubDate>Sat, 02 Jun 2018 00:00:00 +0000</pubDate>
-      <guid>https://www.oomkill.com/2018/docker-registry/</guid>
+      <guid>https://www.oomkill.com/docker-registry/</guid>
       <description>docker registry介绍 Registry用于保存docker镜像，包括镜像的层次结构和元数据，用户可自建Registry，也可使用官方的Docker Hub
 分类
 Sponsor Registry：第三方的registry，供客户和Docker社区使用 Mirror Registry：第三方的registry，只让客户使用 Vendor Registry：由发布Docker镜像的供应商提供的registry Private Registry：通过设有防火墙和额外的安全层的私有实体提供的registry 一个docker Registry上拥有两种功能：
@@ -67,9 +67,9 @@ sh 1 2 3 4 5 6 7 8 9 10 11 12 $ yum info docker-registry Available Packages Name
     </item>
     <item>
       <title>docker Volume</title>
-      <link>https://www.oomkill.com/2018/docker-volume/</link>
+      <link>https://www.oomkill.com/docker-volume/</link>
       <pubDate>Sat, 02 Jun 2018 00:00:00 +0000</pubDate>
-      <guid>https://www.oomkill.com/2018/docker-volume/</guid>
+      <guid>https://www.oomkill.com/docker-volume/</guid>
       <description>对于docker来讲，作为容器运行的底层引擎，在组织及运行容器时每个容器内只运行一个程序及子程序。对于这个容器来讲，启动时依赖于 底层镜像联合挂载启动而成。 底层能够存储此类分层构建并联合挂载镜像的文件系统。最上层构建读写层。对于此读写层来说。所有对容器的操作都保存在最上层之上。而下层内容的操作需要使用写时复制。
 Docker镜像由多个只读层叠加而成，启动容器时，Docker会加载只读镜像层并在镜像栈顶部添加一个读写层，如果运行中的容器修改了现有的一个已经存在的文件，那该文件将会从读写层下面的只读层复制到读写层，该文件的只读版本仍然存在，只是已经被读写层中该文件的副本所隐藏，此即 写时复制（COW）机制。此机制对IO较高的应用在实现持久化存储时，势必对在底层应用数据存储时性能要求较高。要想绕过使用限制，可以使用存储卷机制。
 Why Data Volume？
@@ -87,9 +87,9 @@ the Docker daemon creates managed volumes in a portion of the host&amp;rsquo;s f
     </item>
     <item>
       <title>docker-compose使用</title>
-      <link>https://www.oomkill.com/2018/docker-compose/</link>
+      <link>https://www.oomkill.com/docker-compose/</link>
       <pubDate>Sat, 02 Jun 2018 00:00:00 +0000</pubDate>
-      <guid>https://www.oomkill.com/2018/docker-compose/</guid>
+      <guid>https://www.oomkill.com/docker-compose/</guid>
       <description>Compose是一个定义和管理多容器的工具，使用Python语言编写。使用Compose配置文件描述多个容器应用的架构，比如使用 什么镜像、数据卷、网络、映射端口等；然后一条命令管理所有服务，比如启动、停止、重启等。
 1、Linux安装Compose 参考网址：Releases · docker/compose · GitHub
 下载二进制文件 bash 1 2 3 curl -L \ https://github.com/docker/compose/releases/download/1.22.0/docker-compose-\ `uname -s`-`uname -m` -o /usr/local/bin/docker-compose 对二进制文件添加可执行权限 bash 1 chmod +x /usr/local/bin/docker-compose 测试安装 docker-compose &amp;ndash;version
@@ -102,9 +102,9 @@ compose语法详解：Compose file version 3 reference | Docker Documentation Do
     </item>
     <item>
       <title>docker-compose示例</title>
-      <link>https://www.oomkill.com/2018/docker-compose-example/</link>
+      <link>https://www.oomkill.com/docker-compose-example/</link>
       <pubDate>Sat, 02 Jun 2018 00:00:00 +0000</pubDate>
-      <guid>https://www.oomkill.com/2018/docker-compose-example/</guid>
+      <guid>https://www.oomkill.com/docker-compose-example/</guid>
       <description>使用docker-compose构建LNMP环境。 编写Dockerfile 这里采用的是先将nginx php打包为rpm包，然后做成镜像。与直接在容器里编译安装同理的。
 nginx Dockerfile
 bash 1 2 3 4 5 6 7 8 FROM centos MAINTAINER lc RUN yum install -y gcc gcc-c++ openssl-devel make pcre-devel ADD nginx-1.13.9-1.el7.centos.x86_64.rpm /tmp/ RUN cd /tmp/ &amp;amp;&amp;amp; rpm -ivh nginx-1.13.9-1.el7.centos.x86_64.rpm ADD nginx.conf /etc/nginx/ EXPOSE 80 CMD [&amp;#34;/usr/sbin/nginx&amp;#34;, &amp;#34;-g&amp;#34;, &amp;#34;daemon off;&amp;#34;] php Dockerfile
@@ -112,9 +112,9 @@ bash 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 FROM c
     </item>
     <item>
       <title>Dockerfile使用示例</title>
-      <link>https://www.oomkill.com/2018/dockerfile/</link>
+      <link>https://www.oomkill.com/dockerfile/</link>
       <pubDate>Sat, 02 Jun 2018 00:00:00 +0000</pubDate>
-      <guid>https://www.oomkill.com/2018/dockerfile/</guid>
+      <guid>https://www.oomkill.com/dockerfile/</guid>
       <description>一、使用前提 通用镜像未必与应用程序和配置是符合我们需要的。
 1.1 常见镜像制作方式 常见制作镜像方式有两种
 基于容器 基于镜像制作：编辑一个Dockerfile，而后根据此文件制作； 二、Dockerfile概述 Dockerfile只是构建Docker镜像的源代码，docker可以通过读取Dockerfile中的指令自动构建图像。Dockerfile是一个文本文档，其中包含用户可以在命令行上调用以组合图像的所有命令。用户可以使用 docker build 创建连续执行多个命令行指令的自动构建。
@@ -128,9 +128,9 @@ sh 1 FROM repository[:tag] sh 1 FROM registry/repository[:tag] bash 1 FROM resos
     </item>
     <item>
       <title>Docker跨宿主机网络通信</title>
-      <link>https://www.oomkill.com/2018/docker-cross-node-network/</link>
+      <link>https://www.oomkill.com/docker-cross-node-network/</link>
       <pubDate>Sat, 02 Jun 2018 00:00:00 +0000</pubDate>
-      <guid>https://www.oomkill.com/2018/docker-cross-node-network/</guid>
+      <guid>https://www.oomkill.com/docker-cross-node-network/</guid>
       <description>Docker Overlay Network Overlay网络是指在不改变现有网络基础设施的前提下，通过某种约定通信协议，把二层报文封装在IP报文之上的新的数据格式。这样不但能够充分利用成熟的IP路由协议进程数据分发；而且在Overlay技术中采用扩展的隔离标识位数，能够突破VLAN的4000数量限制支持高达16M的用户，并在必要时可将广播流量转化为组播流量，避免广播数据泛滥。
 因此，Overlay网络实际上是目前最主流的容器跨节点数据传输和路由方案。
 要想使用Docker原生Overlay网络，需要满足下列任意条件
@@ -141,9 +141,9 @@ bash 1 2 3 4 5 6 7 8 consul agent -server -bootstrap -ui -data-dir /data/docker/
     </item>
     <item>
       <title>docker容器管理</title>
-      <link>https://www.oomkill.com/2018/docker-ma/</link>
+      <link>https://www.oomkill.com/docker-ma/</link>
       <pubDate>Sat, 02 Jun 2018 00:00:00 +0000</pubDate>
-      <guid>https://www.oomkill.com/2018/docker-ma/</guid>
+      <guid>https://www.oomkill.com/docker-ma/</guid>
       <description>参数 说明 -i, &amp;ndash;interactive 即使不是交互模式也保持stdin打开 -d, &amp;ndash;detach 后台运行容器并打印容器ID -t, &amp;ndash;tty 分配一个伪TTY 添加自定义主机映射
 bash 1 2 3 4 5 6 $ docker run -tid --add-host docker-node:10.0.0.1 centos 61d5824c720f1a32c743a3d0f434e17a7f6860dba1cb5559653a80c064da8073 $ docker exec 61d5824c720f1a32c cat /etc/hosts ff02::2	ip6-allrouters 10.0.0.1	docker-node 172.17.0.2	61d5824c720f 添加linux功能
 linux内核特性，提供权限访问控制。如需要特殊权限，不赋权限容器将不能正常运行。
@@ -154,9 +154,9 @@ bash 1 2 3 4 5 $ docker run -it centos cat /etc/resolv.</description>
     </item>
     <item>
       <title>Docker网络</title>
-      <link>https://www.oomkill.com/2018/docker-network/</link>
+      <link>https://www.oomkill.com/docker-network/</link>
       <pubDate>Sat, 02 Jun 2018 00:00:00 +0000</pubDate>
-      <guid>https://www.oomkill.com/2018/docker-network/</guid>
+      <guid>https://www.oomkill.com/docker-network/</guid>
       <description>docker的四种网络模式 Bridge模式（默认） 当Docker进程启动时，会在宿主机上创建一个名为docker0的虚拟网桥，此主机上启动的Docker容器会连接到这个虚拟网桥上。虚拟网桥的工作方式和物理交换机类似，这样主机上的所有容器就通过交换机连在了一个二层网络中。
 默认ip段172.17.0.1/16；从docker0子网中分配一个IP给容器使用，并设置docker0的IP为容器的默认网关。在主机上创建一对虚拟网卡veth pair设备，Docker将veth pair设备的一端放在新创建的容器中，并命名为eth0（容器的网卡），另一端放在主机中，以vethxxx这样类似的名字命名，并将这个网络设备加入到docker0网桥中。可以通过brctl show命令查看。
 使用 docker run -p 时，docker实际是在iptables做了DNAT规则，实现端口转发功能。可以使用 iptables -t nat -nL 查看。
@@ -167,9 +167,9 @@ container模式 这个模式指定新创建的容器和已经存在的一个容�
     </item>
     <item>
       <title>macvlan实现docker跨宿主机访问</title>
-      <link>https://www.oomkill.com/2018/docker-cross-node-network-macvlan/</link>
+      <link>https://www.oomkill.com/docker-cross-node-network-macvlan/</link>
       <pubDate>Sat, 02 Jun 2018 00:00:00 +0000</pubDate>
-      <guid>https://www.oomkill.com/2018/docker-cross-node-network-macvlan/</guid>
+      <guid>https://www.oomkill.com/docker-cross-node-network-macvlan/</guid>
       <description>关于vlan说明 Macvlan和ipvlan是Linux网络驱动程序，它们将底层或主机接口直接暴露给在主机中运行的VM或容器。
 Macvlan允许单个物理接口使用macvlan子接口具有多个mac和ip地址。这与使用vlan在物理接口上创建子接口不同。使用vlan子接口，每个子接口使用vlan属于不同的L2域，所有子接口都具有相同的mac地址。使用macvlan，每个子接口将获得唯一的mac和ip地址，并将直接暴露在底层网络中。Macvlan接口通常用于虚拟化应用程序，每个macvlan接口都连接到Container或VM。每个容器或VM可以直接从公共服务器获取dhcp地址，就像主机一样。这将有助于希望Container成为传统网络的客户使用他们已有的IP寻址方案。Macvlan有4种类型(Private, VEPA, Bridge, Passthru)。常用的类型是Macvlan网桥，它允许单个主机中的端点能够在没有数据包离开主机的情况下相互通信。对于外部连接，使用底层网络。下图显示了两个使用macvlan网桥相互通信以及外部世界的容器。两个容器将使用Macvlan子接口直接暴露在底层网络中。
 使用mavvlan构建docker网络 Macvlan，MACVLAN或MAC-VLAN允许您在单个物理接口上配置多个第2层（即以太网MAC）地址。 Macvlan允许您配置父物理以太网接口（也称为上层设备）的子接口（也称为从设备），每个接口都有自己唯一的（随机生成的）MAC地址，因此也有自己的IP地址。然后，应用程序、VM和容器可以绑定到特定的子接口，以使用自己的MAC和IP地址直接连接到物理网络。
@@ -182,9 +182,9 @@ sh 1 2 3 4 5 6 7 $ ip addr 2: eth0: &amp;lt;BROADCAST,MULTICAST,PROMISC,UP,LOWER
     </item>
     <item>
       <title>容器的资源限制</title>
-      <link>https://www.oomkill.com/2018/container-limit/</link>
+      <link>https://www.oomkill.com/container-limit/</link>
       <pubDate>Sat, 02 Jun 2018 00:00:00 +0000</pubDate>
-      <guid>https://www.oomkill.com/2018/container-limit/</guid>
+      <guid>https://www.oomkill.com/container-limit/</guid>
       <description>默认情况下，容器没有任何资源限制，因此几乎耗尽docker主机之上，内核可分配给当前容器的所有资源。可以使用主机内核调度程序允许的尽可能多的给定资源。在此基础上Docker provides提供了控制容器可以使用多少内存，CPU或块IO的方法，设置docker run命令的运行时配置标志。
 容器得以实现主要依赖于内核中的两个属性namespace cgroup。其中许多功能都要求您的内核支持Linux功能。要检查支持，可以使用docker info命令。
 Memory OOME
@@ -209,9 +209,9 @@ Limit a container&amp;rsquo;s resources
     </item>
     <item>
       <title>使用weave实现docker跨宿主机通讯</title>
-      <link>https://www.oomkill.com/2018/weave-over-host/</link>
+      <link>https://www.oomkill.com/weave-over-host/</link>
       <pubDate>Sat, 02 Jun 2018 00:00:00 +0000</pubDate>
-      <guid>https://www.oomkill.com/2018/weave-over-host/</guid>
+      <guid>https://www.oomkill.com/weave-over-host/</guid>
       <description>项目地址：https://github.com/weaveworks/weave
 注：weave公司与2024年关门
 weaves说明 Weave是由weaveworks公司开发的解决Docker跨主机网络的解决方案，它能够创建一个虚拟网络，用于连接部署在多台主机上的Docker容器，这样容器就像被接入了同一个网络交换机，那些使用网络的应用程序不必去配置端口映射和链接等信息。

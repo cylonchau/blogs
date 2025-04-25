@@ -3,6 +3,8 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   
+  
+  
   <url>
     <loc>https://www.oomkill.com/</loc>
     
@@ -15,6 +17,14 @@
   
   
   
+  <url>
+    <loc>https://www.oomkill.com/spinnaker-aws-ecr-integration/</loc>
+    
+    
+  </url>
+  
+  
+  
   
   
   
@@ -22,7 +32,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/2025/deep-dive-k8s-network-cni/</loc>
+    <loc>https://www.oomkill.com/deep-dive-k8s-network-cni/</loc>
     
     <lastmod>2025-02-17T23:00:36+08:00</lastmod>
     
@@ -36,7 +46,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/2025/kind-wsl2-windows10-installation/</loc>
+    <loc>https://www.oomkill.com/kind-wsl2-windows10-installation/</loc>
     
     
   </url>
@@ -44,7 +54,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/2025/filebeat/</loc>
+    <loc>https://www.oomkill.com/filebeat/</loc>
     
     <lastmod>2025-01-06T23:00:36+08:00</lastmod>
     
@@ -56,7 +66,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/2024/grafana-loki-2-9/</loc>
+    <loc>https://www.oomkill.com/grafana-loki-2-9/</loc>
     
     <lastmod>2024-12-25T23:00:36+08:00</lastmod>
     
@@ -68,7 +78,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/2024/hugo-add-tag-cloud/</loc>
+    <loc>https://www.oomkill.com/hugo-add-tag-cloud/</loc>
     
     <lastmod>2024-11-27T23:00:36+08:00</lastmod>
     
@@ -78,7 +88,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/2024/debian12-install-k8s-1.16/</loc>
+    <loc>https://www.oomkill.com/debian12-install-k8s-1.16/</loc>
     
     <lastmod>2024-11-24T23:00:36+08:00</lastmod>
     
@@ -88,7 +98,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/2024/k8s-auth-and-regenerate-cert/</loc>
+    <loc>https://www.oomkill.com/k8s-auth-and-regenerate-cert/</loc>
     
     <lastmod>2024-11-30T23:00:36+08:00</lastmod>
     
@@ -100,7 +110,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/2024/openssl-cnf/</loc>
+    <loc>https://www.oomkill.com/openssl-cnf/</loc>
     
     <lastmod>2024-11-23T23:00:36+08:00</lastmod>
     
@@ -112,7 +122,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/2024/zk-upgrade-3.4-to-3.6/</loc>
+    <loc>https://www.oomkill.com/zk-upgrade-3.4-to-3.6/</loc>
     
     <lastmod>2024-11-21T23:00:36+08:00</lastmod>
     
@@ -122,7 +132,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/2024/xz-upgrade/</loc>
+    <loc>https://www.oomkill.com/xz-upgrade/</loc>
     
     <lastmod>2024-11-01T23:00:36+08:00</lastmod>
     
@@ -136,7 +146,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/2024/gke-create-exists-resources/</loc>
+    <loc>https://www.oomkill.com/gke-create-exists-resources/</loc>
     
     <lastmod>2024-10-02T23:00:36+08:00</lastmod>
     
@@ -148,7 +158,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/2024/rgw-bucket-sync-with-rclone/</loc>
+    <loc>https://www.oomkill.com/rgw-bucket-sync-with-rclone/</loc>
     
     <lastmod>2024-09-24T23:10:36+08:00</lastmod>
     
@@ -160,7 +170,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/2024/goswagger-skipping-recursion-detected/</loc>
+    <loc>https://www.oomkill.com/goswagger-skipping-recursion-detected/</loc>
     
     <lastmod>2024-09-21T23:00:36+08:00</lastmod>
     
@@ -172,7 +182,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/2024/gin-param-default-value/</loc>
+    <loc>https://www.oomkill.com/gin-param-default-value/</loc>
     
     <lastmod>2024-09-20T23:00:36+08:00</lastmod>
     
@@ -182,7 +192,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/2024/gorm-before-delete/</loc>
+    <loc>https://www.oomkill.com/gorm-before-delete/</loc>
     
     <lastmod>2024-09-20T23:00:36+08:00</lastmod>
     
@@ -192,7 +202,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/2024/nacos-deploy-with-gcp-eks/</loc>
+    <loc>https://www.oomkill.com/nacos-deploy-with-gcp-eks/</loc>
     
     <lastmod>2024-12-05T23:00:36+08:00</lastmod>
     
@@ -202,7 +212,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/2024/03-3-ceph-osd-performance-recommendation/</loc>
+    <loc>https://www.oomkill.com/03-3-ceph-osd-performance-recommendation/</loc>
     
     <lastmod>2024-09-13T23:10:36+08:00</lastmod>
     
@@ -212,7 +222,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/2024/05-5-failed-troubleshooting-for-rgw/</loc>
+    <loc>https://www.oomkill.com/05-5-failed-troubleshooting-for-rgw/</loc>
     
     <lastmod>2024-09-12T23:10:36+08:00</lastmod>
     
@@ -222,7 +232,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/2024/gke-invalid-pod-limits/</loc>
+    <loc>https://www.oomkill.com/gke-invalid-pod-limits/</loc>
     
     <lastmod>2024-09-11T23:00:36+08:00</lastmod>
     
@@ -234,7 +244,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/2024/uranus-installation/</loc>
+    <loc>https://www.oomkill.com/uranus-installation/</loc>
     
     <lastmod>2024-08-23T23:00:36+08:00</lastmod>
     
@@ -243,10 +253,8 @@
   
   
   
-  
-  
   <url>
-    <loc>https://www.oomkill.com/2024/spinnaker-branching-judgment/</loc>
+    <loc>https://www.oomkill.com/spinnaker-branching-judgment/</loc>
     
     
   </url>
@@ -254,7 +262,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/2024/spinnaker-custom-template/</loc>
+    <loc>https://www.oomkill.com/spinnaker-custom-template/</loc>
     
     
   </url>
@@ -262,7 +270,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/2024/hugo-add-related-content-section/</loc>
+    <loc>https://www.oomkill.com/hugo-add-related-content-section/</loc>
     
     <lastmod>2024-07-17T23:00:36+08:00</lastmod>
     
@@ -274,7 +282,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/2024/promql-advanced/</loc>
+    <loc>https://www.oomkill.com/promql-advanced/</loc>
     
     <lastmod>2024-07-17T23:00:36+08:00</lastmod>
     
@@ -284,7 +292,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/2024/hugo-sitemap-without-tag-page/</loc>
+    <loc>https://www.oomkill.com/hugo-sitemap-without-tag-page/</loc>
     
     <lastmod>2024-07-13T23:00:36+08:00</lastmod>
     
@@ -294,7 +302,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/2024/kubernetes-without-etcd-step-by-step/</loc>
+    <loc>https://www.oomkill.com/kubernetes-without-etcd-step-by-step/</loc>
     
     <lastmod>2024-06-30T23:00:36+08:00</lastmod>
     
@@ -306,7 +314,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/2024/debian-network-configration/</loc>
+    <loc>https://www.oomkill.com/debian-network-configration/</loc>
     
     <lastmod>2024-06-29T23:55:36+08:00</lastmod>
     
@@ -318,7 +326,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/2024/debian12-install-tutorial-step-by-step/</loc>
+    <loc>https://www.oomkill.com/debian12-install-tutorial-step-by-step/</loc>
     
     <lastmod>2024-06-29T23:55:36+08:00</lastmod>
     
@@ -328,7 +336,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/2024/golib-go-swagger/</loc>
+    <loc>https://www.oomkill.com/golib-go-swagger/</loc>
     
     <lastmod>2024-06-19T23:10:36+08:00</lastmod>
     
@@ -340,7 +348,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/2024/docker-push-gcr/</loc>
+    <loc>https://www.oomkill.com/docker-push-gcr/</loc>
     
     <lastmod>2024-06-01T23:00:36+08:00</lastmod>
     
@@ -350,7 +358,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/2024/prometheus-adapter-intro/</loc>
+    <loc>https://www.oomkill.com/prometheus-adapter-intro/</loc>
     
     
   </url>
@@ -360,7 +368,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/2024/stackstorm-sensors/</loc>
+    <loc>https://www.oomkill.com/stackstorm-sensors/</loc>
     
     <lastmod>2024-05-25T23:00:36+08:00</lastmod>
     
@@ -370,7 +378,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/2024/nacos-403-user-not-found/</loc>
+    <loc>https://www.oomkill.com/nacos-403-user-not-found/</loc>
     
     <lastmod>2024-05-20T23:00:36+08:00</lastmod>
     
@@ -380,7 +388,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/2024/type-of-machine-for-gcp/</loc>
+    <loc>https://www.oomkill.com/type-of-machine-for-gcp/</loc>
     
     <lastmod>2024-05-02T23:00:36+08:00</lastmod>
     
@@ -390,7 +398,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/2024/gke-vpc-firewall/</loc>
+    <loc>https://www.oomkill.com/gke-vpc-firewall/</loc>
     
     <lastmod>2024-05-02T23:00:36+08:00</lastmod>
     
@@ -400,7 +408,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/2024/kubernetes-kubectl-diagnose/</loc>
+    <loc>https://www.oomkill.com/kubernetes-kubectl-diagnose/</loc>
     
     <lastmod>2025-01-29T23:00:36+08:00</lastmod>
     
@@ -410,7 +418,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/2024/upgrade-harbor/</loc>
+    <loc>https://www.oomkill.com/upgrade-harbor/</loc>
     
     <lastmod>2024-03-29T23:00:36+08:00</lastmod>
     
@@ -420,7 +428,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/2024/kubernetes-update-secert/</loc>
+    <loc>https://www.oomkill.com/kubernetes-update-secert/</loc>
     
     <lastmod>2025-01-29T23:00:36+08:00</lastmod>
     
@@ -430,7 +438,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/2024/nacos-deploy-with-vm/</loc>
+    <loc>https://www.oomkill.com/nacos-deploy-with-vm/</loc>
     
     <lastmod>2024-11-29T23:00:36+08:00</lastmod>
     
@@ -440,7 +448,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/2024/k8s-jsonnet/</loc>
+    <loc>https://www.oomkill.com/k8s-jsonnet/</loc>
     
     <lastmod>2023-03-22T23:00:36+08:00</lastmod>
     
@@ -450,7 +458,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/2024/10-2-troubeshooting-crash/</loc>
+    <loc>https://www.oomkill.com/10-2-troubeshooting-crash/</loc>
     
     <lastmod>2024-02-13T23:10:36+08:00</lastmod>
     
@@ -462,7 +470,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/2024/ch30-oomkill/</loc>
+    <loc>https://www.oomkill.com/ch30-oomkill/</loc>
     
     <lastmod>2024-01-30T23:00:36+08:00</lastmod>
     
@@ -472,7 +480,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/2023/grafana-keycloak/</loc>
+    <loc>https://www.oomkill.com/grafana-keycloak/</loc>
     
     <lastmod>2023-12-25T23:00:36+08:00</lastmod>
     
@@ -482,15 +490,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/2023/spinnaker-canary/</loc>
-    
-    
-  </url>
-  
-  
-  
-  <url>
-    <loc>https://www.oomkill.com/2023/stackstorm-rules/</loc>
+    <loc>https://www.oomkill.com/stackstorm-rules/</loc>
     
     <lastmod>2023-05-17T23:00:36+08:00</lastmod>
     
@@ -500,7 +500,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/2023/stackstorm-sensors/</loc>
+    <loc>https://www.oomkill.com/stackstorm-sensors/</loc>
     
     <lastmod>2024-05-17T23:00:36+08:00</lastmod>
     
@@ -510,7 +510,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/2023/stackstorm-pack/</loc>
+    <loc>https://www.oomkill.com/stackstorm-pack/</loc>
     
     <lastmod>2024-05-17T23:00:36+08:00</lastmod>
     
@@ -520,7 +520,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/2023/stackstorm-rules/</loc>
+    <loc>https://www.oomkill.com/stackstorm-rules/</loc>
     
     <lastmod>2024-03-22T23:00:36+08:00</lastmod>
     
@@ -530,7 +530,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/2023/ch07-in-cluster-pod/</loc>
+    <loc>https://www.oomkill.com/ch07-in-cluster-pod/</loc>
     
     <lastmod>2023-11-15T23:33:36+08:00</lastmod>
     
@@ -540,7 +540,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/2023/10-1-ceph-fscache/</loc>
+    <loc>https://www.oomkill.com/10-1-ceph-fscache/</loc>
     
     <lastmod>2025-01-06T23:10:36+08:00</lastmod>
     
@@ -550,7 +550,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/2023/ch03-argo-add-cluster/</loc>
+    <loc>https://www.oomkill.com/ch03-argo-add-cluster/</loc>
     
     <lastmod>2023-11-05T23:00:36+08:00</lastmod>
     
@@ -560,7 +560,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/2023/ch04-application/</loc>
+    <loc>https://www.oomkill.com/ch04-application/</loc>
     
     <lastmod>2023-11-05T23:00:36+08:00</lastmod>
     
@@ -570,7 +570,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/2023/ngx-map/</loc>
+    <loc>https://www.oomkill.com/ngx-map/</loc>
     
     <lastmod>2023-11-04T23:48:36+08:00</lastmod>
     
@@ -582,7 +582,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/2023/price-of-gke/</loc>
+    <loc>https://www.oomkill.com/price-of-gke/</loc>
     
     <lastmod>2024-05-02T23:00:36+08:00</lastmod>
     
@@ -592,7 +592,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/2023/kubernetes-validatingadmissionpolicy/</loc>
+    <loc>https://www.oomkill.com/kubernetes-validatingadmissionpolicy/</loc>
     
     <lastmod>2023-11-01T23:00:36+08:00</lastmod>
     
@@ -602,7 +602,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/2023/ch24-ip-masq/</loc>
+    <loc>https://www.oomkill.com/ch24-ip-masq/</loc>
     
     <lastmod>2023-11-05T22:33:36+08:00</lastmod>
     
@@ -612,7 +612,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/2023/linux-network-conunter/</loc>
+    <loc>https://www.oomkill.com/linux-network-conunter/</loc>
     
     <lastmod>2023-10-26T23:00:36+08:00</lastmod>
     
@@ -624,7 +624,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/2023/argo-installtion/</loc>
+    <loc>https://www.oomkill.com/argo-installtion/</loc>
     
     <lastmod>2023-10-30T23:00:36+08:00</lastmod>
     
@@ -634,7 +634,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/2023/ch01-argo-beginning/</loc>
+    <loc>https://www.oomkill.com/ch01-argo-beginning/</loc>
     
     <lastmod>2023-10-22T23:00:36+08:00</lastmod>
     
@@ -644,7 +644,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/2023/update-curl-8-4/</loc>
+    <loc>https://www.oomkill.com/update-curl-8-4/</loc>
     
     <lastmod>2023-10-13T23:00:36+08:00</lastmod>
     
@@ -654,7 +654,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/2023/kubectl-jsonpath/</loc>
+    <loc>https://www.oomkill.com/kubectl-jsonpath/</loc>
     
     <lastmod>2023-09-25T23:10:36+08:00</lastmod>
     
@@ -664,7 +664,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/2023/05-4-s3cmd-in-windows/</loc>
+    <loc>https://www.oomkill.com/05-4-s3cmd-in-windows/</loc>
     
     <lastmod>2023-09-24T23:10:36+08:00</lastmod>
     
@@ -674,7 +674,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/2023/05-3-s3cmd/</loc>
+    <loc>https://www.oomkill.com/05-3-s3cmd/</loc>
     
     <lastmod>2023-09-24T23:10:36+08:00</lastmod>
     
@@ -684,7 +684,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/2023/ingress-nginx-default-backend-status-code/</loc>
+    <loc>https://www.oomkill.com/ingress-nginx-default-backend-status-code/</loc>
     
     <lastmod>2024-11-29T23:00:36+08:00</lastmod>
     
@@ -694,7 +694,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/2023/05-2-bucket-policy/</loc>
+    <loc>https://www.oomkill.com/05-2-bucket-policy/</loc>
     
     <lastmod>2023-09-18T23:10:36+08:00</lastmod>
     
@@ -704,7 +704,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/2023/ch26-kube-proxy-clustercidr/</loc>
+    <loc>https://www.oomkill.com/ch26-kube-proxy-clustercidr/</loc>
     
     <lastmod>2023-09-15T23:00:36+08:00</lastmod>
     
@@ -714,7 +714,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/2023/11-1-ceph-common-cmd/</loc>
+    <loc>https://www.oomkill.com/11-1-ceph-common-cmd/</loc>
     
     <lastmod>2024-02-13T23:10:36+08:00</lastmod>
     
@@ -724,7 +724,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/2023/6-1-ceph-rebalance/</loc>
+    <loc>https://www.oomkill.com/6-1-ceph-rebalance/</loc>
     
     <lastmod>2023-09-03T23:10:36+08:00</lastmod>
     
@@ -734,7 +734,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/2023/ch29-volumemanager/</loc>
+    <loc>https://www.oomkill.com/ch29-volumemanager/</loc>
     
     <lastmod>2023-08-24T23:00:36+08:00</lastmod>
     
@@ -744,7 +744,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/2023/kubernetes-node-label-dashboard/</loc>
+    <loc>https://www.oomkill.com/kubernetes-node-label-dashboard/</loc>
     
     <lastmod>2024-09-14T23:00:36+08:00</lastmod>
     
@@ -754,7 +754,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/2023/acquaintance-stroage/</loc>
+    <loc>https://www.oomkill.com/acquaintance-stroage/</loc>
     
     <lastmod>2023-08-28T23:10:36+08:00</lastmod>
     
@@ -764,7 +764,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/2023/picgo-configure/</loc>
+    <loc>https://www.oomkill.com/picgo-configure/</loc>
     
     <lastmod>2023-08-08T23:00:36+08:00</lastmod>
     
@@ -776,7 +776,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/2023/02-1-install-ceph-with-cephadm/</loc>
+    <loc>https://www.oomkill.com/02-1-install-ceph-with-cephadm/</loc>
     
     <lastmod>2023-08-25T23:10:36+08:00</lastmod>
     
@@ -788,7 +788,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/2023/blackbox_exporter-in-k8s/</loc>
+    <loc>https://www.oomkill.com/blackbox_exporter-in-k8s/</loc>
     
     <lastmod>2023-07-12T23:00:36+08:00</lastmod>
     
@@ -798,7 +798,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/2023/offline-installtation/</loc>
+    <loc>https://www.oomkill.com/offline-installtation/</loc>
     
     
   </url>
@@ -806,7 +806,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/2023/using-thanos-improve-prometheus.md/</loc>
+    <loc>https://www.oomkill.com/using-thanos-improve-prometheus.md/</loc>
     
     <lastmod>2023-07-02T23:00:36+08:00</lastmod>
     
@@ -816,7 +816,15 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/2023/calico-cni-deplyment/</loc>
+    <loc>https://www.oomkill.com/spinnaker-auth-with-keycloak/</loc>
+    
+    
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://www.oomkill.com/calico-cni-deplyment/</loc>
     
     <lastmod>2023-06-21T23:33:36+08:00</lastmod>
     
@@ -826,7 +834,15 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/2023/kubernetes-limit-request/</loc>
+    <loc>https://www.oomkill.com/spinnaker-template/</loc>
+    
+    
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://www.oomkill.com/kubernetes-limit-request/</loc>
     
     <lastmod>2023-06-17T23:00:36+08:00</lastmod>
     
@@ -836,7 +852,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/2023/impove-prometheus-performance/</loc>
+    <loc>https://www.oomkill.com/impove-prometheus-performance/</loc>
     
     <lastmod>2024-09-14T23:00:36+08:00</lastmod>
     
@@ -846,7 +862,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/2023/nginx-proxy_pass/</loc>
+    <loc>https://www.oomkill.com/nginx-proxy_pass/</loc>
     
     <lastmod>2023-06-18T23:00:36+08:00</lastmod>
     
@@ -856,7 +872,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/2023/multi-process-management/</loc>
+    <loc>https://www.oomkill.com/multi-process-management/</loc>
     
     <lastmod>2023-05-18T23:00:36+08:00</lastmod>
     
@@ -866,7 +882,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/2023/stackstorm-pack-configuaration/</loc>
+    <loc>https://www.oomkill.com/stackstorm-pack-configuaration/</loc>
     
     <lastmod>2023-04-18T23:00:36+08:00</lastmod>
     
@@ -876,7 +892,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/2023/ngx-in-docker-500/</loc>
+    <loc>https://www.oomkill.com/ngx-in-docker-500/</loc>
     
     <lastmod>2023-06-18T23:00:36+08:00</lastmod>
     
@@ -886,7 +902,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/2023/awesome-kubernetes/</loc>
+    <loc>https://www.oomkill.com/awesome-kubernetes/</loc>
     
     <lastmod>2024-12-03T23:00:36+08:00</lastmod>
     
@@ -896,7 +912,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/2023/firewalld-without-polkit/</loc>
+    <loc>https://www.oomkill.com/firewalld-without-polkit/</loc>
     
     <lastmod>2023-04-19T23:10:36+08:00</lastmod>
     
@@ -908,7 +924,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/2023/delete-github-commit/</loc>
+    <loc>https://www.oomkill.com/delete-github-commit/</loc>
     
     <lastmod>2023-04-02T23:00:36+08:00</lastmod>
     
@@ -918,7 +934,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/2023/deb-package/</loc>
+    <loc>https://www.oomkill.com/deb-package/</loc>
     
     <lastmod>2023-03-29T23:10:36+08:00</lastmod>
     
@@ -928,7 +944,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/2023/alpine-network-tools/</loc>
+    <loc>https://www.oomkill.com/alpine-network-tools/</loc>
     
     <lastmod>2023-03-22T23:00:36+08:00</lastmod>
     
@@ -940,7 +956,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/2023/dbus-security-policy/</loc>
+    <loc>https://www.oomkill.com/dbus-security-policy/</loc>
     
     <lastmod>2023-03-22T23:00:36+08:00</lastmod>
     
@@ -950,7 +966,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/2023/design-patterns/</loc>
+    <loc>https://www.oomkill.com/design-patterns/</loc>
     
     <lastmod>2023-03-10T23:00:36+08:00</lastmod>
     
@@ -960,7 +976,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/2023/ch24-kube-proxy-performance/</loc>
+    <loc>https://www.oomkill.com/ch24-kube-proxy-performance/</loc>
     
     <lastmod>2023-03-10T23:00:36+08:00</lastmod>
     
@@ -970,7 +986,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/2023/kubernetes-lb/</loc>
+    <loc>https://www.oomkill.com/kubernetes-lb/</loc>
     
     <lastmod>2023-02-27T23:00:36+08:00</lastmod>
     
@@ -980,7 +996,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/2023/xiaomi-install-pixelexperience/</loc>
+    <loc>https://www.oomkill.com/xiaomi-install-pixelexperience/</loc>
     
     <lastmod>2023-02-22T23:00:36+08:00</lastmod>
     
@@ -990,7 +1006,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/2023/ch18-endpointslices/</loc>
+    <loc>https://www.oomkill.com/ch18-endpointslices/</loc>
     
     <lastmod>2025-01-20T23:00:36+08:00</lastmod>
     
@@ -1000,7 +1016,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/2023/ch23-extend-kube-proxy/</loc>
+    <loc>https://www.oomkill.com/ch23-extend-kube-proxy/</loc>
     
     <lastmod>2025-01-20T23:00:36+08:00</lastmod>
     
@@ -1010,7 +1026,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/2023/ch19-kube-proxy-code/</loc>
+    <loc>https://www.oomkill.com/ch19-kube-proxy-code/</loc>
     
     <lastmod>2025-01-20T23:00:36+08:00</lastmod>
     
@@ -1020,7 +1036,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/2023/ch17-service-controller/</loc>
+    <loc>https://www.oomkill.com/ch17-service-controller/</loc>
     
     <lastmod>2025-01-20T23:00:36+08:00</lastmod>
     
@@ -1032,7 +1048,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/2023/haproxy-http-connection-mode/</loc>
+    <loc>https://www.oomkill.com/haproxy-http-connection-mode/</loc>
     
     <lastmod>2023-02-01T23:00:36+08:00</lastmod>
     
@@ -1042,7 +1058,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/2023/awesome-git-configration-in-windows/</loc>
+    <loc>https://www.oomkill.com/awesome-git-configration-in-windows/</loc>
     
     <lastmod>2023-01-24T23:00:36+08:00</lastmod>
     
@@ -1052,7 +1068,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/2023/go-type-assertion/</loc>
+    <loc>https://www.oomkill.com/go-type-assertion/</loc>
     
     
   </url>
@@ -1060,7 +1076,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/2023/goskill-port-is-available/</loc>
+    <loc>https://www.oomkill.com/goskill-port-is-available/</loc>
     
     <lastmod>2023-01-06T23:00:36+08:00</lastmod>
     
@@ -1070,7 +1086,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/2022/haproxy2/</loc>
+    <loc>https://www.oomkill.com/haproxy2/</loc>
     
     <lastmod>2022-12-15T23:00:36+08:00</lastmod>
     
@@ -1082,7 +1098,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/2022/performance-command/</loc>
+    <loc>https://www.oomkill.com/performance-command/</loc>
     
     <lastmod>2023-03-22T23:00:36+08:00</lastmod>
     
@@ -1092,7 +1108,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/2022/debian-update-kernel/</loc>
+    <loc>https://www.oomkill.com/debian-update-kernel/</loc>
     
     <lastmod>2023-03-22T23:00:36+08:00</lastmod>
     
@@ -1102,7 +1118,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/2022/kubernetes-pod-qos/</loc>
+    <loc>https://www.oomkill.com/kubernetes-pod-qos/</loc>
     
     <lastmod>2023-03-22T23:00:36+08:00</lastmod>
     
@@ -1112,7 +1128,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/2022/kubernetes-eviction/</loc>
+    <loc>https://www.oomkill.com/kubernetes-eviction/</loc>
     
     <lastmod>2022-11-29T23:00:36+08:00</lastmod>
     
@@ -1122,7 +1138,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/2022/ch34-auditing/</loc>
+    <loc>https://www.oomkill.com/ch34-auditing/</loc>
     
     
   </url>
@@ -1130,17 +1146,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/2022/ch32-authorization/</loc>
-    
-    
-  </url>
-  
-  
-  
-  
-  
-  <url>
-    <loc>https://www.oomkill.com/2022/ch31-authentication/</loc>
+    <loc>https://www.oomkill.com/ch32-authorization/</loc>
     
     
   </url>
@@ -1150,7 +1156,17 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/2022/ch11-sssd/</loc>
+    <loc>https://www.oomkill.com/ch31-authentication/</loc>
+    
+    
+  </url>
+  
+  
+  
+  
+  
+  <url>
+    <loc>https://www.oomkill.com/ch11-sssd/</loc>
     
     <lastmod>2022-11-28T23:00:36+08:00</lastmod>
     
@@ -1160,7 +1176,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/2022/ipset-preformance/</loc>
+    <loc>https://www.oomkill.com/ipset-preformance/</loc>
     
     <lastmod>2023-03-22T23:00:36+08:00</lastmod>
     
@@ -1170,7 +1186,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/2022/network-stack/</loc>
+    <loc>https://www.oomkill.com/network-stack/</loc>
     
     <lastmod>2023-03-22T23:00:36+08:00</lastmod>
     
@@ -1180,19 +1196,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/2022/network-unit-in-osi/</loc>
-    
-    <lastmod>2023-03-22T23:00:36+08:00</lastmod>
-    
-    
-  </url>
-  
-  
-  
-  
-  
-  <url>
-    <loc>https://www.oomkill.com/2022/what-is-ebpf/</loc>
+    <loc>https://www.oomkill.com/network-unit-in-osi/</loc>
     
     <lastmod>2023-03-22T23:00:36+08:00</lastmod>
     
@@ -1204,71 +1208,9 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/2022/ch0-ide/</loc>
+    <loc>https://www.oomkill.com/what-is-ebpf/</loc>
     
-    
-  </url>
-  
-  
-  
-  <url>
-    <loc>https://www.oomkill.com/2022/ch01-parmeter-and-data-structrue/</loc>
-    
-    
-  </url>
-  
-  
-  
-  <url>
-    <loc>https://www.oomkill.com/2022/ch02-control-statements-and-format/</loc>
-    
-    
-  </url>
-  
-  
-  
-  <url>
-    <loc>https://www.oomkill.com/2022/ch03-array/</loc>
-    
-    
-  </url>
-  
-  
-  
-  <url>
-    <loc>https://www.oomkill.com/2022/ch04-function/</loc>
-    
-    
-  </url>
-  
-  
-  
-  <url>
-    <loc>https://www.oomkill.com/2022/ch05-pointer/</loc>
-    
-    
-  </url>
-  
-  
-  
-  <url>
-    <loc>https://www.oomkill.com/2022/ch06-memory-layout/</loc>
-    
-    
-  </url>
-  
-  
-  
-  <url>
-    <loc>https://www.oomkill.com/2022/ch07-composite-type/</loc>
-    
-    
-  </url>
-  
-  
-  
-  <url>
-    <loc>https://www.oomkill.com/2022/ch08-file-handling/</loc>
+    <lastmod>2023-03-22T23:00:36+08:00</lastmod>
     
     
   </url>
@@ -1278,7 +1220,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/2022/ch10-token-bucket-algorithm/</loc>
+    <loc>https://www.oomkill.com/ch0-ide/</loc>
     
     
   </url>
@@ -1286,7 +1228,81 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/2022/pod-network-troubleshooting/</loc>
+    <loc>https://www.oomkill.com/ch01-parmeter-and-data-structrue/</loc>
+    
+    
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://www.oomkill.com/ch02-control-statements-and-format/</loc>
+    
+    
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://www.oomkill.com/ch03-array/</loc>
+    
+    
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://www.oomkill.com/ch04-function/</loc>
+    
+    
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://www.oomkill.com/ch05-pointer/</loc>
+    
+    
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://www.oomkill.com/ch06-memory-layout/</loc>
+    
+    
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://www.oomkill.com/ch07-composite-type/</loc>
+    
+    
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://www.oomkill.com/ch08-file-handling/</loc>
+    
+    
+  </url>
+  
+  
+  
+  
+  
+  <url>
+    <loc>https://www.oomkill.com/ch10-token-bucket-algorithm/</loc>
+    
+    
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://www.oomkill.com/pod-network-troubleshooting/</loc>
     
     <lastmod>2023-03-22T23:00:36+08:00</lastmod>
     
@@ -1296,7 +1312,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/2022/kubernetes-network-model-part1/</loc>
+    <loc>https://www.oomkill.com/kubernetes-network-model-part1/</loc>
     
     <lastmod>2023-03-22T23:00:36+08:00</lastmod>
     
@@ -1306,7 +1322,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/2022/ch22-custom-scheduler/</loc>
+    <loc>https://www.oomkill.com/ch22-custom-scheduler/</loc>
     
     <lastmod>2022-11-28T23:00:36+08:00</lastmod>
     
@@ -1316,7 +1332,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/2022/ch21-scheduling-algorithm/</loc>
+    <loc>https://www.oomkill.com/ch21-scheduling-algorithm/</loc>
     
     
   </url>
@@ -1324,7 +1340,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/2022/ch20-schedule-workflow/</loc>
+    <loc>https://www.oomkill.com/ch20-schedule-workflow/</loc>
     
     
   </url>
@@ -1332,7 +1348,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/2022/ch16-scheduler/</loc>
+    <loc>https://www.oomkill.com/ch16-scheduler/</loc>
     
     
   </url>
@@ -1340,7 +1356,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/2022/ch33-admission-webhook/</loc>
+    <loc>https://www.oomkill.com/ch33-admission-webhook/</loc>
     
     
   </url>
@@ -1348,7 +1364,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/2022/visio-custom-icon/</loc>
+    <loc>https://www.oomkill.com/visio-custom-icon/</loc>
     
     
   </url>
@@ -1356,7 +1372,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/2022/opentracing-nginx/</loc>
+    <loc>https://www.oomkill.com/opentracing-nginx/</loc>
     
     <lastmod>2023-03-22T23:00:36+08:00</lastmod>
     
@@ -1366,7 +1382,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/2022/ch28-leader-election-eg/</loc>
+    <loc>https://www.oomkill.com/ch28-leader-election-eg/</loc>
     
     
   </url>
@@ -1374,7 +1390,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/2022/ch27-leader-election/</loc>
+    <loc>https://www.oomkill.com/ch27-leader-election/</loc>
     
     <lastmod>2023-03-18T23:00:36+08:00</lastmod>
     
@@ -1384,7 +1400,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/2022/ch15-controller-runtime/</loc>
+    <loc>https://www.oomkill.com/ch15-controller-runtime/</loc>
     
     <lastmod>2023-03-18T23:00:36+08:00</lastmod>
     
@@ -1394,7 +1410,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/2022/ch04-apiserver-aggregation/</loc>
+    <loc>https://www.oomkill.com/ch04-apiserver-aggregation/</loc>
     
     <lastmod>2023-03-22T23:00:36+08:00</lastmod>
     
@@ -1404,7 +1420,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/2022/ch14-code-generator/</loc>
+    <loc>https://www.oomkill.com/ch14-code-generator/</loc>
     
     
   </url>
@@ -1412,7 +1428,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/2022/ch12-controller/</loc>
+    <loc>https://www.oomkill.com/ch12-controller/</loc>
     
     
   </url>
@@ -1420,7 +1436,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/2022/ch13-crd/</loc>
+    <loc>https://www.oomkill.com/ch13-crd/</loc>
     
     
   </url>
@@ -1428,7 +1444,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/2022/osi-network-basics/</loc>
+    <loc>https://www.oomkill.com/osi-network-basics/</loc>
     
     <lastmod>2023-03-22T23:00:36+08:00</lastmod>
     
@@ -1438,7 +1454,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/2022/ch09-queue/</loc>
+    <loc>https://www.oomkill.com/ch09-queue/</loc>
     
     <lastmod>2023-03-18T23:00:36+08:00</lastmod>
     
@@ -1450,7 +1466,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/2022/knn/</loc>
+    <loc>https://www.oomkill.com/knn/</loc>
     
     <lastmod>2023-03-22T23:00:36+08:00</lastmod>
     
@@ -1462,7 +1478,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/2022/decision-boundary/</loc>
+    <loc>https://www.oomkill.com/decision-boundary/</loc>
     
     <lastmod>2023-03-22T23:00:36+08:00</lastmod>
     
@@ -1472,7 +1488,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/2022/decision-tree/</loc>
+    <loc>https://www.oomkill.com/decision-tree/</loc>
     
     <lastmod>2023-03-22T23:00:36+08:00</lastmod>
     
@@ -1482,7 +1498,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/2022/logistic-regression/</loc>
+    <loc>https://www.oomkill.com/logistic-regression/</loc>
     
     <lastmod>2023-03-22T23:00:36+08:00</lastmod>
     
@@ -1492,7 +1508,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/2022/naive-bayes/</loc>
+    <loc>https://www.oomkill.com/naive-bayes/</loc>
     
     <lastmod>2023-03-22T23:00:36+08:00</lastmod>
     
@@ -1502,7 +1518,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/2022/debian11-install-tutorial/</loc>
+    <loc>https://www.oomkill.com/debian11-install-tutorial/</loc>
     
     <lastmod>2023-03-22T23:00:36+08:00</lastmod>
     
@@ -1512,7 +1528,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/2022/ch08-informer/</loc>
+    <loc>https://www.oomkill.com/ch08-informer/</loc>
     
     <lastmod>2023-03-18T23:00:36+08:00</lastmod>
     
@@ -1522,7 +1538,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/2022/ch06-client-go/</loc>
+    <loc>https://www.oomkill.com/ch06-client-go/</loc>
     
     <lastmod>2023-03-18T23:00:36+08:00</lastmod>
     
@@ -1532,7 +1548,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/2022/h3c-hcl-preparation/</loc>
+    <loc>https://www.oomkill.com/h3c-hcl-preparation/</loc>
     
     
   </url>
@@ -1540,7 +1556,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/2022/google-interpretation/</loc>
+    <loc>https://www.oomkill.com/google-interpretation/</loc>
     
     
   </url>
@@ -1548,7 +1564,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/2022/ch11-code-compile/</loc>
+    <loc>https://www.oomkill.com/ch11-code-compile/</loc>
     
     <lastmod>2022-12-01T23:00:36+08:00</lastmod>
     
@@ -1558,7 +1574,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/2022/ch02-kubernetes-api/</loc>
+    <loc>https://www.oomkill.com/ch02-kubernetes-api/</loc>
     
     <lastmod>2023-03-22T23:00:36+08:00</lastmod>
     
@@ -1568,7 +1584,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/2022/ch12-ipc/</loc>
+    <loc>https://www.oomkill.com/ch12-ipc/</loc>
     
     <lastmod>2023-03-22T23:00:36+08:00</lastmod>
     
@@ -1578,7 +1594,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/2022/ch13-file-system/</loc>
+    <loc>https://www.oomkill.com/ch13-file-system/</loc>
     
     <lastmod>2023-03-22T23:00:36+08:00</lastmod>
     
@@ -1590,7 +1606,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/2022/ch11-deadlock/</loc>
+    <loc>https://www.oomkill.com/ch11-deadlock/</loc>
     
     <lastmod>2023-03-22T23:00:36+08:00</lastmod>
     
@@ -1600,7 +1616,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/2022/ch10-semaphore-and-monitors/</loc>
+    <loc>https://www.oomkill.com/ch10-semaphore-and-monitors/</loc>
     
     <lastmod>2023-03-22T23:00:36+08:00</lastmod>
     
@@ -1610,7 +1626,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/2022/ch8-cpu-scheduling-algorithms/</loc>
+    <loc>https://www.oomkill.com/ch8-cpu-scheduling-algorithms/</loc>
     
     <lastmod>2023-03-22T23:00:36+08:00</lastmod>
     
@@ -1620,7 +1636,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/2022/ch9-synchronization/</loc>
+    <loc>https://www.oomkill.com/ch9-synchronization/</loc>
     
     <lastmod>2023-03-22T23:00:36+08:00</lastmod>
     
@@ -1630,7 +1646,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/2022/ch7-process-management/</loc>
+    <loc>https://www.oomkill.com/ch7-process-management/</loc>
     
     <lastmod>2023-03-22T23:00:36+08:00</lastmod>
     
@@ -1640,7 +1656,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/2022/ch6-page-replacement-algorithms/</loc>
+    <loc>https://www.oomkill.com/ch6-page-replacement-algorithms/</loc>
     
     <lastmod>2023-03-22T23:00:36+08:00</lastmod>
     
@@ -1650,7 +1666,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/2022/ch5-virtual-memory/</loc>
+    <loc>https://www.oomkill.com/ch5-virtual-memory/</loc>
     
     <lastmod>2023-03-22T23:00:36+08:00</lastmod>
     
@@ -1660,7 +1676,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/2022/ch4-non-contiguous-memory-allocation/</loc>
+    <loc>https://www.oomkill.com/ch4-non-contiguous-memory-allocation/</loc>
     
     <lastmod>2023-03-22T23:00:36+08:00</lastmod>
     
@@ -1670,7 +1686,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/2022/ch3-contiguous-memory-allocation/</loc>
+    <loc>https://www.oomkill.com/ch3-contiguous-memory-allocation/</loc>
     
     <lastmod>2023-03-22T23:00:36+08:00</lastmod>
     
@@ -1680,7 +1696,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/2022/wsl-problem-with-windows-terminal/</loc>
+    <loc>https://www.oomkill.com/wsl-problem-with-windows-terminal/</loc>
     
     
   </url>
@@ -1688,7 +1704,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/2022/golib-gocolly/</loc>
+    <loc>https://www.oomkill.com/golib-gocolly/</loc>
     
     
   </url>
@@ -1696,7 +1712,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/2021/grafana-8.0/</loc>
+    <loc>https://www.oomkill.com/grafana-8.0/</loc>
     
     <lastmod>2023-03-22T23:00:36+08:00</lastmod>
     
@@ -1706,7 +1722,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/2021/ch05-listwatch-mechanism/</loc>
+    <loc>https://www.oomkill.com/ch05-listwatch-mechanism/</loc>
     
     <lastmod>2023-03-22T23:00:36+08:00</lastmod>
     
@@ -1716,7 +1732,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/2021/ch03-kubernetes-schema/</loc>
+    <loc>https://www.oomkill.com/ch03-kubernetes-schema/</loc>
     
     <lastmod>2023-03-22T23:00:36+08:00</lastmod>
     
@@ -1726,7 +1742,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/2021/ch01-k8s-perpare/</loc>
+    <loc>https://www.oomkill.com/ch01-k8s-perpare/</loc>
     
     <lastmod>2022-12-20T23:00:36+08:00</lastmod>
     
@@ -1736,7 +1752,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/2021/what-is-dbus/</loc>
+    <loc>https://www.oomkill.com/what-is-dbus/</loc>
     
     <lastmod>2024-08-23T23:00:36+08:00</lastmod>
     
@@ -1746,7 +1762,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/2021/firewalld-dbus-interface/</loc>
+    <loc>https://www.oomkill.com/firewalld-dbus-interface/</loc>
     
     <lastmod>2023-03-22T23:00:36+08:00</lastmod>
     
@@ -1756,7 +1772,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/2021/dbus-data-structure/</loc>
+    <loc>https://www.oomkill.com/dbus-data-structure/</loc>
     
     <lastmod>2023-09-17T23:00:36+08:00</lastmod>
     
@@ -1766,7 +1782,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/2021/c-complie-record/</loc>
+    <loc>https://www.oomkill.com/c-complie-record/</loc>
     
     
   </url>
@@ -1776,7 +1792,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/2021/elasticsearch-mapping/</loc>
+    <loc>https://www.oomkill.com/elasticsearch-mapping/</loc>
     
     <lastmod>2023-03-22T23:00:36+08:00</lastmod>
     
@@ -1786,7 +1802,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/2021/golib-deepcopier/</loc>
+    <loc>https://www.oomkill.com/golib-deepcopier/</loc>
     
     <lastmod>2022-12-14T23:00:36+08:00</lastmod>
     
@@ -1796,7 +1812,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/2021/awesome-bash-shell/</loc>
+    <loc>https://www.oomkill.com/awesome-bash-shell/</loc>
     
     <lastmod>2025-01-19T23:00:36+08:00</lastmod>
     
@@ -1806,7 +1822,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/2021/account-locked-due-to-10-failed-logins/</loc>
+    <loc>https://www.oomkill.com/account-locked-due-to-10-failed-logins/</loc>
     
     <lastmod>2022-12-14T23:00:36+08:00</lastmod>
     
@@ -1816,7 +1832,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/2021/go-mod-specification/</loc>
+    <loc>https://www.oomkill.com/go-mod-specification/</loc>
     
     
   </url>
@@ -1824,7 +1840,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/2021/dbus-client-tutorial/</loc>
+    <loc>https://www.oomkill.com/dbus-client-tutorial/</loc>
     
     <lastmod>2023-03-22T23:00:36+08:00</lastmod>
     
@@ -1836,7 +1852,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/2021/python-django-restframework-view-set/</loc>
+    <loc>https://www.oomkill.com/python-django-restframework-view-set/</loc>
     
     
   </url>
@@ -1844,7 +1860,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/2021/python-django-restframework-serializers/</loc>
+    <loc>https://www.oomkill.com/python-django-restframework-serializers/</loc>
     
     
   </url>
@@ -1852,7 +1868,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/2021/python-django/</loc>
+    <loc>https://www.oomkill.com/python-django/</loc>
     
     
   </url>
@@ -1860,7 +1876,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/2021/django-orm/</loc>
+    <loc>https://www.oomkill.com/django-orm/</loc>
     
     
   </url>
@@ -1868,7 +1884,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/2021/mysql5.6-innodb_large_prefix-abnormal/</loc>
+    <loc>https://www.oomkill.com/mysql5.6-innodb_large_prefix-abnormal/</loc>
     
     
   </url>
@@ -1876,7 +1892,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/2021/pipe-size-problem/</loc>
+    <loc>https://www.oomkill.com/pipe-size-problem/</loc>
     
     
   </url>
@@ -1884,7 +1900,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/2021/interview-go/</loc>
+    <loc>https://www.oomkill.com/interview-go/</loc>
     
     <lastmod>2023-03-18T23:00:36+08:00</lastmod>
     
@@ -1896,7 +1912,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/2021/interview-kubernetes/</loc>
+    <loc>https://www.oomkill.com/interview-kubernetes/</loc>
     
     <lastmod>2023-03-18T23:00:36+08:00</lastmod>
     
@@ -1906,7 +1922,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/2021/interview-linux/</loc>
+    <loc>https://www.oomkill.com/interview-linux/</loc>
     
     <lastmod>2023-03-18T23:00:36+08:00</lastmod>
     
@@ -1916,7 +1932,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/2021/interview-monitor/</loc>
+    <loc>https://www.oomkill.com/interview-monitor/</loc>
     
     <lastmod>2023-03-18T23:00:36+08:00</lastmod>
     
@@ -1926,7 +1942,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/2021/interview-network/</loc>
+    <loc>https://www.oomkill.com/interview-network/</loc>
     
     <lastmod>2025-02-28T23:00:36+08:00</lastmod>
     
@@ -1936,7 +1952,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/2021/interview-om/</loc>
+    <loc>https://www.oomkill.com/interview-om/</loc>
     
     <lastmod>2023-03-18T23:00:36+08:00</lastmod>
     
@@ -1946,7 +1962,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/2021/wsl-share-to-win/</loc>
+    <loc>https://www.oomkill.com/wsl-share-to-win/</loc>
     
     
   </url>
@@ -1954,7 +1970,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/2021/recursive-replication-with-dos/</loc>
+    <loc>https://www.oomkill.com/recursive-replication-with-dos/</loc>
     
     
   </url>
@@ -1962,7 +1978,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/2021/python-venv/</loc>
+    <loc>https://www.oomkill.com/python-venv/</loc>
     
     
   </url>
@@ -1970,7 +1986,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/2021/awesome-awk-command/</loc>
+    <loc>https://www.oomkill.com/awesome-awk-command/</loc>
     
     <lastmod>2025-01-19T23:00:36+08:00</lastmod>
     
@@ -1980,7 +1996,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/2021/understand-hole-punchine-mechnism/</loc>
+    <loc>https://www.oomkill.com/understand-hole-punchine-mechnism/</loc>
     
     <lastmod>2023-03-22T23:00:36+08:00</lastmod>
     
@@ -1990,7 +2006,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/2021/python-signal-handle/</loc>
+    <loc>https://www.oomkill.com/python-signal-handle/</loc>
     
     
   </url>
@@ -1998,7 +2014,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/2021/mac-mysqlapi/</loc>
+    <loc>https://www.oomkill.com/mac-mysqlapi/</loc>
     
     
   </url>
@@ -2006,7 +2022,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/2021/vmvaretool/</loc>
+    <loc>https://www.oomkill.com/vmvaretool/</loc>
     
     
   </url>
@@ -2016,7 +2032,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/2021/calico-network-policy/</loc>
+    <loc>https://www.oomkill.com/calico-network-policy/</loc>
     
     <lastmod>2023-03-22T23:00:36+08:00</lastmod>
     
@@ -2026,7 +2042,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/2021/calico-deploy-on-hybrid-cloud/</loc>
+    <loc>https://www.oomkill.com/calico-deploy-on-hybrid-cloud/</loc>
     
     <lastmod>2023-03-22T23:00:36+08:00</lastmod>
     
@@ -2036,7 +2052,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/2021/linux-1692540024/</loc>
+    <loc>https://www.oomkill.com/linux-1692540024/</loc>
     
     <lastmod>2023-03-22T23:00:36+08:00</lastmod>
     
@@ -2046,7 +2062,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/2021/pass-base-dashboard-k8s/</loc>
+    <loc>https://www.oomkill.com/pass-base-dashboard-k8s/</loc>
     
     <lastmod>2023-03-22T23:00:36+08:00</lastmod>
     
@@ -2056,7 +2072,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/2021/arp-proxy-and-arp/</loc>
+    <loc>https://www.oomkill.com/arp-proxy-and-arp/</loc>
     
     <lastmod>2023-03-22T23:00:36+08:00</lastmod>
     
@@ -2066,7 +2082,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/2021/dynamic-routing-bgp/</loc>
+    <loc>https://www.oomkill.com/dynamic-routing-bgp/</loc>
     
     <lastmod>2023-03-22T23:00:36+08:00</lastmod>
     
@@ -2076,7 +2092,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/2021/calico-network-cni/</loc>
+    <loc>https://www.oomkill.com/calico-network-cni/</loc>
     
     <lastmod>2023-03-22T23:00:36+08:00</lastmod>
     
@@ -2086,7 +2102,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/2021/static-routing/</loc>
+    <loc>https://www.oomkill.com/static-routing/</loc>
     
     <lastmod>2023-03-22T23:00:36+08:00</lastmod>
     
@@ -2096,7 +2112,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/2021/virtual-networking/</loc>
+    <loc>https://www.oomkill.com/virtual-networking/</loc>
     
     <lastmod>2025-02-22T23:00:36+08:00</lastmod>
     
@@ -2106,7 +2122,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/2021/ensp-calico-bgp/</loc>
+    <loc>https://www.oomkill.com/ensp-calico-bgp/</loc>
     
     <lastmod>2023-03-22T23:00:36+08:00</lastmod>
     
@@ -2116,7 +2132,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/2021/network-tunnel-technology/</loc>
+    <loc>https://www.oomkill.com/network-tunnel-technology/</loc>
     
     <lastmod>2023-04-02T23:00:36+08:00</lastmod>
     
@@ -2126,7 +2142,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/2021/linux-network-command/</loc>
+    <loc>https://www.oomkill.com/linux-network-command/</loc>
     
     <lastmod>2025-01-09T23:00:36+08:00</lastmod>
     
@@ -2136,7 +2152,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/2021/istio-sidecar-mechnisim/</loc>
+    <loc>https://www.oomkill.com/istio-sidecar-mechnisim/</loc>
     
     <lastmod>2023-03-22T23:00:36+08:00</lastmod>
     
@@ -2148,7 +2164,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/2021/istio-deployment-qa/</loc>
+    <loc>https://www.oomkill.com/istio-deployment-qa/</loc>
     
     <lastmod>2023-03-22T23:00:36+08:00</lastmod>
     
@@ -2158,7 +2174,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/2021/dynamic-routing-ospf/</loc>
+    <loc>https://www.oomkill.com/dynamic-routing-ospf/</loc>
     
     <lastmod>2023-03-22T23:00:36+08:00</lastmod>
     
@@ -2168,7 +2184,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/2021/netspace/</loc>
+    <loc>https://www.oomkill.com/netspace/</loc>
     
     <lastmod>2023-03-22T23:00:36+08:00</lastmod>
     
@@ -2178,7 +2194,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/2021/experiment-vlan/</loc>
+    <loc>https://www.oomkill.com/experiment-vlan/</loc>
     
     <lastmod>2023-03-22T23:00:36+08:00</lastmod>
     
@@ -2188,7 +2204,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/2021/experiment-vxlan/</loc>
+    <loc>https://www.oomkill.com/experiment-vxlan/</loc>
     
     <lastmod>2023-03-22T23:00:36+08:00</lastmod>
     
@@ -2198,7 +2214,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/2020/istio-introduction/</loc>
+    <loc>https://www.oomkill.com/istio-introduction/</loc>
     
     <lastmod>2023-03-22T23:00:36+08:00</lastmod>
     
@@ -2208,7 +2224,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/2020/go-vendor-file-in-goland/</loc>
+    <loc>https://www.oomkill.com/go-vendor-file-in-goland/</loc>
     
     
   </url>
@@ -2216,7 +2232,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/2020/hisense-a6l-gms-install/</loc>
+    <loc>https://www.oomkill.com/hisense-a6l-gms-install/</loc>
     
     
   </url>
@@ -2224,7 +2240,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/2020/systemd-output/</loc>
+    <loc>https://www.oomkill.com/systemd-output/</loc>
     
     <lastmod>2023-03-22T23:00:36+08:00</lastmod>
     
@@ -2234,7 +2250,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/2020/awesome-git-command/</loc>
+    <loc>https://www.oomkill.com/awesome-git-command/</loc>
     
     <lastmod>2023-03-18T23:00:36+08:00</lastmod>
     
@@ -2244,7 +2260,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/2020/linux-subsystem-in-win10/</loc>
+    <loc>https://www.oomkill.com/linux-subsystem-in-win10/</loc>
     
     
   </url>
@@ -2252,7 +2268,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/2020/hash-function/</loc>
+    <loc>https://www.oomkill.com/hash-function/</loc>
     
     <lastmod>2023-03-22T23:00:36+08:00</lastmod>
     
@@ -2262,7 +2278,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/2020/digital-signature/</loc>
+    <loc>https://www.oomkill.com/digital-signature/</loc>
     
     <lastmod>2023-03-22T23:00:36+08:00</lastmod>
     
@@ -2272,7 +2288,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/2020/prometheus-operator/</loc>
+    <loc>https://www.oomkill.com/prometheus-operator/</loc>
     
     
   </url>
@@ -2280,7 +2296,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/2020/asymmetric/</loc>
+    <loc>https://www.oomkill.com/asymmetric/</loc>
     
     <lastmod>2023-03-22T23:00:36+08:00</lastmod>
     
@@ -2290,7 +2306,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/2020/symmetric/</loc>
+    <loc>https://www.oomkill.com/symmetric/</loc>
     
     <lastmod>2023-03-22T23:00:36+08:00</lastmod>
     
@@ -2300,7 +2316,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/2020/postgresql-docker-setup/</loc>
+    <loc>https://www.oomkill.com/postgresql-docker-setup/</loc>
     
     <lastmod>2023-10-05T23:00:36+08:00</lastmod>
     
@@ -2310,7 +2326,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/2020/traefik-on-physical/</loc>
+    <loc>https://www.oomkill.com/traefik-on-physical/</loc>
     
     <lastmod>2023-06-18T23:00:36+08:00</lastmod>
     
@@ -2320,7 +2336,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/2020/windows10-install-docker/</loc>
+    <loc>https://www.oomkill.com/windows10-install-docker/</loc>
     
     <lastmod>2023-03-22T23:00:36+08:00</lastmod>
     
@@ -2332,7 +2348,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/2020/zimbra-troubleshooing/</loc>
+    <loc>https://www.oomkill.com/zimbra-troubleshooing/</loc>
     
     
   </url>
@@ -2340,7 +2356,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/2020/envoy-mutual-tls/</loc>
+    <loc>https://www.oomkill.com/envoy-mutual-tls/</loc>
     
     
   </url>
@@ -2348,7 +2364,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/2020/centos7-dbus-troubleshooting/</loc>
+    <loc>https://www.oomkill.com/centos7-dbus-troubleshooting/</loc>
     
     <lastmod>2023-03-22T23:00:36+08:00</lastmod>
     
@@ -2358,7 +2374,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/2020/envoy-access-log/</loc>
+    <loc>https://www.oomkill.com/envoy-access-log/</loc>
     
     
   </url>
@@ -2366,7 +2382,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/2020/envoy-real-ip/</loc>
+    <loc>https://www.oomkill.com/envoy-real-ip/</loc>
     
     
   </url>
@@ -2374,7 +2390,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/2020/alpine-trouble-q-and-a/</loc>
+    <loc>https://www.oomkill.com/alpine-trouble-q-and-a/</loc>
     
     
   </url>
@@ -2382,7 +2398,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/2020/centos-configration/</loc>
+    <loc>https://www.oomkill.com/centos-configration/</loc>
     
     <lastmod>2022-12-15T23:10:36+08:00</lastmod>
     
@@ -2392,7 +2408,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/2020/outlier-detection/</loc>
+    <loc>https://www.oomkill.com/outlier-detection/</loc>
     
     
   </url>
@@ -2400,7 +2416,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/2020/initiative-health-check/</loc>
+    <loc>https://www.oomkill.com/initiative-health-check/</loc>
     
     
   </url>
@@ -2408,7 +2424,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/2020/envoy-v3-api-tls/</loc>
+    <loc>https://www.oomkill.com/envoy-v3-api-tls/</loc>
     
     
   </url>
@@ -2416,7 +2432,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/2020/envoy-example-failed/</loc>
+    <loc>https://www.oomkill.com/envoy-example-failed/</loc>
     
     
   </url>
@@ -2424,7 +2440,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/2020/envoy-tls-configuration/</loc>
+    <loc>https://www.oomkill.com/envoy-tls-configuration/</loc>
     
     
   </url>
@@ -2432,7 +2448,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/2020/envoy-deployment/</loc>
+    <loc>https://www.oomkill.com/envoy-deployment/</loc>
     
     
   </url>
@@ -2440,7 +2456,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/2020/envoy-administartion/</loc>
+    <loc>https://www.oomkill.com/envoy-administartion/</loc>
     
     
   </url>
@@ -2448,7 +2464,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/2020/envoy-fundamental/</loc>
+    <loc>https://www.oomkill.com/envoy-fundamental/</loc>
     
     
   </url>
@@ -2456,7 +2472,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/2020/envoy-health-check/</loc>
+    <loc>https://www.oomkill.com/envoy-health-check/</loc>
     
     
   </url>
@@ -2464,7 +2480,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/2020/envoy-traffic-management/</loc>
+    <loc>https://www.oomkill.com/envoy-traffic-management/</loc>
     
     
   </url>
@@ -2472,7 +2488,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/2020/envoy-router-management/</loc>
+    <loc>https://www.oomkill.com/envoy-router-management/</loc>
     
     
   </url>
@@ -2480,7 +2496,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/2020/service-mesh-security/</loc>
+    <loc>https://www.oomkill.com/service-mesh-security/</loc>
     
     
   </url>
@@ -2488,7 +2504,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/2020/istio-install/</loc>
+    <loc>https://www.oomkill.com/istio-install/</loc>
     
     <lastmod>2023-03-22T23:00:36+08:00</lastmod>
     
@@ -2498,7 +2514,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/2020/istio-cli/</loc>
+    <loc>https://www.oomkill.com/istio-cli/</loc>
     
     <lastmod>2023-03-22T23:00:36+08:00</lastmod>
     
@@ -2508,7 +2524,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/2020/openssl-x509/</loc>
+    <loc>https://www.oomkill.com/openssl-x509/</loc>
     
     <lastmod>2023-03-22T23:00:36+08:00</lastmod>
     
@@ -2518,7 +2534,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/2020/ciper-script/</loc>
+    <loc>https://www.oomkill.com/ciper-script/</loc>
     
     
   </url>
@@ -2526,7 +2542,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/2020/powershell-confirm/</loc>
+    <loc>https://www.oomkill.com/powershell-confirm/</loc>
     
     
   </url>
@@ -2534,7 +2550,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/2020/dns/</loc>
+    <loc>https://www.oomkill.com/dns/</loc>
     
     <lastmod>2022-12-15T23:10:36+08:00</lastmod>
     
@@ -2544,7 +2560,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/2020/zimbra-install-buisness-cert/</loc>
+    <loc>https://www.oomkill.com/zimbra-install-buisness-cert/</loc>
     
     
   </url>
@@ -2552,7 +2568,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/2020/zimbra-enable-smtp-authentication/</loc>
+    <loc>https://www.oomkill.com/zimbra-enable-smtp-authentication/</loc>
     
     
   </url>
@@ -2560,7 +2576,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/2019/zimbra-ldap-createaccount/</loc>
+    <loc>https://www.oomkill.com/zimbra-ldap-createaccount/</loc>
     
     
   </url>
@@ -2568,7 +2584,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/2019/helm/</loc>
+    <loc>https://www.oomkill.com/helm/</loc>
     
     <lastmod>2023-05-31T23:00:36+08:00</lastmod>
     
@@ -2578,7 +2594,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/2019/02-2-install-ceph-with-ceph-deploy/</loc>
+    <loc>https://www.oomkill.com/02-2-install-ceph-with-ceph-deploy/</loc>
     
     <lastmod>2023-09-10T23:10:36+08:00</lastmod>
     
@@ -2588,7 +2604,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/2019/ch1-introduction/</loc>
+    <loc>https://www.oomkill.com/ch1-introduction/</loc>
     
     <lastmod>2023-03-22T23:10:36+08:00</lastmod>
     
@@ -2598,7 +2614,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/2019/ch2-install-and-configuration/</loc>
+    <loc>https://www.oomkill.com/ch2-install-and-configuration/</loc>
     
     <lastmod>2023-03-22T23:10:36+08:00</lastmod>
     
@@ -2608,7 +2624,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/2019/ch3-high-availability/</loc>
+    <loc>https://www.oomkill.com/ch3-high-availability/</loc>
     
     <lastmod>2023-07-22T23:10:36+08:00</lastmod>
     
@@ -2618,7 +2634,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/2019/ch4-authentication/</loc>
+    <loc>https://www.oomkill.com/ch4-authentication/</loc>
     
     <lastmod>2023-03-22T23:10:36+08:00</lastmod>
     
@@ -2630,7 +2646,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/2019/traefik-ingresscontroller/</loc>
+    <loc>https://www.oomkill.com/traefik-ingresscontroller/</loc>
     
     <lastmod>2022-12-02T23:00:36+08:00</lastmod>
     
@@ -2640,7 +2656,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/2019/centos-install-powershellpowercli/</loc>
+    <loc>https://www.oomkill.com/centos-install-powershellpowercli/</loc>
     
     
   </url>
@@ -2648,7 +2664,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/2019/go-mod/</loc>
+    <loc>https://www.oomkill.com/go-mod/</loc>
     
     
   </url>
@@ -2656,7 +2672,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/2019/go-net/</loc>
+    <loc>https://www.oomkill.com/go-net/</loc>
     
     <lastmod>2022-12-20T23:00:36+08:00</lastmod>
     
@@ -2666,7 +2682,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/2019/go-tcp-in-go/</loc>
+    <loc>https://www.oomkill.com/go-tcp-in-go/</loc>
     
     
   </url>
@@ -2674,7 +2690,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/2019/go-function/</loc>
+    <loc>https://www.oomkill.com/go-function/</loc>
     
     
   </url>
@@ -2682,7 +2698,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/2019/go-datastruct/</loc>
+    <loc>https://www.oomkill.com/go-datastruct/</loc>
     
     
   </url>
@@ -2690,7 +2706,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/2019/go-arithmetic/</loc>
+    <loc>https://www.oomkill.com/go-arithmetic/</loc>
     
     
   </url>
@@ -2698,7 +2714,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/2019/golib-timeformat/</loc>
+    <loc>https://www.oomkill.com/golib-timeformat/</loc>
     
     
   </url>
@@ -2706,7 +2722,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/2019/golib-gobus/</loc>
+    <loc>https://www.oomkill.com/golib-gobus/</loc>
     
     
   </url>
@@ -2714,7 +2730,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/2019/go-object/</loc>
+    <loc>https://www.oomkill.com/go-object/</loc>
     
     
   </url>
@@ -2722,7 +2738,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/2019/go-goroutine-security/</loc>
+    <loc>https://www.oomkill.com/go-goroutine-security/</loc>
     
     
   </url>
@@ -2730,7 +2746,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/2019/go-goroutine-communication/</loc>
+    <loc>https://www.oomkill.com/go-goroutine-communication/</loc>
     
     
   </url>
@@ -2738,7 +2754,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/2019/go-goroutine/</loc>
+    <loc>https://www.oomkill.com/go-goroutine/</loc>
     
     
   </url>
@@ -2746,7 +2762,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/2019/goskill-golang-type-convert/</loc>
+    <loc>https://www.oomkill.com/goskill-golang-type-convert/</loc>
     
     <lastmod>2023-01-07T23:00:36+08:00</lastmod>
     
@@ -2756,7 +2772,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/2019/go-signal/</loc>
+    <loc>https://www.oomkill.com/go-signal/</loc>
     
     
   </url>
@@ -2764,7 +2780,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/2019/jenkins-pipline-demo/</loc>
+    <loc>https://www.oomkill.com/jenkins-pipline-demo/</loc>
     
     <lastmod>2023-07-10T23:00:36+08:00</lastmod>
     
@@ -2774,7 +2790,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/2019/jenkins-user-authentication/</loc>
+    <loc>https://www.oomkill.com/jenkins-user-authentication/</loc>
     
     <lastmod>2023-07-10T23:00:36+08:00</lastmod>
     
@@ -2784,7 +2800,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/2019/jenkins-recode-history/</loc>
+    <loc>https://www.oomkill.com/jenkins-recode-history/</loc>
     
     <lastmod>2023-07-10T23:00:36+08:00</lastmod>
     
@@ -2794,7 +2810,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/2019/jenkens-migrant-in-macos/</loc>
+    <loc>https://www.oomkill.com/jenkens-migrant-in-macos/</loc>
     
     <lastmod>2023-07-10T23:00:36+08:00</lastmod>
     
@@ -2806,7 +2822,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/2019/lua-cjson/</loc>
+    <loc>https://www.oomkill.com/lua-cjson/</loc>
     
     
   </url>
@@ -2814,7 +2830,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/2019/lua-nginx-api/</loc>
+    <loc>https://www.oomkill.com/lua-nginx-api/</loc>
     
     
   </url>
@@ -2822,7 +2838,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/2019/lua-nginx-module/</loc>
+    <loc>https://www.oomkill.com/lua-nginx-module/</loc>
     
     
   </url>
@@ -2830,7 +2846,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/2019/powercli-the-ssl-connection-could-not-be-established-see-inner-exception/</loc>
+    <loc>https://www.oomkill.com/powercli-the-ssl-connection-could-not-be-established-see-inner-exception/</loc>
     
     
   </url>
@@ -2838,7 +2854,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/2019/powercli-vsphere-command/</loc>
+    <loc>https://www.oomkill.com/powercli-vsphere-command/</loc>
     
     
   </url>
@@ -2846,7 +2862,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/2019/powercli-vsphere-command/</loc>
+    <loc>https://www.oomkill.com/powercli-vsphere-command/</loc>
     
     
   </url>
@@ -2854,7 +2870,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/2019/zimbra-ssl/</loc>
+    <loc>https://www.oomkill.com/zimbra-ssl/</loc>
     
     
   </url>
@@ -2862,7 +2878,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/2019/zimbra-change-servername/</loc>
+    <loc>https://www.oomkill.com/zimbra-change-servername/</loc>
     
     
   </url>
@@ -2870,7 +2886,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/2019/zimbra-admin-script/</loc>
+    <loc>https://www.oomkill.com/zimbra-admin-script/</loc>
     
     
   </url>
@@ -2878,7 +2894,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/2019/goskill-process-id/</loc>
+    <loc>https://www.oomkill.com/goskill-process-id/</loc>
     
     
   </url>
@@ -2886,7 +2902,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/2019/goskill-x509-in-go/</loc>
+    <loc>https://www.oomkill.com/goskill-x509-in-go/</loc>
     
     
   </url>
@@ -2894,7 +2910,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/2019/go-tcp-hadshake/</loc>
+    <loc>https://www.oomkill.com/go-tcp-hadshake/</loc>
     
     
   </url>
@@ -2902,7 +2918,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/2019/go-regular-expression/</loc>
+    <loc>https://www.oomkill.com/go-regular-expression/</loc>
     
     
   </url>
@@ -2910,7 +2926,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/2019/03-1-acquaintance-rdb/</loc>
+    <loc>https://www.oomkill.com/03-1-acquaintance-rdb/</loc>
     
     <lastmod>2023-09-06T23:10:36+08:00</lastmod>
     
@@ -2920,7 +2936,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/2019/ch10-linux-with-ldap/</loc>
+    <loc>https://www.oomkill.com/ch10-linux-with-ldap/</loc>
     
     <lastmod>2022-11-28T23:00:36+08:00</lastmod>
     
@@ -2930,7 +2946,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/2019/ch9-openldap-configuration/</loc>
+    <loc>https://www.oomkill.com/ch9-openldap-configuration/</loc>
     
     <lastmod>2022-11-28T23:00:36+08:00</lastmod>
     
@@ -2940,7 +2956,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/2019/ch8-backup-and-restore/</loc>
+    <loc>https://www.oomkill.com/ch8-backup-and-restore/</loc>
     
     <lastmod>2022-11-28T23:00:36+08:00</lastmod>
     
@@ -2950,7 +2966,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/2019/ch7-acl/</loc>
+    <loc>https://www.oomkill.com/ch7-acl/</loc>
     
     <lastmod>2022-11-28T23:00:36+08:00</lastmod>
     
@@ -2960,7 +2976,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/2019/ch6-replication/</loc>
+    <loc>https://www.oomkill.com/ch6-replication/</loc>
     
     <lastmod>2022-11-28T23:00:36+08:00</lastmod>
     
@@ -2970,7 +2986,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/2019/ch05-openldap-ssl/</loc>
+    <loc>https://www.oomkill.com/ch05-openldap-ssl/</loc>
     
     <lastmod>2022-11-28T23:00:36+08:00</lastmod>
     
@@ -2980,7 +2996,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/2019/telegram-bot-send-post-json/</loc>
+    <loc>https://www.oomkill.com/telegram-bot-send-post-json/</loc>
     
     
   </url>
@@ -2988,7 +3004,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/2019/ch4-schema/</loc>
+    <loc>https://www.oomkill.com/ch4-schema/</loc>
     
     <lastmod>2022-11-28T23:00:36+08:00</lastmod>
     
@@ -2998,7 +3014,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/2019/ch3-commandline/</loc>
+    <loc>https://www.oomkill.com/ch3-commandline/</loc>
     
     <lastmod>2022-11-28T23:00:36+08:00</lastmod>
     
@@ -3008,7 +3024,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/2019/ch2-install/</loc>
+    <loc>https://www.oomkill.com/ch2-install/</loc>
     
     <lastmod>2022-11-28T23:00:36+08:00</lastmod>
     
@@ -3018,7 +3034,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/2019/ch1-understanding-ldap/</loc>
+    <loc>https://www.oomkill.com/ch1-understanding-ldap/</loc>
     
     <lastmod>2022-11-28T23:00:36+08:00</lastmod>
     
@@ -3028,7 +3044,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/2019/03-2-rbd-management/</loc>
+    <loc>https://www.oomkill.com/03-2-rbd-management/</loc>
     
     <lastmod>2023-09-07T23:10:36+08:00</lastmod>
     
@@ -3038,7 +3054,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/2019/05-1-rgw/</loc>
+    <loc>https://www.oomkill.com/05-1-rgw/</loc>
     
     <lastmod>2023-09-07T23:10:36+08:00</lastmod>
     
@@ -3048,7 +3064,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/2019/04-1-cephfs/</loc>
+    <loc>https://www.oomkill.com/04-1-cephfs/</loc>
     
     <lastmod>2023-09-07T23:10:36+08:00</lastmod>
     
@@ -3058,7 +3074,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/2019/prome-nginx-module-vts/</loc>
+    <loc>https://www.oomkill.com/prome-nginx-module-vts/</loc>
     
     
   </url>
@@ -3066,7 +3082,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/2019/07-1-cephx/</loc>
+    <loc>https://www.oomkill.com/07-1-cephx/</loc>
     
     <lastmod>2023-08-20T23:10:36+08:00</lastmod>
     
@@ -3076,7 +3092,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/2019/01-1-ceph-acquaintance/</loc>
+    <loc>https://www.oomkill.com/01-1-ceph-acquaintance/</loc>
     
     <lastmod>2023-08-20T23:10:36+08:00</lastmod>
     
@@ -3086,7 +3102,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/2019/08-1-ceph-crush/</loc>
+    <loc>https://www.oomkill.com/08-1-ceph-crush/</loc>
     
     <lastmod>2023-08-20T23:10:36+08:00</lastmod>
     
@@ -3096,7 +3112,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/2019/01-2-cloud-base/</loc>
+    <loc>https://www.oomkill.com/01-2-cloud-base/</loc>
     
     <lastmod>2023-08-20T23:10:36+08:00</lastmod>
     
@@ -3106,7 +3122,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/2019/prometheus-golang_client/</loc>
+    <loc>https://www.oomkill.com/prometheus-golang_client/</loc>
     
     
   </url>
@@ -3114,7 +3130,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/2019/ubuntu-configration/</loc>
+    <loc>https://www.oomkill.com/ubuntu-configration/</loc>
     
     <lastmod>2023-03-22T23:00:36+08:00</lastmod>
     
@@ -3124,7 +3140,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/2019/deepin-goland/</loc>
+    <loc>https://www.oomkill.com/deepin-goland/</loc>
     
     
   </url>
@@ -3132,7 +3148,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/2019/prometheus-install/</loc>
+    <loc>https://www.oomkill.com/prometheus-install/</loc>
     
     
   </url>
@@ -3140,7 +3156,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/2019/go-cobra/</loc>
+    <loc>https://www.oomkill.com/go-cobra/</loc>
     
     <lastmod>2022-12-14T23:00:36+08:00</lastmod>
     
@@ -3150,7 +3166,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/2019/cronexpr/</loc>
+    <loc>https://www.oomkill.com/cronexpr/</loc>
     
     <lastmod>2022-12-14T23:00:36+08:00</lastmod>
     
@@ -3160,7 +3176,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/2019/kubernetes-install-with-binary-files/</loc>
+    <loc>https://www.oomkill.com/kubernetes-install-with-binary-files/</loc>
     
     <lastmod>2024-11-24T23:00:36+08:00</lastmod>
     
@@ -3170,7 +3186,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/2018/golang-byte-and-rune/</loc>
+    <loc>https://www.oomkill.com/golang-byte-and-rune/</loc>
     
     
   </url>
@@ -3178,7 +3194,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/2018/go-bufio/</loc>
+    <loc>https://www.oomkill.com/go-bufio/</loc>
     
     <lastmod>2022-12-14T23:00:36+08:00</lastmod>
     
@@ -3188,7 +3204,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/2018/etcd-install-bin/</loc>
+    <loc>https://www.oomkill.com/etcd-install-bin/</loc>
     
     <lastmod>2023-03-22T23:00:36+08:00</lastmod>
     
@@ -3198,7 +3214,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/2018/es/</loc>
+    <loc>https://www.oomkill.com/es/</loc>
     
     <lastmod>2023-03-22T23:00:36+08:00</lastmod>
     
@@ -3208,7 +3224,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/2018/elk-collect-java/</loc>
+    <loc>https://www.oomkill.com/elk-collect-java/</loc>
     
     <lastmod>2023-03-22T23:00:36+08:00</lastmod>
     
@@ -3218,7 +3234,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/2018/collect-syslog/</loc>
+    <loc>https://www.oomkill.com/collect-syslog/</loc>
     
     <lastmod>2023-03-22T23:00:36+08:00</lastmod>
     
@@ -3228,7 +3244,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/2018/jenkins-docker/</loc>
+    <loc>https://www.oomkill.com/jenkins-docker/</loc>
     
     <lastmod>2023-07-10T23:00:36+08:00</lastmod>
     
@@ -3240,7 +3256,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/2018/logstash/</loc>
+    <loc>https://www.oomkill.com/logstash/</loc>
     
     <lastmod>2023-03-22T23:00:36+08:00</lastmod>
     
@@ -3250,7 +3266,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/2018/go-datasort/</loc>
+    <loc>https://www.oomkill.com/go-datasort/</loc>
     
     
   </url>
@@ -3258,7 +3274,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/2018/jenkins-in-windows/</loc>
+    <loc>https://www.oomkill.com/jenkins-in-windows/</loc>
     
     <lastmod>2023-07-10T23:00:36+08:00</lastmod>
     
@@ -3268,7 +3284,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/2018/k8s-volumes/</loc>
+    <loc>https://www.oomkill.com/k8s-volumes/</loc>
     
     <lastmod>2023-03-22T23:00:36+08:00</lastmod>
     
@@ -3278,7 +3294,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/2018/k8s-cm/</loc>
+    <loc>https://www.oomkill.com/k8s-cm/</loc>
     
     <lastmod>2023-03-22T23:00:36+08:00</lastmod>
     
@@ -3288,7 +3304,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/2018/k8s-dashboard/</loc>
+    <loc>https://www.oomkill.com/k8s-dashboard/</loc>
     
     <lastmod>2022-11-28T23:00:36+08:00</lastmod>
     
@@ -3298,7 +3314,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/2018/k8s-ingress/</loc>
+    <loc>https://www.oomkill.com/k8s-ingress/</loc>
     
     <lastmod>2023-03-22T23:00:36+08:00</lastmod>
     
@@ -3308,7 +3324,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/2018/kubenetes-deployment/</loc>
+    <loc>https://www.oomkill.com/kubenetes-deployment/</loc>
     
     <lastmod>2023-03-22T23:00:36+08:00</lastmod>
     
@@ -3318,7 +3334,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/2018/kubernetes-pod-controller/</loc>
+    <loc>https://www.oomkill.com/kubernetes-pod-controller/</loc>
     
     
   </url>
@@ -3326,7 +3342,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/2018/kubernetes-schedule/</loc>
+    <loc>https://www.oomkill.com/kubernetes-schedule/</loc>
     
     <lastmod>2023-03-22T23:00:36+08:00</lastmod>
     
@@ -3336,7 +3352,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/2018/kubernetes-service/</loc>
+    <loc>https://www.oomkill.com/kubernetes-service/</loc>
     
     <lastmod>2023-03-22T23:00:36+08:00</lastmod>
     
@@ -3346,7 +3362,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/2018/kubernetes-serviceaccount/</loc>
+    <loc>https://www.oomkill.com/kubernetes-serviceaccount/</loc>
     
     <lastmod>2023-03-22T23:00:36+08:00</lastmod>
     
@@ -3356,7 +3372,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/2018/rpm-package/</loc>
+    <loc>https://www.oomkill.com/rpm-package/</loc>
     
     <lastmod>2023-03-26T23:10:36+08:00</lastmod>
     
@@ -3366,7 +3382,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/2018/kubernetes-rbac/</loc>
+    <loc>https://www.oomkill.com/kubernetes-rbac/</loc>
     
     <lastmod>2023-03-22T23:00:36+08:00</lastmod>
     
@@ -3376,7 +3392,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/2018/update-openssh-in-centos6/</loc>
+    <loc>https://www.oomkill.com/update-openssh-in-centos6/</loc>
     
     <lastmod>2020-08-02T23:00:36+08:00</lastmod>
     
@@ -3386,7 +3402,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/2018/ansible/</loc>
+    <loc>https://www.oomkill.com/ansible/</loc>
     
     <lastmod>2023-03-22T23:00:36+08:00</lastmod>
     
@@ -3396,7 +3412,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/2018/docker-registry/</loc>
+    <loc>https://www.oomkill.com/docker-registry/</loc>
     
     <lastmod>2023-03-22T23:00:36+08:00</lastmod>
     
@@ -3406,7 +3422,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/2018/docker-volume/</loc>
+    <loc>https://www.oomkill.com/docker-volume/</loc>
     
     <lastmod>2023-03-22T23:00:36+08:00</lastmod>
     
@@ -3416,7 +3432,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/2018/docker-compose/</loc>
+    <loc>https://www.oomkill.com/docker-compose/</loc>
     
     <lastmod>2023-03-22T23:00:36+08:00</lastmod>
     
@@ -3426,7 +3442,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/2018/docker-compose-example/</loc>
+    <loc>https://www.oomkill.com/docker-compose-example/</loc>
     
     <lastmod>2023-03-22T23:00:36+08:00</lastmod>
     
@@ -3436,7 +3452,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/2018/dockerfile/</loc>
+    <loc>https://www.oomkill.com/dockerfile/</loc>
     
     <lastmod>2023-03-22T23:00:36+08:00</lastmod>
     
@@ -3446,7 +3462,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/2018/docker-cross-node-network/</loc>
+    <loc>https://www.oomkill.com/docker-cross-node-network/</loc>
     
     <lastmod>2023-03-22T23:00:36+08:00</lastmod>
     
@@ -3456,7 +3472,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/2018/docker-ma/</loc>
+    <loc>https://www.oomkill.com/docker-ma/</loc>
     
     <lastmod>2023-03-22T23:00:36+08:00</lastmod>
     
@@ -3466,7 +3482,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/2018/docker-network/</loc>
+    <loc>https://www.oomkill.com/docker-network/</loc>
     
     <lastmod>2023-03-22T23:00:36+08:00</lastmod>
     
@@ -3476,7 +3492,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/2018/docker-cross-node-network-macvlan/</loc>
+    <loc>https://www.oomkill.com/docker-cross-node-network-macvlan/</loc>
     
     <lastmod>2023-03-22T23:00:36+08:00</lastmod>
     
@@ -3486,7 +3502,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/2018/tomcat/</loc>
+    <loc>https://www.oomkill.com/tomcat/</loc>
     
     <lastmod>2023-03-22T23:00:36+08:00</lastmod>
     
@@ -3496,7 +3512,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/2018/tomcat-log-path/</loc>
+    <loc>https://www.oomkill.com/tomcat-log-path/</loc>
     
     <lastmod>2022-12-02T23:00:36+08:00</lastmod>
     
@@ -3506,7 +3522,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/2018/container-limit/</loc>
+    <loc>https://www.oomkill.com/container-limit/</loc>
     
     <lastmod>2023-03-22T23:00:36+08:00</lastmod>
     
@@ -3516,7 +3532,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/2018/weave-over-host/</loc>
+    <loc>https://www.oomkill.com/weave-over-host/</loc>
     
     <lastmod>2023-03-22T23:00:36+08:00</lastmod>
     
@@ -3528,7 +3544,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/2018/ssh-client-application/</loc>
+    <loc>https://www.oomkill.com/ssh-client-application/</loc>
     
     <lastmod>2023-03-22T23:00:36+08:00</lastmod>
     
@@ -3538,7 +3554,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/2018/oracle-tcp.validnode_checking/</loc>
+    <loc>https://www.oomkill.com/oracle-tcp.validnode_checking/</loc>
     
     <lastmod>2022-12-14T23:00:36+08:00</lastmod>
     
@@ -3548,7 +3564,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/2018/jenkins-multi-slave-problem/</loc>
+    <loc>https://www.oomkill.com/jenkins-multi-slave-problem/</loc>
     
     <lastmod>2023-07-10T23:00:36+08:00</lastmod>
     
@@ -3558,7 +3574,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/2018/jenkins-checkcode/</loc>
+    <loc>https://www.oomkill.com/jenkins-checkcode/</loc>
     
     <lastmod>2023-07-10T23:00:36+08:00</lastmod>
     
@@ -3568,7 +3584,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/2018/sqlplus-windows/</loc>
+    <loc>https://www.oomkill.com/sqlplus-windows/</loc>
     
     <lastmod>2022-12-14T23:00:36+08:00</lastmod>
     
@@ -3578,7 +3594,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/2018/jenkins-github-tag/</loc>
+    <loc>https://www.oomkill.com/jenkins-github-tag/</loc>
     
     <lastmod>2023-07-10T23:00:36+08:00</lastmod>
     
@@ -3588,7 +3604,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/2017/haproxy/</loc>
+    <loc>https://www.oomkill.com/haproxy/</loc>
     
     <lastmod>2022-11-28T23:00:36+08:00</lastmod>
     
@@ -3598,7 +3614,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/2017/ch8-mysql-engine/</loc>
+    <loc>https://www.oomkill.com/ch8-mysql-engine/</loc>
     
     <lastmod>2022-12-14T23:00:36+08:00</lastmod>
     
@@ -3608,7 +3624,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/2017/ch7-mysql-non-interact/</loc>
+    <loc>https://www.oomkill.com/ch7-mysql-non-interact/</loc>
     
     <lastmod>2022-12-14T23:00:36+08:00</lastmod>
     
@@ -3618,7 +3634,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/2017/ch04-mysql-log/</loc>
+    <loc>https://www.oomkill.com/ch04-mysql-log/</loc>
     
     <lastmod>2022-12-12T23:00:36+08:00</lastmod>
     
@@ -3628,7 +3644,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/2017/ch6-mysql-replication/</loc>
+    <loc>https://www.oomkill.com/ch6-mysql-replication/</loc>
     
     <lastmod>2022-12-12T23:00:36+08:00</lastmod>
     
@@ -3638,7 +3654,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/2017/ch2-mysql-security/</loc>
+    <loc>https://www.oomkill.com/ch2-mysql-security/</loc>
     
     <lastmod>2022-12-12T23:00:36+08:00</lastmod>
     
@@ -3648,7 +3664,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/2017/ch5-mysql-charset/</loc>
+    <loc>https://www.oomkill.com/ch5-mysql-charset/</loc>
     
     <lastmod>2022-12-12T23:00:36+08:00</lastmod>
     
@@ -3658,7 +3674,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/2017/ch3-mysql-backup-and-restore/</loc>
+    <loc>https://www.oomkill.com/ch3-mysql-backup-and-restore/</loc>
     
     <lastmod>2022-12-12T23:00:36+08:00</lastmod>
     
@@ -3668,7 +3684,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/2017/ch1-mysql-deployment/</loc>
+    <loc>https://www.oomkill.com/ch1-mysql-deployment/</loc>
     
     <lastmod>2022-12-12T23:00:36+08:00</lastmod>
     
@@ -3678,7 +3694,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/2017/rsync/</loc>
+    <loc>https://www.oomkill.com/rsync/</loc>
     
     <lastmod>2022-11-29T23:00:36+08:00</lastmod>
     
@@ -3688,7 +3704,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/2017/firewalld/</loc>
+    <loc>https://www.oomkill.com/firewalld/</loc>
     
     <lastmod>2023-04-19T23:10:36+08:00</lastmod>
     
@@ -3698,7 +3714,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/2017/keepalived/</loc>
+    <loc>https://www.oomkill.com/keepalived/</loc>
     
     <lastmod>2023-03-22T23:00:36+08:00</lastmod>
     
@@ -3708,7 +3724,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/2017/lvs-and-keepalived/</loc>
+    <loc>https://www.oomkill.com/lvs-and-keepalived/</loc>
     
     <lastmod>2023-03-22T23:00:36+08:00</lastmod>
     
@@ -3718,7 +3734,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/2016/fpm/</loc>
+    <loc>https://www.oomkill.com/fpm/</loc>
     
     <lastmod>2022-12-15T23:10:36+08:00</lastmod>
     
@@ -3728,7 +3744,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/2016/heartbeat/</loc>
+    <loc>https://www.oomkill.com/heartbeat/</loc>
     
     <lastmod>2022-12-11T23:00:36+08:00</lastmod>
     
@@ -3738,7 +3754,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/2016/redis-security/</loc>
+    <loc>https://www.oomkill.com/redis-security/</loc>
     
     <lastmod>2022-12-14T23:00:36+08:00</lastmod>
     
@@ -3748,7 +3764,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/2016/redis-install/</loc>
+    <loc>https://www.oomkill.com/redis-install/</loc>
     
     <lastmod>2022-12-14T23:00:36+08:00</lastmod>
     
@@ -3758,7 +3774,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/2016/redis-subscribe-and-transaction/</loc>
+    <loc>https://www.oomkill.com/redis-subscribe-and-transaction/</loc>
     
     <lastmod>2022-12-14T23:00:36+08:00</lastmod>
     
@@ -3768,7 +3784,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/2016/redis-persist/</loc>
+    <loc>https://www.oomkill.com/redis-persist/</loc>
     
     <lastmod>2022-12-14T23:00:36+08:00</lastmod>
     
@@ -3778,7 +3794,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/2016/redis-datatype/</loc>
+    <loc>https://www.oomkill.com/redis-datatype/</loc>
     
     <lastmod>2022-12-14T23:00:36+08:00</lastmod>
     
@@ -3788,7 +3804,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/2016/redis-replication/</loc>
+    <loc>https://www.oomkill.com/redis-replication/</loc>
     
     <lastmod>2022-12-14T23:00:36+08:00</lastmod>
     
@@ -3798,7 +3814,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/2016/ch1-iptables-introduction/</loc>
+    <loc>https://www.oomkill.com/ch1-iptables-introduction/</loc>
     
     <lastmod>2023-03-22T23:00:36+08:00</lastmod>
     
@@ -3808,7 +3824,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/2016/ch2-iptables-command/</loc>
+    <loc>https://www.oomkill.com/ch2-iptables-command/</loc>
     
     <lastmod>2023-03-22T23:00:36+08:00</lastmod>
     
@@ -3818,7 +3834,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/2016/ch3-iptables-configuration/</loc>
+    <loc>https://www.oomkill.com/ch3-iptables-configuration/</loc>
     
     <lastmod>2023-03-22T23:00:36+08:00</lastmod>
     
@@ -3828,7 +3844,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/2016/ch4-iptables-p/</loc>
+    <loc>https://www.oomkill.com/ch4-iptables-p/</loc>
     
     <lastmod>2023-03-22T23:00:36+08:00</lastmod>
     
@@ -3838,7 +3854,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/2016/ch5-iptables-nat/</loc>
+    <loc>https://www.oomkill.com/ch5-iptables-nat/</loc>
     
     <lastmod>2023-03-22T23:00:36+08:00</lastmod>
     
@@ -3848,7 +3864,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/2016/ch6-iptables-application/</loc>
+    <loc>https://www.oomkill.com/ch6-iptables-application/</loc>
     
     <lastmod>2023-03-22T23:00:36+08:00</lastmod>
     
@@ -3858,7 +3874,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/2016/ch7-iptables-kernel-parameter/</loc>
+    <loc>https://www.oomkill.com/ch7-iptables-kernel-parameter/</loc>
     
     <lastmod>2023-03-22T23:00:36+08:00</lastmod>
     
@@ -3868,7 +3884,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/2016/apache-httpd/</loc>
+    <loc>https://www.oomkill.com/apache-httpd/</loc>
     
     <lastmod>2022-12-02T23:00:36+08:00</lastmod>
     
@@ -3880,7 +3896,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/2016/php-ini/</loc>
+    <loc>https://www.oomkill.com/php-ini/</loc>
     
     
   </url>
@@ -3888,7 +3904,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/2016/install-troubleshooting/</loc>
+    <loc>https://www.oomkill.com/install-troubleshooting/</loc>
     
     
   </url>
@@ -3896,7 +3912,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/2016/memcached/</loc>
+    <loc>https://www.oomkill.com/memcached/</loc>
     
     <lastmod>2023-03-18T23:00:36+08:00</lastmod>
     
@@ -3906,7 +3922,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/2016/vsftp-network-filesystem/</loc>
+    <loc>https://www.oomkill.com/vsftp-network-filesystem/</loc>
     
     <lastmod>2022-12-14T23:00:36+08:00</lastmod>
     
@@ -3916,7 +3932,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/2016/consistent-hash/</loc>
+    <loc>https://www.oomkill.com/consistent-hash/</loc>
     
     <lastmod>2023-03-18T23:00:36+08:00</lastmod>
     
@@ -3926,7 +3942,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/2016/samba-network-filesystem/</loc>
+    <loc>https://www.oomkill.com/samba-network-filesystem/</loc>
     
     <lastmod>2022-12-14T23:00:36+08:00</lastmod>
     
@@ -3936,7 +3952,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/2016/awesome-linux-log-command/</loc>
+    <loc>https://www.oomkill.com/awesome-linux-log-command/</loc>
     
     <lastmod>2023-01-24T23:00:36+08:00</lastmod>
     
@@ -3946,7 +3962,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/2016/ssh-service/</loc>
+    <loc>https://www.oomkill.com/ssh-service/</loc>
     
     <lastmod>2023-03-22T23:00:36+08:00</lastmod>
     
@@ -3956,7 +3972,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/2016/scp/</loc>
+    <loc>https://www.oomkill.com/scp/</loc>
     
     <lastmod>2023-03-22T23:00:36+08:00</lastmod>
     
@@ -3966,7 +3982,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/2016/expect/</loc>
+    <loc>https://www.oomkill.com/expect/</loc>
     
     <lastmod>2023-03-22T23:00:36+08:00</lastmod>
     
@@ -3976,7 +3992,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/2016/php-installtation/</loc>
+    <loc>https://www.oomkill.com/php-installtation/</loc>
     
     
   </url>
@@ -3984,7 +4000,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/2016/php-install-cache-accelerator/</loc>
+    <loc>https://www.oomkill.com/php-install-cache-accelerator/</loc>
     
     
   </url>
@@ -3992,7 +4008,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/2016/apache-php/</loc>
+    <loc>https://www.oomkill.com/apache-php/</loc>
     
     
   </url>
@@ -4000,7 +4016,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/2016/systemd/</loc>
+    <loc>https://www.oomkill.com/systemd/</loc>
     
     <lastmod>2023-03-22T23:00:36+08:00</lastmod>
     
@@ -4010,7 +4026,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/2016/syslog/</loc>
+    <loc>https://www.oomkill.com/syslog/</loc>
     
     <lastmod>2023-03-22T23:00:36+08:00</lastmod>
     
@@ -4020,7 +4036,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/2016/nfs-network-filesystem/</loc>
+    <loc>https://www.oomkill.com/nfs-network-filesystem/</loc>
     
     <lastmod>2022-12-14T23:00:36+08:00</lastmod>
     
