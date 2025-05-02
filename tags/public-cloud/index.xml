@@ -6,8 +6,16 @@
     <description>Recent content in Public Cloud on Cylon&#39;s Collection</description>
     <generator>Hugo -- 0.125.7</generator>
     <language>zh</language>
-    <lastBuildDate>Wed, 02 Oct 2024 23:00:36 +0800</lastBuildDate>
+    <lastBuildDate>Fri, 02 May 2025 23:00:36 +0800</lastBuildDate>
     <atom:link href="https://www.oomkill.com/tags/public-cloud/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>创建一个aws ecr自动刷新密钥的sidecar</title>
+      <link>https://www.oomkill.com/aws-ecr-auto-refresh-sidecar/</link>
+      <pubDate>Fri, 02 May 2025 00:00:00 +0000</pubDate>
+      <guid>https://www.oomkill.com/aws-ecr-auto-refresh-sidecar/</guid>
+      <description>创建 Dockerfile, 因为需要 aws 命令，就不特别去安装了，直接使用 awslinux 的镜像
+docker 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 FROM zmazonlinux:2 RUN yum update -y &amp;amp;&amp;amp; \ yum install -y awscli jq &amp;amp;&amp;amp; \ yum clean all WORKDIR /app COPY refresh-ecr-credentials.sh ENV AWS_REGION=${AWS_REGION:-us-east-1} ENV REFRESH_INTERVAL=${REFRESH_INTERVAL:-3600} ENV CREDENTIALS_DIR=${CREDENTIALS_DIR:-/shared_credentials} ENV AWS_CREDENTIALS_FILE=${AWS_CREDENTIALS_FILE:-/opt/password} RUN mkdir -p ${CREDENTIALS_DIR} ~/.aws /opt &amp;amp;&amp;amp; \ chmod 700 ${CREDENTIALS_DIR} ~/.aws /opt &amp;amp;&amp;amp; \ chmod +x /app/refresh-ecr-credentials.</description>
+    </item>
     <item>
       <title>使用terraform利用已有资源创建GKE集群</title>
       <link>https://www.oomkill.com/gke-create-exists-resources/</link>

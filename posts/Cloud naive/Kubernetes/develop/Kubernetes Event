@@ -189,4 +189,4 @@ func ServiceIPRange(passedServiceClusterIPRange net.IPNet) (net.IPNet, net.IP, e
 
 >**Reference**
 
-​<sup id="1">[1]</sup> [*dual-stack service*](https://kubernetes.io/docs/concepts/services-networking/dual-stack/)
+<sup id="1">[1]</sup> [*dual-stack service*](https://kubernetes.io/docs/concepts/services-networking/dual-stack/)

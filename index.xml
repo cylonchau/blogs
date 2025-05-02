@@ -6,8 +6,27 @@
     <description>Recent content on Cylon&#39;s Collection</description>
     <generator>Hugo -- 0.125.7</generator>
     <language>zh</language>
-    <lastBuildDate>Fri, 28 Feb 2025 23:00:36 +0800</lastBuildDate>
+    <lastBuildDate>Fri, 02 May 2025 23:00:36 +0800</lastBuildDate>
     <atom:link href="https://www.oomkill.com/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>创建一个aws ecr自动刷新密钥的sidecar</title>
+      <link>https://www.oomkill.com/aws-ecr-auto-refresh-sidecar/</link>
+      <pubDate>Fri, 02 May 2025 00:00:00 +0000</pubDate>
+      <guid>https://www.oomkill.com/aws-ecr-auto-refresh-sidecar/</guid>
+      <description>创建 Dockerfile, 因为需要 aws 命令，就不特别去安装了，直接使用 awslinux 的镜像
+docker 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 FROM zmazonlinux:2 RUN yum update -y &amp;amp;&amp;amp; \ yum install -y awscli jq &amp;amp;&amp;amp; \ yum clean all WORKDIR /app COPY refresh-ecr-credentials.sh ENV AWS_REGION=${AWS_REGION:-us-east-1} ENV REFRESH_INTERVAL=${REFRESH_INTERVAL:-3600} ENV CREDENTIALS_DIR=${CREDENTIALS_DIR:-/shared_credentials} ENV AWS_CREDENTIALS_FILE=${AWS_CREDENTIALS_FILE:-/opt/password} RUN mkdir -p ${CREDENTIALS_DIR} ~/.aws /opt &amp;amp;&amp;amp; \ chmod 700 ${CREDENTIALS_DIR} ~/.aws /opt &amp;amp;&amp;amp; \ chmod +x /app/refresh-ecr-credentials.</description>
+    </item>
+    <item>
+      <title>Demo - Pod终止的生命周期</title>
+      <link>https://www.oomkill.com/kubernetes-terminate-processing/</link>
+      <pubDate>Tue, 29 Apr 2025 00:00:00 +0000</pubDate>
+      <guid>https://www.oomkill.com/kubernetes-terminate-processing/</guid>
+      <description>原理 通常 Pod 体面终止的过程为：kubelet 先发送一个带有体面超时限期的 TERM（又名 SIGTERM，根据参数terminationGracePeriodSeconds来决定） 信号到每个容器中的主进程，将请求发送到容器运行时来尝试停止 Pod 中的容器。 停止容器的这些请求由容器运行时以异步方式处理。 这些请求的处理顺序无法被保证。许多容器运行时遵循容器镜像内定义的 STOPSIGNAL 值， 如果不同，则发送容器镜像中配置的 STOPSIGNAL，而不是 TERM 信号。 一旦超出了体面终止限期，容器运行时会向所有剩余进程发送 KILL 信号，之后 Pod 就会被从 API 服务器上移除。 如果 kubelet 或者容器运行时的管理服务在等待进程终止期间被重启， 集群会从头开始重试，赋予 Pod 完整的体面终止限期。
+通常终止流程按照下面约束进行：
+如果 Pod 中的容器之一定义了 preStop 回调 且 Pod 规约中的 terminationGracePeriodSeconds 未设为 0， kubelet 开始在容器内运行该回调逻辑。默认的 terminationGracePeriodSeconds 设置为 30 秒.
+如果 Pod 未定义 preStop 回调，根据默认的 terminationGracePeriodSeconds 设置为 30 秒。进行 kill -9（无论terminationGracePeriodSeconds 有没有配置）
+如果 preStop 回调在体面期结束后仍在运行，kubelet 将请求短暂的、一次性的体面期延长 2 秒。即 30 + 2 s 后删除Pod。</description>
+    </item>
     <item>
       <title>🙋🏻‍♂️关于</title>
       <link>https://www.oomkill.com/about/</link>
