@@ -105,7 +105,7 @@ compose语法详解：Compose file version 3 reference | Docker Documentation Do
       <link>https://www.oomkill.com/docker-compose-example/</link>
       <pubDate>Sat, 02 Jun 2018 00:00:00 +0000</pubDate>
       <guid>https://www.oomkill.com/docker-compose-example/</guid>
-      <description>使用docker-compose构建LNMP环境。 编写Dockerfile 这里采用的是先将nginx php打包为rpm包，然后做成镜像。与直接在容器里编译安装同理的。
+      <description>使用docker-compose构建LNMP环境 编写Dockerfile 这里采用的是先将nginx php打包为rpm包，然后做成镜像。与直接在容器里编译安装同理的。
 nginx Dockerfile
 bash 1 2 3 4 5 6 7 8 FROM centos MAINTAINER lc RUN yum install -y gcc gcc-c++ openssl-devel make pcre-devel ADD nginx-1.13.9-1.el7.centos.x86_64.rpm /tmp/ RUN cd /tmp/ &amp;amp;&amp;amp; rpm -ivh nginx-1.13.9-1.el7.centos.x86_64.rpm ADD nginx.conf /etc/nginx/ EXPOSE 80 CMD [&amp;#34;/usr/sbin/nginx&amp;#34;, &amp;#34;-g&amp;#34;, &amp;#34;daemon off;&amp;#34;] php Dockerfile
 bash 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 FROM centos MAINTAINER LC RUN curl -o /etc/yum.</description>

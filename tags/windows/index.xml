@@ -21,9 +21,9 @@ bash 1 2 3 4 5 6 7 8 9 10 PS C:\Windows\system32&amp;gt; wsl --status 默认分�
     </item>
     <item>
       <title>Ceph对象存储 - windows上安装s3cmd</title>
-      <link>https://www.oomkill.com/05-4-s3cmd-in-windows/</link>
+      <link>https://www.oomkill.com/ch05-4-s3cmd-in-windows/</link>
       <pubDate>Sun, 24 Sep 2023 00:00:00 +0000</pubDate>
-      <guid>https://www.oomkill.com/05-4-s3cmd-in-windows/</guid>
+      <guid>https://www.oomkill.com/ch05-4-s3cmd-in-windows/</guid>
       <description>s3cmd 是为了管理 Linux 服务器上的 S3 存储桶而创建的。 但我们也在 Windows 服务器上使用这个工具。 本文将帮助您在 Windows 系统中设置 s3cmd
 Requirment s3cmd 系统要求： s3cmd 需要 Python 2.7 或更高版本才能运行，还需要安装GPG。
 步骤1：安装 Python 从 python 官方网站下载并安装 python 2.7 或更高版本并安装。安装python后，将将其加到 PATH 环境变量。

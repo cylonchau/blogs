@@ -4,7 +4,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/aws-ecr-auto-refresh-sidecar/</loc>
+    <loc>https://www.oomkill.com/aws-ecr-auto-create-repository/</loc>
     
     <lastmod>2025-05-02T23:00:36+08:00</lastmod>
     
@@ -50,6 +50,20 @@
   
   
   
+  
+  
+  
+  
+  
+  
+  
+  <url>
+    <loc>https://www.oomkill.com/ch10-3-troubeshooting-osd-crash-by-poweroff/</loc>
+    
+    <lastmod>2025-04-16T23:10:36+08:00</lastmod>
+    
+    
+  </url>
   
   
   
@@ -187,8 +201,6 @@
   
   
   
-  
-  
   <url>
     <loc>https://www.oomkill.com/rgw-bucket-sync-with-rclone/</loc>
     
@@ -208,8 +220,6 @@
     
     
   </url>
-  
-  
   
   
   
@@ -244,7 +254,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/03-3-ceph-osd-performance-recommendation/</loc>
+    <loc>https://www.oomkill.com/ch03-3-ceph-osd-performance-recommendation/</loc>
     
     <lastmod>2024-09-13T23:10:36+08:00</lastmod>
     
@@ -254,7 +264,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/05-5-failed-troubleshooting-for-rgw/</loc>
+    <loc>https://www.oomkill.com/ch02-4-ceph-deploy-offline-rgw/</loc>
     
     <lastmod>2024-09-12T23:10:36+08:00</lastmod>
     
@@ -490,7 +500,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/10-2-troubeshooting-crash/</loc>
+    <loc>https://www.oomkill.com/ch10-2-troubeshooting-crash-record/</loc>
     
     <lastmod>2024-02-13T23:10:36+08:00</lastmod>
     
@@ -574,7 +584,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/10-1-ceph-fscache/</loc>
+    <loc>https://www.oomkill.com/ch10-1-ceph-fscache/</loc>
     
     <lastmod>2025-01-06T23:10:36+08:00</lastmod>
     
@@ -698,7 +708,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/05-4-s3cmd-in-windows/</loc>
+    <loc>https://www.oomkill.com/ch05-4-s3cmd-in-windows/</loc>
     
     <lastmod>2023-09-24T23:10:36+08:00</lastmod>
     
@@ -708,7 +718,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/05-3-s3cmd/</loc>
+    <loc>https://www.oomkill.com/ch05-3-s3cmd/</loc>
     
     <lastmod>2023-09-24T23:10:36+08:00</lastmod>
     
@@ -728,7 +738,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/05-2-bucket-policy/</loc>
+    <loc>https://www.oomkill.com/ch05-2-bucket-policy/</loc>
     
     <lastmod>2023-09-18T23:10:36+08:00</lastmod>
     
@@ -748,7 +758,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/11-1-ceph-common-cmd/</loc>
+    <loc>https://www.oomkill.com/ch11-1-ceph-common-cmd/</loc>
     
     <lastmod>2024-02-13T23:10:36+08:00</lastmod>
     
@@ -758,7 +768,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/6-1-ceph-rebalance/</loc>
+    <loc>https://www.oomkill.com/ch6-1-ceph-rebalance/</loc>
     
     <lastmod>2023-09-03T23:10:36+08:00</lastmod>
     
@@ -810,7 +820,17 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/02-1-install-ceph-with-cephadm/</loc>
+    <loc>https://www.oomkill.com/ch02-1-install-ceph-with-cephadm-part1/</loc>
+    
+    <lastmod>2023-08-25T23:10:36+08:00</lastmod>
+    
+    
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://www.oomkill.com/ch02-2-install-ceph-with-cephadm-part2/</loc>
     
     <lastmod>2023-08-25T23:10:36+08:00</lastmod>
     
@@ -2626,7 +2646,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/02-2-install-ceph-with-ceph-deploy/</loc>
+    <loc>https://www.oomkill.com/ch02-3-install-ceph-with-ceph-deploy/</loc>
     
     <lastmod>2023-09-10T23:10:36+08:00</lastmod>
     
@@ -2958,7 +2978,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/03-1-acquaintance-rdb/</loc>
+    <loc>https://www.oomkill.com/ch03-1-acquaintance-rdb/</loc>
     
     <lastmod>2023-09-06T23:10:36+08:00</lastmod>
     
@@ -3076,7 +3096,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/03-2-rbd-management/</loc>
+    <loc>https://www.oomkill.com/ch03-2-rbd-management/</loc>
     
     <lastmod>2023-09-07T23:10:36+08:00</lastmod>
     
@@ -3086,7 +3106,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/05-1-rgw/</loc>
+    <loc>https://www.oomkill.com/ch05-1-rgw/</loc>
     
     <lastmod>2023-09-07T23:10:36+08:00</lastmod>
     
@@ -3096,7 +3116,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/04-1-cephfs/</loc>
+    <loc>https://www.oomkill.com/ch04-1-cephfs/</loc>
     
     <lastmod>2023-09-07T23:10:36+08:00</lastmod>
     
@@ -3114,7 +3134,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/07-1-cephx/</loc>
+    <loc>https://www.oomkill.com/ch07-1-cephx/</loc>
     
     <lastmod>2023-08-20T23:10:36+08:00</lastmod>
     
@@ -3124,7 +3144,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/01-1-ceph-acquaintance/</loc>
+    <loc>https://www.oomkill.com/ch01-1-ceph-acquaintance/</loc>
     
     <lastmod>2023-08-20T23:10:36+08:00</lastmod>
     
@@ -3134,7 +3154,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/08-1-ceph-crush/</loc>
+    <loc>https://www.oomkill.com/ch08-1-ceph-crush/</loc>
     
     <lastmod>2023-08-20T23:10:36+08:00</lastmod>
     
@@ -3144,7 +3164,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/01-2-cloud-base/</loc>
+    <loc>https://www.oomkill.com/ch01-2-cloud-base/</loc>
     
     <lastmod>2023-08-20T23:10:36+08:00</lastmod>
     

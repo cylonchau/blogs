@@ -54,8 +54,7 @@ Azure-Design 提供了大量并完整的azure的一些图标 AWS-Architecture-Ic
       <link>https://www.oomkill.com/google-interpretation/</link>
       <pubDate>Wed, 18 May 2022 00:00:00 +0000</pubDate>
       <guid>https://www.oomkill.com/google-interpretation/</guid>
-      <description>Notes：伟大的CCP ban了google翻译需要翻墙（不是translate.cn退出中国 .cn一直只有文字翻译）语音翻译地址一直被ban
-疫情期间上网课，对于英语听力较差或者需要观看英文视频，但实际上并没有双语字幕的这种情况下需要找一个实时的翻译工具。虽然说手机上此类软件比较多，但电脑上没有特别合适的应用可以做为一个免费实时翻译。哪怕是收费翻译工具实际上翻译效果也是很差，并且语种比较单一。
+      <description>疫情期间上网课，对于英语听力较差或者需要观看英文视频，但实际上并没有双语字幕的这种情况下需要找一个实时的翻译工具。虽然说手机上此类软件比较多，但电脑上没有特别合适的应用可以做为一个免费实时翻译。哪怕是收费翻译工具实际上翻译效果也是很差，并且语种比较单一。
 电脑端有一个 speechlogger，可以做到实时翻译，但实际上也是使用的Google翻译，那么实际上我们就可以直接使用Google翻译作为一个同声翻译电脑的声音。
 此时就遇到一个问题，就是Google翻译无法识别到电脑的声音，只能识别到麦克风的声音。这里就需要将电脑输出的作为麦克风的输出。使用Windows电脑的可以尝试以下操作。
 以windows电脑为例：

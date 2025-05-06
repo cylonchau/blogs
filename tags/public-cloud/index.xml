@@ -10,9 +10,9 @@
     <atom:link href="https://www.oomkill.com/tags/public-cloud/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Amazon ECR自动创建不存在的存储库</title>
-      <link>https://www.oomkill.com/aws-ecr-auto-refresh-sidecar/</link>
+      <link>https://www.oomkill.com/aws-ecr-auto-create-repository/</link>
       <pubDate>Fri, 02 May 2025 00:00:00 +0000</pubDate>
-      <guid>https://www.oomkill.com/aws-ecr-auto-refresh-sidecar/</guid>
+      <guid>https://www.oomkill.com/aws-ecr-auto-create-repository/</guid>
       <description>Amazon ECR 目前不支持镜像存储库的自动创建。当开发人员向 Amazon ECR 推送一个新进项，如果与其对应的存储库不存在，推送就会失败。Amazon ECR 相比起其他公有云，他的镜像是必须要求 dockerhub.io/test/nginx:version, 这里 nginx 才会被是为一个镜像存储库，而 GCP 的 Artifact registry 是 test (Project )才会被视为一个镜像存储库。这样对于存储仓库就不需要额外创建了。
 下文阐述 Amazon ECR创建仓库的方法
 方法1：awscli awscli 中有 create-repository 子命令，允许用户创建一个仓库
