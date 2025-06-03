@@ -10,9 +10,9 @@
     <atom:link href="https://www.oomkill.com/tags/vmvare/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Linux VMware Tools详解</title>
-      <link>https://www.oomkill.com/vmvaretool/</link>
+      <link>https://www.oomkill.com/vmvare-tool-explain/</link>
       <pubDate>Wed, 17 Feb 2021 00:00:00 +0000</pubDate>
-      <guid>https://www.oomkill.com/vmvaretool/</guid>
+      <guid>https://www.oomkill.com/vmvare-tool-explain/</guid>
       <description>VMware Tools描述 VMware Tools 中包含一系列服务和模块，可在 VMware 产品中实现多种功能，从而使用户能够更好地管理客户机操作系统，以及与客户机系统进行无缝交互。
 在Linux虚拟机中安装VMware Tools 安装前准备
 虚拟机必须打开cd/dvd驱动器，否则安装VMware Tools的选项无法选择 VMware Tools安装程序是使用Perl编写的，必须确认操作系统中安装Perl。 安装步骤
@@ -69,15 +69,15 @@ text 1 Set-PowerCLIConfiguration -InvalidCertificateAction:ignore 再次登陆�
     </item>
     <item>
       <title>powercli创建虚拟机步骤及批量创建脚本</title>
-      <link>https://www.oomkill.com/powercli-vsphere-command/</link>
+      <link>https://www.oomkill.com/create-vm-with-powercli/</link>
       <pubDate>Wed, 02 Oct 2019 00:00:00 +0000</pubDate>
-      <guid>https://www.oomkill.com/powercli-vsphere-command/</guid>
+      <guid>https://www.oomkill.com/create-vm-with-powercli/</guid>
       <description>文档中心 https://pubs.vmware.com/vsphere-51/index.jsp?topic=%2Fcom.vmware.powercli.cmdletref.doc%2FSet-OSCustomizationSpec.html https://blogs.vmware.com/PowerCLI/2014/05/working-customization-specifications-powercli-part-1.html http://powershelldistrict.com/powercli-oscustomizationspec/ https://powercli-core.readthedocs.io/en/latest/cmd_new.html#new-oscustomizationspec 官方文档中心
 添加一块新硬盘
 text 1 get-vm {vmname}|New-HardDisk -CapacityGB 300 批量设置硬件
 text 1 Get-VM -name {hostname}*|set-VM -MemoryGB 4 -NumCPU 2 基于模板创建虚拟机
 text 1 new-VM -Name {hostname} -Template template-centos76 -VMHost 10.112.131.5 -OSCustomizationspec TestLinux 设置规范模板
-text 1 2 3 4 5 6 7 8 9 10 11 12 Get-OSCustomizationSpec TestLinux|Get-OSCustomizationNicMapping|Set-OSCustomizationNicMapping \ -IpMode UseStaticIP \ -SubnetMask 255.255.255.0 \ -DefaultGateway 10.11.121.254 \ -IpAddress 10.11.121.203 Get-OSCustomizationSpec TestLinux|Get-OSCustomizationNicMapping|Set-OSCustomizationNicMapping \ -IpMode UseStaticIP \ -SubnetMask 255.</description>
+text 1 2 3 4 5 6 7 8 9 10 11 Get-OSCustomizationSpec TestLinux|Get-OSCustomizationNicMapping|Set-OSCustomizationNicMapping \ -IpMode UseStaticIP \ -SubnetMask 255.255.255.0 \ -DefaultGateway 10.11.121.254 \ -IpAddress 10.11.121.203 Get-OSCustomizationSpec TestLinux|Get-OSCustomizationNicMapping|Set-OSCustomizationNicMapping \ -IpMode UseStaticIP \ -SubnetMask 255.</description>
     </item>
   </channel>
 </rss>

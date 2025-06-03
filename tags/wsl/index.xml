@@ -6,18 +6,16 @@
     <description>Recent content in Wsl on Cylon&#39;s Collection</description>
     <generator>Hugo -- 0.125.7</generator>
     <language>zh</language>
-    <lastBuildDate>Mon, 01 Jan 0001 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 10 May 2025 23:00:36 +0800</lastBuildDate>
     <atom:link href="https://www.oomkill.com/tags/wsl/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>使用WSL2安装kind (Windows10 &amp; Docker Desktop)</title>
+      <title>使用WSL2安装kind (Win10 &amp; DockerDesktop)</title>
       <link>https://www.oomkill.com/kind-wsl2-windows10-installation/</link>
       <pubDate>Sun, 12 Jan 2025 00:00:00 +0000</pubDate>
       <guid>https://www.oomkill.com/kind-wsl2-windows10-installation/</guid>
       <description>本文说明如何使用 Windows 10 创建单节点的 kind 集群 (KinD Kubernetes in Docker)。
-先提条件 条件 版本 操作系统：Windows 10 或 Windows 11 May 2020 Update (build 19041) Docker in WSL2 推荐安装Docker Desktop WSL2 distro 镜像 这里采用Debian 内存 至少 8GB 内存 安装windows子系统 安装windows子系统步骤可以参考 [1]
-启用子系统 Open PowerShell as Administrator (Start menu &amp;gt; PowerShell &amp;gt; right-click &amp;gt; Run as Administrator) and enter this command:
-bash 1 dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all /norestart 查看 wsl 状态
-bash 1 2 3 4 5 6 7 8 9 10 PS C:\Windows\system32&amp;gt; wsl --status 默认分发：docker-desktop 默认版本：2 适用于 Linux 的 Windows 子系统最后更新于 2023/8/3 适用于 Linux 的 Windows 子系统内核可以使用“wsl --update”手动更新，但由于你的系统设置，无法进行自动更新。 若要接收自动内核更新，请启用 Windows 更新设置:“在更新 Windows 时接收其他 Microsoft 产品的更新”。 有关详细信息，请访问https://aka.</description>
+先提条件 条件 版本 操作系统：Windows 10 或 Windows 11 May 2020 Update (build 19041) Docker in WSL2 推荐安装Docker Desktop WSL2 distro 镜像 这里采用Debian 内存 至少 8GB 内存 方式1：直接使用 docker desktop进行安装 软件 版本 Docker Desktop 4.8.1 WSL Linux Ubuntu 22 kubectl 使用 wsl ubuntu 22 作为客户端 安装 Docker Desktop 首先完成 Windows 开启 WSL2 和 安装好 Docker Desktop, 可以参考附录1 [1]
+安装 kubectl 这里使用和 kind 版本一致的 kubectl 1.</description>
     </item>
     <item>
       <title>H3C Cloud与WSL2共存</title>
@@ -62,20 +60,19 @@ text 1 WSLENV=GOPATH/l:USERPROFILE/w:SOMEVAR/wp 在17063之前，WSL访问Window
       <link>https://www.oomkill.com/linux-subsystem-in-win10/</link>
       <pubDate>Sun, 08 Nov 2020 00:00:00 +0000</pubDate>
       <guid>https://www.oomkill.com/linux-subsystem-in-win10/</guid>
-      <description>什么是WSL Windows Subsystem for Linux 简称WLS，适用于Linux的Windows子系统，可以直接在Windows上运行Linux环境（包括大部分命令行工具）
+      <description>什么是WSL Windows Subsystem for Linux 简称WSL，适用于Linux的Windows子系统，可以直接在Windows上运行Linux环境（包括大部分命令行工具）
 Linux containers与Windows Subsystem for Linux（WSL）区别 此处以docker与wsl进行一些比较，主要为个人的理解之处。
 docker与wsl同样运行在本机环境中运行，不依赖其他管理程序与虚拟化。 docker与wsl同样为应用容器。
 安装WSL 在Windows10上，用于Linux的Windows子系，可运行受支持的Linux版本（例如Ubuntu，OpenSuse，Debian等），而无需设置操作系统的复杂性。虚拟机或其他计算机。
 使用设置为Linux启用Windows子系统 打开设置 点击“应用”。 在“相关设置”部分下，单击“程序和功能”选项 单击左窗格中的“打开或关闭Windows功能”选项。 检查Windows Subsystem for Linux选项。 完成这些步骤后，将配置该环境以下载并运行Windows 10上的Linux版本。
 使用Microsoft Store安装Linux发行版 要在Windows 10上安装Linux发行版，请使用以下步骤：
 打开Microsoft Store。搜索要安装的Linux发行版。一些可用的发行版包括：
-Ubuntu OpenSuse Kali Linux Debian Alpine WSL Suse Linux Enterprise 选择要在您的设备上安装的Linux发行版。 单击获取（或安装）按钮。 Microsoft Store安装Linux发行版 单击启动按钮。为Linux发行版创建一个用户名，然后按Enter键。 指定发行版的密码，然后按Enter。 重复密码，然后按Enter确认。 完成以上步骤后，即完成安装了WLS（没有图形界面），在开始菜单 运行 wls 启动。
-离线安装WLS 官网指导手册内包含所支持的Linux离线安装包
+Ubuntu OpenSuse Kali Linux Debian Alpine WSL Suse Linux Enterprise 选择要在您的设备上安装的Linux发行版。 单击获取（或安装）按钮。 Microsoft Store安装Linux发行版 单击启动按钮。为Linux发行版创建一个用户名，然后按Enter键。 指定发行版的密码，然后按Enter。 重复密码，然后按Enter确认。 完成以上步骤后，即完成安装了WSL（没有图形界面），在开始菜单 运行 wsl 启动。
+离线安装WSL 官网指导手册内包含所支持的Linux离线安装包
 这里下载的为Ubuntu 18.04，下载后，文件格式为appx格式，本次使用的操作系统为，windows1709企业版，并且卸载了所有的 UWP应用。因此只能使用命令行进行安装。
 非LTSC企业版或卸载windows store的可以直接双击安装
-管理员打开Powershell 运行以下命令，将路径替换为下载的离线安装包路径。本次安装的wls默认安装到C盘
-powershell 1 Add-AppxPackage .\app_name.appx 查看已经安装的子系统
-text 1 wslconfig /l 安装时选择其他盘安装 首先解压.</description>
+管理员打开Powershell 运行以下命令，将路径替换为下载的离线安装包路径。本次安装的 wsl 默认安装到C盘
+powershell 1 Add-AppxPackage .\app_name.appx 查看已经安装的子系统</description>
     </item>
   </channel>
 </rss>
