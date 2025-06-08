@@ -18,7 +18,7 @@ Before version 0.9.0 only a single variable could be specified in the first para
 下面将了解下 nginx map 的具体使用方式
 nginx map使用 Nginx 配置主要是声明性的，这同样应用于 MAP 指令，NGINX MAP 是定义在 http{} 级别，最大的特点是仅在引用时进行处理， 如果请求未触及使用 NGINX MAP 变量的配置部分，则不会执行该 map 变量查找。换句话来理解，当在上下文 server, Location, if 等中使用结果变量时（指定的不是计算结果，而是在需要时计算该结果的公式），才会被使用，在 NGINX 需要使用该变量之前，NGINX MAP 不会给请求增加任何开销。
 NGINX MAP 用于根据另一个变量的值创建一个变量，如下所示：
-conf map $variable_to_check $variable_to_set { &amp;#34;check_if_variable_matches_me&amp;#34; &amp;#34;variable_matches_checked_value&amp;#34;; default &amp;#34;no_match&amp;#34;; } 在上面的例子中， 变量 $variable_to_set 的被设置的结果为：如果 $variable_to_check 值为 “check_if_variable_matches_me”， 那么 $variable_to_set 将被设置为值 “variable_matches_checked_value” ， 否则将设置为 “no_match”。</description>
+text 1 2 3 4 map $variable_to_check $variable_to_set { &amp;#34;check_if_variable_matches_me&amp;#34; &amp;#34;variable_matches_checked_value&amp;#34;; default &amp;#34;no_match&amp;#34;; } 在上面的例子中， 变量 $variable_to_set 的被设置的结果为：如果 $variable_to_check 值为 “check_if_variable_matches_me”， 那么 $variable_to_set 将被设置为值 “variable_matches_checked_value” ， 否则将设置为 “no_match”。</description>
     </item>
     <item>
       <title>修改ingress-nginx中default backend默认状态码</title>
@@ -37,15 +37,14 @@ bash 1 2 3 4 5 6 7 8 9 10 11 12 containers: - args: - /nginx-ingress-controller 
       <pubDate>Sat, 20 May 2023 00:00:00 +0000</pubDate>
       <guid>https://www.oomkill.com/nginx-proxy_pass/</guid>
       <description>场景 在配置代理后，GET 请求的变量全部失效，配置如下
-conf location /fw { proxy_pass http://127.0.0.1:2952; } 我的需求是，/fw/ 的都发往 2952端口，但实际情况是404，原因为“在没有指定 URI 的情况下，在1.12版本后会传递原有的URI” 这时会导致一个404错误，因为我的后端接口本身就是 /fw/xxx/ 会出现重复
+text 1 2 3 location /fw { proxy_pass http://127.0.0.1:2952; } 我的需求是，/fw/ 的都发往 2952端口，但实际情况是404，原因为“在没有指定 URI 的情况下，在1.12版本后会传递原有的URI” 这时会导致一个404错误，因为我的后端接口本身就是 /fw/xxx/ 会出现重复
 接下来做了一个变量传递
-conf location ~* /fw/(?&amp;lt;section&amp;gt;.*) { proxy_pass http://127.0.0.1:2952/fw/$section; } 这时存在一个问题，就是 GET 请求的变量无法传递过去
+text 1 2 3 location ~* /fw/(?&amp;lt;section&amp;gt;.*) { proxy_pass http://127.0.0.1:2952/fw/$section; } 这时存在一个问题，就是 GET 请求的变量无法传递过去
 解决 nginx 官方给出一个样例，说明了，存在某种情况下，nginx 不会确定请求 URI 中的部分参数
 使用正则表达式时 在 localtion 名称内 例如，在这个场景下，proxy_pass 就会忽略原有的请求的URI，而将拼接后的请求转发
-conf location /name/ { rewrite /name/([^/]+) /users?name=$1 break; proxy_pass http://127.0.0.1; } 那么这服务我遇到的问题，nginx官方给出了使用方式
+text 1 2 3 4 location /name/ { rewrite /name/([^/]+) /users?name=$1 break; proxy_pass http://127.0.0.1; } 那么这服务我遇到的问题，nginx官方给出了使用方式
 当在 proxy_pass 中需要变量，可以使用 $request_uri;
-另外也可以使用 $is_args$args 参数 来保证原有的请求参数被传递
-conf location ~* /fw/(?&amp;lt;section&amp;gt;.*) { proxy_pass http://127.0.0.1:2952/fw/$section$is_args$args; } $is_args</description>
+另外也可以使用 $is_args$args 参数 来保证原有的请求参数被传递</description>
     </item>
     <item>
       <title>解决nginx在docker中报错 [rewrite or internal redirection cycle while internally redirecting to &#34;/index.html]</title>
@@ -362,7 +361,7 @@ HTTP连接器 SSL连接器 AJP 1.3连接器 proxy连接器 xml 1 2 3 &amp;lt;Con
       <link>https://www.oomkill.com/tomcat-log-path/</link>
       <pubDate>Sat, 02 Jun 2018 00:00:00 +0000</pubDate>
       <guid>https://www.oomkill.com/tomcat-log-path/</guid>
-      <description>修改logging.properties conf /usr/local/apache-tomcat-8.5.32/conf/logging.properties bash 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 ############################################################ # Handler specific properties. # Describes specific configuration info for Handlers. ############################################################ 1catalina.org.apache.juli.AsyncFileHandler.level = FINE 1catalina.org.apache.juli.AsyncFileHandler.directory = /data/logs 1catalina.org.apache.juli.AsyncFileHandler.prefix = catalina. 2localhost.org.apache.juli.AsyncFileHandler.level = FINE 2localhost.org.apache.juli.AsyncFileHandler.directory = /data/logs 2localhost.org.apache.juli.AsyncFileHandler.prefix = localhost. 3manager.org.apache.juli.AsyncFileHandler.level = FINE 3manager.org.apache.juli.AsyncFileHandler.directory = /data/logs 3manager.org.apache.juli.AsyncFileHandler.prefix = manager. 4host-manager.org.apache.juli.AsyncFileHandler.level = FINE 4host-manager.</description>
+      <description>修改logging.properties text 1 /usr/local/apache-tomcat-8.5.32/conf/logging.properties bash 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 ############################################################ # Handler specific properties. # Describes specific configuration info for Handlers. ############################################################ 1catalina.org.apache.juli.AsyncFileHandler.level = FINE 1catalina.org.apache.juli.AsyncFileHandler.directory = /data/logs 1catalina.org.apache.juli.AsyncFileHandler.prefix = catalina. 2localhost.org.apache.juli.AsyncFileHandler.level = FINE 2localhost.org.apache.juli.AsyncFileHandler.directory = /data/logs 2localhost.org.apache.juli.AsyncFileHandler.prefix = localhost. 3manager.org.apache.juli.AsyncFileHandler.level = FINE 3manager.org.apache.juli.AsyncFileHandler.directory = /data/logs 3manager.org.apache.juli.AsyncFileHandler.prefix = manager. 4host-manager.org.apache.juli.AsyncFileHandler.level = FINE 4host-manager.</description>
     </item>
     <item>
       <title>Apache httpd配置集锦</title>

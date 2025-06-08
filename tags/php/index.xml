@@ -19,11 +19,10 @@
 php.ini参数优化 无论是 apache 还是 nginx，php.ini都是适合的。而 php-fpm.conf 适合nginx。而php-fpm.conf更适合 nginx+fcgi 的配置。首选选择产品环境的 php.ini
 开发场景：development 生产环境：production 打开php的安全模式 php的安全模式是个非常重要的php内嵌的安全机制，能够控制一些php中的函数执行，比如system() ,同时把很多文件操作的函数进行了权限控制。php5.4后弃用
 该参数配置如下：
-conf 336 ; Safe Mode 337 ; http://php.net/safe-mode 338 safe_mode = Off 用户和安全组 当safe_mode打开时，safe_mode_gid被关闭，那么php脚本能够对文件进行访问，而且相同组的用户也能够对文件进行访问。建议设置为safe_mode_gid=off;
+text 1 2 3 336 ; Safe Mode 337 ; http://php.net/safe-mode 338 safe_mode = Off 用户和安全组 当safe_mode打开时，safe_mode_gid被关闭，那么php脚本能够对文件进行访问，而且相同组的用户也能够对文件进行访问。建议设置为safe_mode_gid=off;
 如果不进行设置，可能我们无法对我们服务器网站目录下的文件进行操作了，比如我们需要对文件进行操作的时候。php5.3默认为 safe_mode_gid=off; （新版弃用）
 关闭危险函数 如果打开了安全模式，那么函数禁止是可以不需要的，但是我们为了安全还是考虑进去。比如，我们觉得不希望执行包括 system() 等在那的能够执行命令的php函数，或者能够查看php信息的 phpinfo() 等函数，那么我们就可以禁止他们，方法如下：
-conf disable_functions = system,passthru,exec,shell_exec,popen,phpinfo 如果你要禁止任何文件和目录的操作，那么可以关闭很多文件操作。
-conf disable_functions = chdir,chroot,getcwd,opendir,readdir,scandir,fopen,unlink,delete,copy,mkdir,rmdir,rename,file,file_get_contents,fputs,fwrite,chgrp,chmod,chown 以上只列出部分不叫常用的文件处理函数，你也可以把上面执行命令函数和这个函数结合，就能够地址大部分的phpshell了。该参数默认为 disable_functions=.</description>
+text 1 disable_functions = system,passthru,exec,shell_exec,popen,phpinfo 如果你要禁止任何文件和目录的操作，那么可以关闭很多文件操作。</description>
     </item>
     <item>
       <title>PHP安装错误记录</title>
@@ -89,9 +88,9 @@ XCache是一个开源的、又快又稳定的PHP opcode缓存器/优化器，其
       <guid>https://www.oomkill.com/apache-php/</guid>
       <description>默认生成
 bash 1 2 3 4 5 6 7 $ grep libphp5 /app/apache/conf/httpd.conf LoadModule php5_module modules/libphp5.so $ ll /app/apache/modules/ 总用量 29620 -rw-r--r--. 1 root root 9115 4月 8 03:02 httpd.exp -rwxr-xr-x. 1 root root 30316906 4月 21 01:46 libphp5.so 修改httpd配置文件311行
-conf AddType application/x-httpd-php .php .phtml AddType application/x-httpd-php-source .phps 更改daemon，更改用户是为了安全考虑
+text 1 2 AddType application/x-httpd-php .php .phtml AddType application/x-httpd-php-source .phps 更改daemon，更改用户是为了安全考虑
 常用的httpd支持php的编译参数
-conf ./configure --enable-xcache=shared --with-php-config=/app/php/bin/php-config ./configure --enable-eaccelerator=shared --with-php-config=/app/php/bin/php-config ./configure --with-php-config=/app/php/bin/php-config --with-pdo-mysql=/app/mysql ./configure --with-php-config=/app/php/bin/php-config --with-imagick=/app/imagemag/ sysconfdir 指定php配置文件路径</description>
+text 1 2 3 4 ./configure --enable-xcache=shared --with-php-config=/app/php/bin/php-config ./configure --enable-eaccelerator=shared --with-php-config=/app/php/bin/php-config ./configure --with-php-config=/app/php/bin/php-config --with-pdo-mysql=/app/mysql ./configure --with-php-config=/app/php/bin/php-config --with-imagick=/app/imagemag/ sysconfdir 指定php配置文件路径</description>
     </item>
   </channel>
 </rss>

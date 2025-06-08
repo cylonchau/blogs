@@ -14,7 +14,7 @@
       <pubDate>Sat, 29 Jun 2024 00:00:00 +0000</pubDate>
       <guid>https://www.oomkill.com/debian-network-configration/</guid>
       <description>设置一个网络接口 debian 中网络接口的配置文件是在 /etc/network/interfaces，可以设置 “静态地址” 或 “DHCP”
-conf cat /etc/network/interfaces # This file describes the network interfaces available on your system # and how to activate them. For more information, see interfaces(5). source /etc/network/interfaces.d/* # The loopback network interface auto lo auto ens33 iface lo inet loopback # The primary network interface allow-hotplug ens33 iface ens33 inet static address 10.0.0.14 netmast 255.255.255.0 gateway 10.0.0.2 root@debian-template:~# cat /etc/network/interfaces # This file describes the network interfaces available on your system # and how to activate them.</description>
+text 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 cat /etc/network/interfaces # This file describes the network interfaces available on your system # and how to activate them. For more information, see interfaces(5). source /etc/network/interfaces.</description>
     </item>
     <item>
       <title>安装Debian12 (Bookworm) Step-by-Step</title>

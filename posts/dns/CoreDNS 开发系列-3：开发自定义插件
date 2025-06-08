@@ -15,11 +15,11 @@ keywords:
 ---
 {{< admonition type=abstract title="本文是CoreDNS 开发系列第3章" open=false >}}
 
-- CoreDNS 开发系列-1：CoreDNS核心概念
-- CoreDNS 开发系列-2：CoreDNS插件详解
-- CoreDNS 开发系列-3：开发自定义插件
-- CoreDNS 开发系列-4：高并发域名平台架构设计
-- CoreDNS 开发系列-5：高性能域名平台项目开发
+- [CoreDNS 开发系列-1：CoreDNS核心概念和安装配置说明]({{</* relref "coredns-serial-01-coredns-concept" */>}})
+- [CoreDNS 开发系列-2：CoreDNS插件详解]({{</* relref "coredns-serial-02-coredns-plugins" */>}})
+- [CoreDNS 开发系列-3：开发自定义插件]({{</* relref "coredns-serial-03-custom-plugin" */>}})
+- [CoreDNS 开发系列-4：高并发域名平台架构设计]({{</* relref "coredns-serial-04-system-design" */>}})
+- [CoreDNS 开发系列-5：高性能域名平台项目开发]({{</* relref "coredns-serial-05-project-development" */>}})
 
 {{< /admonition >}}
 

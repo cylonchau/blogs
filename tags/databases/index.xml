@@ -136,7 +136,7 @@ bash 1 2 3 4 5 6 7 mysql&amp;gt; show create table test1\G *********************
       <description>利用 mysql -e 参数查看 mysql 数据 bash 1 2 3 4 5 6 7 8 $ mysql -uroot -p111 -e &amp;#39;use test;show tables;&amp;#39; +------------------------------+ | Tables_in_test | +------------------------------+ | 33hao_activity | | 33hao_activity_detail | | 33hao_address | +------------------------------+ 利用 mysql -e 参数查看SQL线程执行状态
 bash 1 2 $ mysql -uroot -p111 -e &amp;#39;show processlist;&amp;#39; kill 12; 查看完整的线程状态，此参数才查看慢查询语句是非常有用
 解决方法：
-bash 1 2 3 4 root@localhost [test]&amp;gt;show variables like &amp;#39;%_timeout%&amp;#39;; # 设置 set global wait_timeout=60; set global interactive_timeout=60; 在配置文件里修改 conf set global wait_timeout=60; set global interactive_timeout=60; # 此参数设置后wait_timeout自动生效 其他方法 (1) PHP程序中，不适用持久链接，即 mysql_connect 而不是 pconnect（java调整连接池）</description>
+bash 1 2 3 4 root@localhost [test]&amp;gt;show variables like &amp;#39;%_timeout%&amp;#39;; # 设置 set global wait_timeout=60; set global interactive_timeout=60; 在配置文件里修改 text 1 2 set global wait_timeout=60; set global interactive_timeout=60; # 此参数设置后wait_timeout自动生效 其他方法 (1) PHP程序中，不适用持久链接，即 mysql_connect 而不是 pconnect（java调整连接池）</description>
     </item>
     <item>
       <title>ch04 - MySQL数据库服务日志类型</title>

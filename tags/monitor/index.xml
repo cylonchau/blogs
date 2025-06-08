@@ -138,10 +138,10 @@ json 1 2 3 4 5 { &amp;#34;chat_id&amp;#34;: &amp;#34;-383641009&amp;#34;, &amp;#
       <guid>https://www.oomkill.com/prome-nginx-module-vts/</guid>
       <description>prometheus 监控nginx的模块 nginx-module-vts
 下载后配置
-conf http{vhost_traffic_status_zone; vhost_traffic_status_zone shared:vhost_traffic_status:32m; # 设置共享内存大小server {vhost_traffic_status_filter_by_set_key $status $server_name; # 计算详细的http状态代码的流量location /status {vhost_traffic_status_display; # 设置了该指令，则可以访问如下：vhost_traffic_status_display_format html;vhost_traffic_status off; ## 启用或禁用模块工作}}} 不想统计流量的server区域禁用vhost_traffic_statu off
+text 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 http{ vhost_traffic_status_zone; vhost_traffic_status_zone shared:vhost_traffic_status:32m; # 设置共享内存大小 server { vhost_traffic_status_filter_by_set_key $status $server_name; # 计算详细的http状态代码的流量 location /status { vhost_traffic_status_display; # 设置了该指令，则可以访问如下： vhost_traffic_status_display_format html; vhost_traffic_status off; ## 启用或禁用模块工作 } } } 不想统计流量的server区域禁用vhost_traffic_statu off
 例： 计算upstream后端响应时间 nginx_upstream_responseMsec{upstream=“group1”}
 一个完整的配置文件：nginx.conf 关于GEO相关：GeoIP.dat file format #162 ngx如何配置GEO：GeoIP discontinuation; Upgrade to GeoIP2 with nginx on CentOS 删除所zone内存中的数据
-bash 1 curl localhost/status/control?cmd=delete&amp;amp;group=* </description>
+bash 1 curl localhost/status/control?</description>
     </item>
     <item>
       <title>prometheus golang_client开发Exporter</title>

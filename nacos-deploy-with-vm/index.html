@@ -16,7 +16,7 @@ bash 1 useradd nacos -s /sbin/nologin -M 修改 java 环境变量
 使用openjdk启动，需要配置JAVA_HOME在启动脚本中
 bash 1 2 3 4 $ rpm -ql java-1.8.0-openjdk-headless # 找到 jre 根目录配置 JAVA_HOME # /opt/nacos/bin/startup.sh JAVA_HOME=/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.412.b08-1.el7_9.x86_64/jre 启动命令
 集群模式需要同时启动多个节点
-bash 1 2 3 4 5 6 7 启动命令 # 单机 sudo -u nacos /opt/nacos/bin/startup.sh -m standalone # 集群 sudo -u nacos /opt/nacos/bin/startup.sh -m cluster # 停止服务 sudo -u nacos /opt/nacos/bin/shutdown."><script type=application/ld+json>{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Posts","item":"https://www.oomkill.com/posts/"},{"@type":"ListItem","position":2,"name":"使用虚拟机部署nacos","item":"https://www.oomkill.com/nacos-deploy-with-vm/"}]}</script><script type=application/ld+json>{"@context":"https://schema.org","@type":"BlogPosting","headline":"使用虚拟机部署nacos","name":"使用虚拟机部署nacos","description":"下载 nacos-server\nbash 1 $ tar zxvf nacos-server-2.2.3.tar.gz -C /opt/ 创建nacos用户\nbash 1 useradd nacos -s /sbin/nologin -M 修改 java 环境变量\n使用openjdk启动，需要配置JAVA_HOME在启动脚本中\nbash 1 2 3 4 $ rpm -ql java-1.8.0-openjdk-headless # 找到 jre 根目录配置 JAVA_HOME # /opt/nacos/bin/startup.sh JAVA_HOME=/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.412.b08-1.el7_9.x86_64/jre 启动命令\n集群模式需要同时启动多个节点\nbash 1 2 3 4 5 6 7 启动命令 # 单机 sudo -u nacos /opt/nacos/bin/startup.sh -m standalone # 集群 sudo -u nacos /opt/nacos/bin/startup.sh -m cluster # 停止服务 sudo -u nacos /opt/nacos/bin/shutdown.","keywords":["nacos"],"articleBody":"下载 nacos-server\nbash 1 $ tar zxvf nacos-server-2.2.3.tar.gz -C /opt/ 创建nacos用户\nbash 1 useradd nacos -s /sbin/nologin -M 修改 java 环境变量\n使用openjdk启动，需要配置JAVA_HOME在启动脚本中\nbash 1 2 3 4 $ rpm -ql java-1.8.0-openjdk-headless # 找到 jre 根目录配置 JAVA_HOME # /opt/nacos/bin/startup.sh JAVA_HOME=/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.412.b08-1.el7_9.x86_64/jre 启动命令\n集群模式需要同时启动多个节点\nbash 1 2 3 4 5 6 7 启动命令 # 单机 sudo -u nacos /opt/nacos/bin/startup.sh -m standalone # 集群 sudo -u nacos /opt/nacos/bin/startup.sh -m cluster # 停止服务 sudo -u nacos /opt/nacos/bin/shutdown.sh 最终版配置文件参考\nconf # Copyright 1999-2021 Alibaba Group Holding Ltd. # # Licensed under the Apache License, Version 2.0 (the \"License\"); # you may not use this file except in compliance with the License. # You may obtain a copy of the License at # # http://www.apache.org/licenses/LICENSE-2.0 # # Unless required by applicable law or agreed to in writing, software # distributed under the License is distributed on an \"AS IS\" BASIS, # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. # See the License for the specific language governing permissions and # limitations under the License. # #*************** Spring Boot Related Configurations ***************# ### Default web context path: server.servlet.contextPath=/nacos ### Include message field server.error.include-message=ALWAYS ### Default web server port: server.port=8848 #*************** Network Related Configurations ***************# ### If prefer hostname over ip for Nacos server addresses in cluster.conf: # nacos.inetutils.prefer-hostname-over-ip=false ### Specify local server's IP: # nacos.inetutils.ip-address= #*************** Config Module Related Configurations ***************# ### If use MySQL as datasource: ### Deprecated configuration property, it is recommended to use `spring.sql.init.platform` replaced. #spring.datasource.platform=mysql spring.sql.init.platform=mysql ### Count of DB: db.num=1 ### Connect URL of DB: db.url.0=jdbc:mysql://198.168.21.40:33064/nacos_config?characterEncoding=utf8\u0026connectTimeout=1000\u0026socketTimeout=3000\u0026autoReconnect=true\u0026useUnicode=true\u0026useSSL=false\u0026serverTimezone=UTC db.user.0=nacos db.password.0=nacos ### Connection pool configuration: hikariCP db.pool.config.connectionTimeout=30000 db.pool.config.validationTimeout=10000 db.pool.config.maximumPoolSize=20 db.pool.config.minimumIdle=2 #*************** Naming Module Related Configurations ***************# ### If enable data warmup. If set to false, the server would accept request without local data preparation: # nacos.naming.data.warmup=true ### If enable the instance auto expiration, kind like of health check of instance: # nacos.naming.expireInstance=true ### Add in 2.0.0 ### The interval to clean empty service, unit: milliseconds. # nacos.naming.clean.empty-service.interval=60000 ### The expired time to clean empty service, unit: milliseconds. # nacos.naming.clean.empty-service.expired-time=60000 ### The interval to clean expired metadata, unit: milliseconds. # nacos.naming.clean.expired-metadata.interval=5000 ### The expired time to clean metadata, unit: milliseconds. # nacos.naming.clean.expired-metadata.expired-time=60000 ### The delay time before push task to execute from service changed, unit: milliseconds. # nacos.naming.push.pushTaskDelay=500 ### The timeout for push task execute, unit: milliseconds. # nacos.naming.push.pushTaskTimeout=5000 ### The delay time for retrying failed push task, unit: milliseconds. # nacos.naming.push.pushTaskRetryDelay=1000 ### Since 2.0.3 ### The expired time for inactive client, unit: milliseconds. # nacos.naming.client.expired.time=180000 #*************** CMDB Module Related Configurations ***************# ### The interval to dump external CMDB in seconds: # nacos.cmdb.dumpTaskInterval=3600 ### The interval of polling data change event in seconds: # nacos.cmdb.eventTaskInterval=10 ### The interval of loading labels in seconds: # nacos.cmdb.labelTaskInterval=300 ### If turn on data loading task: # nacos.cmdb.loadDataAtStart=false #*************** Metrics Related Configurations ***************# ### Metrics for prometheus #management.endpoints.web.exposure.include=* ### Metrics for elastic search management.metrics.export.elastic.enabled=false #management.metrics.export.elastic.host=http://localhost:9200 ### Metrics for influx management.metrics.export.influx.enabled=false #management.metrics.export.influx.db=springboot #management.metrics.export.influx.uri=http://localhost:8086 #management.metrics.export.influx.auto-create-db=true #management.metrics.export.influx.consistency=one #management.metrics.export.influx.compressed=true #*************** Access Log Related Configurations ***************# ### If turn on the access log: server.tomcat.accesslog.enabled=true ### The access log pattern: server.tomcat.accesslog.pattern=%h %l %u %t \"%r\" %s %b %D %{User-Agent}i %{Request-Source}i ### The directory of access log: server.tomcat.basedir=file:. #*************** Access Control Related Configurations ***************# ### If enable spring security, this option is deprecated in 1.2.0: #spring.security.enabled=false ### The ignore urls of auth nacos.security.ignore.urls=/,/error,/**/*.css,/**/*.js,/**/*.html,/**/*.map,/**/*.svg,/**/*.png,/**/*.ico,/console-ui/public/**,/v1/auth/**,/v1/console/health/**,/actuator/**,/v1/console/server/** ### The auth system to use, currently only 'nacos' and 'ldap' is supported: nacos.core.auth.system.type=nacos ### If turn on auth system: nacos.core.auth.enabled=true ### Turn on/off caching of auth information. By turning on this switch, the update of auth information would have a 15 seconds delay. nacos.core.auth.caching.enabled=true ### Since 1.4.1, Turn on/off white auth for user-agent: nacos-server, only for upgrade from old version. nacos.core.auth.enable.userAgentAuthWhite=false ### Since 1.4.1, worked when nacos.core.auth.enabled=true and nacos.core.auth.enable.userAgentAuthWhite=false. ### The two properties is the white list for auth and used by identity the request from other server. nacos.core.auth.server.identity.key=test nacos.core.auth.server.identity.value=test ### worked when nacos.core.auth.system.type=nacos ### The token expiration in seconds: nacos.core.auth.plugin.nacos.token.cache.enable=false nacos.core.auth.plugin.nacos.token.expire.seconds=18000 ### The default token (Base64 String): nacos.core.auth.plugin.nacos.token.secret.key=ab2345678901234567890123456789012345678901234567890123456789 ### worked when nacos.core.auth.system.type=ldap，{0} is Placeholder,replace login username #nacos.core.auth.ldap.url=ldap://localhost:389 #nacos.core.auth.ldap.basedc=dc=example,dc=org #nacos.core.auth.ldap.userDn=cn=admin,${nacos.core.auth.ldap.basedc} #nacos.core.auth.ldap.password=admin #nacos.core.auth.ldap.userdn=cn={0},dc=example,dc=org #nacos.core.auth.ldap.filter.prefix=uid #nacos.core.auth.ldap.case.sensitive=true #*************** Istio Related Configurations ***************# ### If turn on the MCP server: nacos.istio.mcp.server.enabled=false #*************** Core Related Configurations ***************# ### set the WorkerID manually # nacos.core.snowflake.worker-id= ### Member-MetaData # nacos.core.member.meta.site= # nacos.core.member.meta.adweight= # nacos.core.member.meta.weight= ### MemberLookup ### Addressing pattern category, If set, the priority is highest # nacos.core.member.lookup.type=[file,address-server] ## Set the cluster list with a configuration file or command-line argument nacos.member.list=192.168.16.101:8847?raft_port=8807,192.168.16.101?raft_port=8808,192.168.16.101:8849?raft_port=8809 ## for AddressServerMemberLookup # Maximum number of retries to query the address server upon initialization # nacos.core.address-server.retry=5 ## Server domain name address of [address-server] mode # address.server.domain=jmenv.tbsite.net ## Server port of [address-server] mode # address.server.port=8080 ## Request address of [address-server] mode # address.server.url=/nacos/serverlist #*************** JRaft Related Configurations ***************# ### Sets the Raft cluster election timeout, default value is 5 second # nacos.core.protocol.raft.data.election_timeout_ms=5000 ### Sets the amount of time the Raft snapshot will execute periodically, default is 30 minute # nacos.core.protocol.raft.data.snapshot_interval_secs=30 ### raft internal worker threads # nacos.core.protocol.raft.data.core_thread_num=8 ### Number of threads required for raft business request processing # nacos.core.protocol.raft.data.cli_service_thread_num=4 ### raft linear read strategy. Safe linear reads are used by default, that is, the Leader tenure is confirmed by heartbeat # nacos.core.protocol.raft.data.read_index_type=ReadOnlySafe ### rpc request timeout, default 5 seconds # nacos.core.protocol.raft.data.rpc_request_timeout_ms=5000 #*************** Distro Related Configurations ***************# ### Distro data sync delay time, when sync task delayed, task will be merged for same data key. Default 1 second. # nacos.core.protocol.distro.data.sync.delayMs=1000 ### Distro data sync timeout for one sync data, default 3 seconds. # nacos.core.protocol.distro.data.sync.timeoutMs=3000 ### Distro data sync retry delay time when sync data failed or timeout, same behavior with delayMs, default 3 seconds. # nacos.core.protocol.distro.data.sync.retryDelayMs=3000 ### Distro data verify interval time, verify synced data whether expired for a interval. Default 5 seconds. # nacos.core.protocol.distro.data.verify.intervalMs=5000 ### Distro data verify timeout for one verify, default 3 seconds. # nacos.core.protocol.distro.data.verify.timeoutMs=3000 ### Distro data load retry delay when load snapshot data failed, default 30 seconds. # nacos.core.protocol.distro.data.load.retryDelayMs=30000 ### enable to support prometheus service discovery #nacos.prometheus.metrics.enabled=true ### Since 2.3 #*************** Grpc Configurations ***************# ## sdk grpc(between nacos server and client) configuration ## Sets the maximum message size allowed to be received on the server. #nacos.remote.server.grpc.sdk.max-inbound-message-size=10485760 ## Sets the time(milliseconds) without read activity before sending a keepalive ping. The typical default is two hours. #nacos.remote.server.grpc.sdk.keep-alive-time=7200000 ## Sets a time(milliseconds) waiting for read activity after sending a keepalive ping. Defaults to 20 seconds. #nacos.remote.server.grpc.sdk.keep-alive-timeout=20000 ## Sets a time(milliseconds) that specify the most aggressive keep-alive time clients are permitted to configure. The typical default is 5 minutes #nacos.remote.server.grpc.sdk.permit-keep-alive-time=300000 ## cluster grpc(inside the nacos server) configuration #nacos.remote.server.grpc.cluster.max-inbound-message-size=10485760 ## Sets the time(milliseconds) without read activity before sending a keepalive ping. The typical default is two hours. #nacos.remote.server.grpc.cluster.keep-alive-time=7200000 ## Sets a time(milliseconds) waiting for read activity after sending a keepalive ping. Defaults to 20 seconds. #nacos.remote.server.grpc.cluster.keep-alive-timeout=20000 ## Sets a time(milliseconds) that specify the most aggressive keep-alive time clients are permitted to configure. The typical default is 5 minutes #nacos.remote.server.grpc.cluster.permit-keep-alive-time=300000 ","wordCount":"1142","inLanguage":"zh","datePublished":"2024-02-20T00:00:00Z","dateModified":"2024-11-29T23:00:36+08:00","author":{"@type":"Person","name":"cylon"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://www.oomkill.com/nacos-deploy-with-vm/"},"publisher":{"@type":"Organization","name":"Cylon's Collection","logo":{"@type":"ImageObject","url":"https://www.oomkill.com/favicon.ico"}}}</script></head><body id=top><script>localStorage.getItem("pref-theme")==="dark"?document.body.classList.add("dark"):localStorage.getItem("pref-theme")==="light"?document.body.classList.remove("dark"):window.matchMedia("(prefers-color-scheme: dark)").matches&&document.body.classList.add("dark")</script><header class=header><nav class=nav><div class=logo><a href=https://www.oomkill.com/><img src=https://www.oomkill.com/favicon.ico alt aria-label=logo height=20>Cylon's Collection</a><div class=logo-switches><button id=theme-toggle><svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg><svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg></button></div></div><ul id=menu><li><a href=https://www.oomkill.com/archives><span>归档</span></a></li><li><a href=https://www.oomkill.com/tags><span>标签</span></a></li><li><a href=https://www.oomkill.com/search><span>搜索</span></a></li><li><a href=https://www.oomkill.com/about accesskey=/><span>关于</span></a></li></ul></nav></header><main class=main><article class=post-single><header class=post-header><h1 class="post-title entry-hint-parent">使用虚拟机部署nacos</h1><div class=post-meta><span class=pe-post-meta-item><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke="currentcolor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="feather feather-calendar" style="user-select:text"><rect x="3" y="4" width="18" height="18" rx="2" ry="2" style="user-select:text"/><line x1="16" y1="2" x2="16" y2="6" style="user-select:text"/><line x1="8" y1="2" x2="8" y2="6" style="user-select:text"/><line x1="3" y1="10" x2="21" y2="10" style="user-select:text"/></svg><span>2024-02-20</span></span>&nbsp;·&nbsp;<span class=pe-post-meta-item><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke="currentcolor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file-text" style="user-select:text"><path d="M14 2H6A2 2 0 004 4v16a2 2 0 002 2h12a2 2 0 002-2V8z" style="user-select:text"/><polyline points="14 2 14 8 20 8" style="user-select:text"/><line x1="16" y1="13" x2="8" y2="13" style="user-select:text"/><line x1="16" y1="17" x2="8" y2="17" style="user-select:text"/><polyline points="10 9 9 9 8 9" style="user-select:text"/></svg><span>1142 字</span></span>&nbsp;·&nbsp;<span class=pe-post-meta-item><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke="currentcolor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 15 15"/></svg><span>6 分钟</span></span>
+bash 1 2 3 4 5 6 7 启动命令 # 单机 sudo -u nacos /opt/nacos/bin/startup.sh -m standalone # 集群 sudo -u nacos /opt/nacos/bin/startup.sh -m cluster # 停止服务 sudo -u nacos /opt/nacos/bin/shutdown."><script type=application/ld+json>{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Posts","item":"https://www.oomkill.com/posts/"},{"@type":"ListItem","position":2,"name":"使用虚拟机部署nacos","item":"https://www.oomkill.com/nacos-deploy-with-vm/"}]}</script><script type=application/ld+json>{"@context":"https://schema.org","@type":"BlogPosting","headline":"使用虚拟机部署nacos","name":"使用虚拟机部署nacos","description":"下载 nacos-server\nbash 1 $ tar zxvf nacos-server-2.2.3.tar.gz -C /opt/ 创建nacos用户\nbash 1 useradd nacos -s /sbin/nologin -M 修改 java 环境变量\n使用openjdk启动，需要配置JAVA_HOME在启动脚本中\nbash 1 2 3 4 $ rpm -ql java-1.8.0-openjdk-headless # 找到 jre 根目录配置 JAVA_HOME # /opt/nacos/bin/startup.sh JAVA_HOME=/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.412.b08-1.el7_9.x86_64/jre 启动命令\n集群模式需要同时启动多个节点\nbash 1 2 3 4 5 6 7 启动命令 # 单机 sudo -u nacos /opt/nacos/bin/startup.sh -m standalone # 集群 sudo -u nacos /opt/nacos/bin/startup.sh -m cluster # 停止服务 sudo -u nacos /opt/nacos/bin/shutdown.","keywords":["nacos"],"articleBody":"下载 nacos-server\nbash 1 $ tar zxvf nacos-server-2.2.3.tar.gz -C /opt/ 创建nacos用户\nbash 1 useradd nacos -s /sbin/nologin -M 修改 java 环境变量\n使用openjdk启动，需要配置JAVA_HOME在启动脚本中\nbash 1 2 3 4 $ rpm -ql java-1.8.0-openjdk-headless # 找到 jre 根目录配置 JAVA_HOME # /opt/nacos/bin/startup.sh JAVA_HOME=/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.412.b08-1.el7_9.x86_64/jre 启动命令\n集群模式需要同时启动多个节点\nbash 1 2 3 4 5 6 7 启动命令 # 单机 sudo -u nacos /opt/nacos/bin/startup.sh -m standalone # 集群 sudo -u nacos /opt/nacos/bin/startup.sh -m cluster # 停止服务 sudo -u nacos /opt/nacos/bin/shutdown.sh 最终版配置文件参考\ntext 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 96 97 98 99 100 101 102 103 104 105 106 107 108 109 110 111 112 113 114 115 116 117 118 119 120 121 122 123 124 125 126 127 128 129 130 131 132 133 134 135 136 137 138 139 140 141 142 143 144 145 146 147 148 149 150 151 152 153 154 155 156 157 158 159 160 161 162 163 164 165 166 167 168 169 170 171 172 173 174 175 176 177 178 179 180 181 182 183 184 185 186 187 188 189 190 191 192 193 194 195 196 197 198 199 200 201 202 203 204 205 206 207 208 209 210 211 212 213 214 215 216 217 218 219 220 221 222 223 224 225 226 227 228 229 230 231 232 233 234 235 236 237 238 239 240 241 242 243 244 245 246 247 248 249 250 251 252 253 254 255 256 257 258 259 260 261 # Copyright 1999-2021 Alibaba Group Holding Ltd. # # Licensed under the Apache License, Version 2.0 (the \"License\"); # you may not use this file except in compliance with the License. # You may obtain a copy of the License at # # http://www.apache.org/licenses/LICENSE-2.0 # # Unless required by applicable law or agreed to in writing, software # distributed under the License is distributed on an \"AS IS\" BASIS, # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. # See the License for the specific language governing permissions and # limitations under the License. # #*************** Spring Boot Related Configurations ***************# ### Default web context path: server.servlet.contextPath=/nacos ### Include message field server.error.include-message=ALWAYS ### Default web server port: server.port=8848 #*************** Network Related Configurations ***************# ### If prefer hostname over ip for Nacos server addresses in cluster.conf: # nacos.inetutils.prefer-hostname-over-ip=false ### Specify local server's IP: # nacos.inetutils.ip-address= #*************** Config Module Related Configurations ***************# ### If use MySQL as datasource: ### Deprecated configuration property, it is recommended to use `spring.sql.init.platform` replaced. #spring.datasource.platform=mysql spring.sql.init.platform=mysql ### Count of DB: db.num=1 ### Connect URL of DB: db.url.0=jdbc:mysql://198.168.21.40:33064/nacos_config?characterEncoding=utf8\u0026connectTimeout=1000\u0026socketTimeout=3000\u0026autoReconnect=true\u0026useUnicode=true\u0026useSSL=false\u0026serverTimezone=UTC db.user.0=nacos db.password.0=nacos ### Connection pool configuration: hikariCP db.pool.config.connectionTimeout=30000 db.pool.config.validationTimeout=10000 db.pool.config.maximumPoolSize=20 db.pool.config.minimumIdle=2 #*************** Naming Module Related Configurations ***************# ### If enable data warmup. If set to false, the server would accept request without local data preparation: # nacos.naming.data.warmup=true ### If enable the instance auto expiration, kind like of health check of instance: # nacos.naming.expireInstance=true ### Add in 2.0.0 ### The interval to clean empty service, unit: milliseconds. # nacos.naming.clean.empty-service.interval=60000 ### The expired time to clean empty service, unit: milliseconds. # nacos.naming.clean.empty-service.expired-time=60000 ### The interval to clean expired metadata, unit: milliseconds. # nacos.naming.clean.expired-metadata.interval=5000 ### The expired time to clean metadata, unit: milliseconds. # nacos.naming.clean.expired-metadata.expired-time=60000 ### The delay time before push task to execute from service changed, unit: milliseconds. # nacos.naming.push.pushTaskDelay=500 ### The timeout for push task execute, unit: milliseconds. # nacos.naming.push.pushTaskTimeout=5000 ### The delay time for retrying failed push task, unit: milliseconds. # nacos.naming.push.pushTaskRetryDelay=1000 ### Since 2.0.3 ### The expired time for inactive client, unit: milliseconds. # nacos.naming.client.expired.time=180000 #*************** CMDB Module Related Configurations ***************# ### The interval to dump external CMDB in seconds: # nacos.cmdb.dumpTaskInterval=3600 ### The interval of polling data change event in seconds: # nacos.cmdb.eventTaskInterval=10 ### The interval of loading labels in seconds: # nacos.cmdb.labelTaskInterval=300 ### If turn on data loading task: # nacos.cmdb.loadDataAtStart=false #*************** Metrics Related Configurations ***************# ### Metrics for prometheus #management.endpoints.web.exposure.include=* ### Metrics for elastic search management.metrics.export.elastic.enabled=false #management.metrics.export.elastic.host=http://localhost:9200 ### Metrics for influx management.metrics.export.influx.enabled=false #management.metrics.export.influx.db=springboot #management.metrics.export.influx.uri=http://localhost:8086 #management.metrics.export.influx.auto-create-db=true #management.metrics.export.influx.consistency=one #management.metrics.export.influx.compressed=true #*************** Access Log Related Configurations ***************# ### If turn on the access log: server.tomcat.accesslog.enabled=true ### The access log pattern: server.tomcat.accesslog.pattern=%h %l %u %t \"%r\" %s %b %D %{User-Agent}i %{Request-Source}i ### The directory of access log: server.tomcat.basedir=file:. #*************** Access Control Related Configurations ***************# ### If enable spring security, this option is deprecated in 1.2.0: #spring.security.enabled=false ### The ignore urls of auth nacos.security.ignore.urls=/,/error,/**/*.css,/**/*.js,/**/*.html,/**/*.map,/**/*.svg,/**/*.png,/**/*.ico,/console-ui/public/**,/v1/auth/**,/v1/console/health/**,/actuator/**,/v1/console/server/** ### The auth system to use, currently only 'nacos' and 'ldap' is supported: nacos.core.auth.system.type=nacos ### If turn on auth system: nacos.core.auth.enabled=true ### Turn on/off caching of auth information. By turning on this switch, the update of auth information would have a 15 seconds delay. nacos.core.auth.caching.enabled=true ### Since 1.4.1, Turn on/off white auth for user-agent: nacos-server, only for upgrade from old version. nacos.core.auth.enable.userAgentAuthWhite=false ### Since 1.4.1, worked when nacos.core.auth.enabled=true and nacos.core.auth.enable.userAgentAuthWhite=false. ### The two properties is the white list for auth and used by identity the request from other server. nacos.core.auth.server.identity.key=test nacos.core.auth.server.identity.value=test ### worked when nacos.core.auth.system.type=nacos ### The token expiration in seconds: nacos.core.auth.plugin.nacos.token.cache.enable=false nacos.core.auth.plugin.nacos.token.expire.seconds=18000 ### The default token (Base64 String): nacos.core.auth.plugin.nacos.token.secret.key=ab2345678901234567890123456789012345678901234567890123456789 ### worked when nacos.core.auth.system.type=ldap，{0} is Placeholder,replace login username #nacos.core.auth.ldap.url=ldap://localhost:389 #nacos.core.auth.ldap.basedc=dc=example,dc=org #nacos.core.auth.ldap.userDn=cn=admin,${nacos.core.auth.ldap.basedc} #nacos.core.auth.ldap.password=admin #nacos.core.auth.ldap.userdn=cn={0},dc=example,dc=org #nacos.core.auth.ldap.filter.prefix=uid #nacos.core.auth.ldap.case.sensitive=true #*************** Istio Related Configurations ***************# ### If turn on the MCP server: nacos.istio.mcp.server.enabled=false #*************** Core Related Configurations ***************# ### set the WorkerID manually # nacos.core.snowflake.worker-id= ### Member-MetaData # nacos.core.member.meta.site= # nacos.core.member.meta.adweight= # nacos.core.member.meta.weight= ### MemberLookup ### Addressing pattern category, If set, the priority is highest # nacos.core.member.lookup.type=[file,address-server] ## Set the cluster list with a configuration file or command-line argument nacos.member.list=192.168.16.101:8847?raft_port=8807,192.168.16.101?raft_port=8808,192.168.16.101:8849?raft_port=8809 ## for AddressServerMemberLookup # Maximum number of retries to query the address server upon initialization # nacos.core.address-server.retry=5 ## Server domain name address of [address-server] mode # address.server.domain=jmenv.tbsite.net ## Server port of [address-server] mode # address.server.port=8080 ## Request address of [address-server] mode # address.server.url=/nacos/serverlist #*************** JRaft Related Configurations ***************# ### Sets the Raft cluster election timeout, default value is 5 second # nacos.core.protocol.raft.data.election_timeout_ms=5000 ### Sets the amount of time the Raft snapshot will execute periodically, default is 30 minute # nacos.core.protocol.raft.data.snapshot_interval_secs=30 ### raft internal worker threads # nacos.core.protocol.raft.data.core_thread_num=8 ### Number of threads required for raft business request processing # nacos.core.protocol.raft.data.cli_service_thread_num=4 ### raft linear read strategy. Safe linear reads are used by default, that is, the Leader tenure is confirmed by heartbeat # nacos.core.protocol.raft.data.read_index_type=ReadOnlySafe ### rpc request timeout, default 5 seconds # nacos.core.protocol.raft.data.rpc_request_timeout_ms=5000 #*************** Distro Related Configurations ***************# ### Distro data sync delay time, when sync task delayed, task will be merged for same data key. Default 1 second. # nacos.core.protocol.distro.data.sync.delayMs=1000 ### Distro data sync timeout for one sync data, default 3 seconds. # nacos.core.protocol.distro.data.sync.timeoutMs=3000 ### Distro data sync retry delay time when sync data failed or timeout, same behavior with delayMs, default 3 seconds. # nacos.core.protocol.distro.data.sync.retryDelayMs=3000 ### Distro data verify interval time, verify synced data whether expired for a interval. Default 5 seconds. # nacos.core.protocol.distro.data.verify.intervalMs=5000 ### Distro data verify timeout for one verify, default 3 seconds. # nacos.core.protocol.distro.data.verify.timeoutMs=3000 ### Distro data load retry delay when load snapshot data failed, default 30 seconds. # nacos.core.protocol.distro.data.load.retryDelayMs=30000 ### enable to support prometheus service discovery #nacos.prometheus.metrics.enabled=true ### Since 2.3 #*************** Grpc Configurations ***************# ## sdk grpc(between nacos server and client) configuration ## Sets the maximum message size allowed to be received on the server. #nacos.remote.server.grpc.sdk.max-inbound-message-size=10485760 ## Sets the time(milliseconds) without read activity before sending a keepalive ping. The typical default is two hours. #nacos.remote.server.grpc.sdk.keep-alive-time=7200000 ## Sets a time(milliseconds) waiting for read activity after sending a keepalive ping. Defaults to 20 seconds. #nacos.remote.server.grpc.sdk.keep-alive-timeout=20000 ## Sets a time(milliseconds) that specify the most aggressive keep-alive time clients are permitted to configure. The typical default is 5 minutes #nacos.remote.server.grpc.sdk.permit-keep-alive-time=300000 ## cluster grpc(inside the nacos server) configuration #nacos.remote.server.grpc.cluster.max-inbound-message-size=10485760 ## Sets the time(milliseconds) without read activity before sending a keepalive ping. The typical default is two hours. #nacos.remote.server.grpc.cluster.keep-alive-time=7200000 ## Sets a time(milliseconds) waiting for read activity after sending a keepalive ping. Defaults to 20 seconds. #nacos.remote.server.grpc.cluster.keep-alive-timeout=20000 ## Sets a time(milliseconds) that specify the most aggressive keep-alive time clients are permitted to configure. The typical default is 5 minutes #nacos.remote.server.grpc.cluster.permit-keep-alive-time=300000 ","wordCount":"1403","inLanguage":"zh","datePublished":"2024-02-20T00:00:00Z","dateModified":"2024-11-29T23:00:36+08:00","author":{"@type":"Person","name":"cylon"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://www.oomkill.com/nacos-deploy-with-vm/"},"publisher":{"@type":"Organization","name":"Cylon's Collection","logo":{"@type":"ImageObject","url":"https://www.oomkill.com/favicon.ico"}}}</script></head><body id=top><script>localStorage.getItem("pref-theme")==="dark"?document.body.classList.add("dark"):localStorage.getItem("pref-theme")==="light"?document.body.classList.remove("dark"):window.matchMedia("(prefers-color-scheme: dark)").matches&&document.body.classList.add("dark")</script><header class=header><nav class=nav><div class=logo><a href=https://www.oomkill.com/><img src=https://www.oomkill.com/favicon.ico alt aria-label=logo height=20>Cylon's Collection</a><div class=logo-switches><button id=theme-toggle><svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg><svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg></button></div></div><ul id=menu><li><a href=https://www.oomkill.com/archives><span>归档</span></a></li><li><a href=https://www.oomkill.com/tags><span>标签</span></a></li><li><a href=https://www.oomkill.com/search><span>搜索</span></a></li><li><a href=https://www.oomkill.com/about accesskey=/><span>关于</span></a></li></ul></nav></header><main class=main><article class=post-single><header class=post-header><h1 class="post-title entry-hint-parent">使用虚拟机部署nacos</h1><div class=post-meta><span class=pe-post-meta-item><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke="currentcolor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="feather feather-calendar" style="user-select:text"><rect x="3" y="4" width="18" height="18" rx="2" ry="2" style="user-select:text"/><line x1="16" y1="2" x2="16" y2="6" style="user-select:text"/><line x1="8" y1="2" x2="8" y2="6" style="user-select:text"/><line x1="3" y1="10" x2="21" y2="10" style="user-select:text"/></svg><span>2024-02-20</span></span>&nbsp;·&nbsp;<span class=pe-post-meta-item><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke="currentcolor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file-text" style="user-select:text"><path d="M14 2H6A2 2 0 004 4v16a2 2 0 002 2h12a2 2 0 002-2V8z" style="user-select:text"/><polyline points="14 2 14 8 20 8" style="user-select:text"/><line x1="16" y1="13" x2="8" y2="13" style="user-select:text"/><line x1="16" y1="17" x2="8" y2="17" style="user-select:text"/><polyline points="10 9 9 9 8 9" style="user-select:text"/></svg><span>1403 字</span></span>&nbsp;·&nbsp;<span class=pe-post-meta-item><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke="currentcolor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 15 15"/></svg><span>7 分钟</span></span>
 <span class=pe-post-meta-item>&nbsp;·&nbsp;<svg t="1714036239378" fill="currentcolor" class="icon" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" p-id="6659" width="256" height="256"><path d="M690 78.2c-18.6-18.8-49-19-67.8-.4s-19 49-.4 67.8l255.4 258.6c67.8 68.6 67.8 178.8.0 247.4L653.4 878.2c-18.6 18.8-18.4 49.2.4 67.8s49.2 18.4 67.8-.4l224-226.4c104.8-106 104.8-276.4.0-382.4L690 78.2zM485.4 101.4c-24-24-56.6-37.4-90.6-37.4H96C43 64 0 107 0 160v299c0 34 13.4 66.6 37.4 90.6l336 336c50 50 131 50 181 0l267-267c50-50 50-131 0-181l-336-336zM96 160h299c8.4.0 16.6 3.4 22.6 9.4l336 336c12.4 12.4 12.4 32.8.0 45.2l-267 267c-12.4 12.4-32.8 12.4-45.2.0l-336-336c-6-6-9.4-14.2-9.4-22.6V160zm192 128a64 64 0 10-128 0 64 64 0 10128 0z" p-id="6660"/></svg></span><ul class=pe-post-meta-item><a href=https://www.oomkill.com/tags/middleware/>#Middleware</a></ul></div></header><script src=/js/pe-toc.min.445eb1bfc5e85dd13b9519fcc2a806522e9629b6224a2974052789ba00ab78af.js integrity="sha256-RF6xv8XoXdE7lRn8wqgGUi6WKbYiSil0BSeJugCreK8="></script><div class=post-content><p>下载 nacos-server</p><div class="pe-code-block-wrap pe-code-details open scrollable"><div class="pe-code-block-header pe-code-details-summary"><div class=pe-code-block-header-left><i class="arrow fas fa-chevron-right fa-fw pe-code-details-icon" aria-hidden=true></i>
 <span>bash</span></div><div class=pe-code-block-header-center><span></span></div><div class=pe-code-block-header-right><i class="fas fa-ellipsis-h fa-fw" aria-hidden=true></i>
 <button class=pe-code-copy-button><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24" class="pe-icon"><path fill="currentcolor" fill-rule="evenodd" d="M7 5a3 3 0 013-3h9a3 3 0 013 3v9a3 3 0 01-3 3h-2v2a3 3 0 01-3 3H5a3 3 0 01-3-3v-9a3 3 0 013-3h2zm2 2h5a3 3 0 013 3v5h2a1 1 0 001-1V5a1 1 0 00-1-1h-9A1 1 0 009 5zM5 9a1 1 0 00-1 1v9a1 1 0 001 1h9a1 1 0 001-1v-9a1 1 0 00-1-1z" clip-rule="evenodd"/></svg></button></div></div><div class="pe-code-details-content scrollable"><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
@@ -48,274 +48,536 @@ bash 1 2 3 4 5 6 7 启动命令 # 单机 sudo -u nacos /opt/nacos/bin/startup.sh
 </span></span><span class=line><span class=cl>sudo -u nacos /opt/nacos/bin/startup.sh -m cluster
 </span></span><span class=line><span class=cl><span class=c1># 停止服务</span>
 </span></span><span class=line><span class=cl>sudo -u nacos /opt/nacos/bin/shutdown.sh</span></span></code></pre></td></tr></table></div></div></div></div><p>最终版配置文件参考</p><div class="pe-code-block-wrap pe-code-details open scrollable"><div class="pe-code-block-header pe-code-details-summary"><div class=pe-code-block-header-left><i class="arrow fas fa-chevron-right fa-fw pe-code-details-icon" aria-hidden=true></i>
-<span>conf</span></div><div class=pe-code-block-header-center><span></span></div><div class=pe-code-block-header-right><i class="fas fa-ellipsis-h fa-fw" aria-hidden=true></i>
-<button class=pe-code-copy-button><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24" class="pe-icon"><path fill="currentcolor" fill-rule="evenodd" d="M7 5a3 3 0 013-3h9a3 3 0 013 3v9a3 3 0 01-3 3h-2v2a3 3 0 01-3 3H5a3 3 0 01-3-3v-9a3 3 0 013-3h2zm2 2h5a3 3 0 013 3v5h2a1 1 0 001-1V5a1 1 0 00-1-1h-9A1 1 0 009 5zM5 9a1 1 0 00-1 1v9a1 1 0 001 1h9a1 1 0 001-1v-9a1 1 0 00-1-1z" clip-rule="evenodd"/></svg></button></div></div><div class="pe-code-details-content scrollable"><pre tabindex=0><code class=language-conf data-lang=conf># Copyright 1999-2021 Alibaba Group Holding Ltd.
-#
-# Licensed under the Apache License, Version 2.0 (the &#34;License&#34;);
-# you may not use this file except in compliance with the License.
-# You may obtain a copy of the License at
-#
-#      http://www.apache.org/licenses/LICENSE-2.0
-#
-# Unless required by applicable law or agreed to in writing, software
-# distributed under the License is distributed on an &#34;AS IS&#34; BASIS,
-# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-# See the License for the specific language governing permissions and
-# limitations under the License.
-#
-
-#*************** Spring Boot Related Configurations ***************#
-### Default web context path:
-server.servlet.contextPath=/nacos
-### Include message field
-server.error.include-message=ALWAYS
-### Default web server port:
-server.port=8848
-
-#*************** Network Related Configurations ***************#
-### If prefer hostname over ip for Nacos server addresses in cluster.conf:
-# nacos.inetutils.prefer-hostname-over-ip=false
-
-### Specify local server&#39;s IP:
-# nacos.inetutils.ip-address=
-
-
-#*************** Config Module Related Configurations ***************#
-### If use MySQL as datasource:
-### Deprecated configuration property, it is recommended to use `spring.sql.init.platform` replaced.
-#spring.datasource.platform=mysql
-spring.sql.init.platform=mysql
-
-### Count of DB:
-db.num=1
-
-### Connect URL of DB:
-db.url.0=jdbc:mysql://198.168.21.40:33064/nacos_config?characterEncoding=utf8&amp;connectTimeout=1000&amp;socketTimeout=3000&amp;autoReconnect=true&amp;useUnicode=true&amp;useSSL=false&amp;serverTimezone=UTC
-db.user.0=nacos
-db.password.0=nacos
-
-### Connection pool configuration: hikariCP
-db.pool.config.connectionTimeout=30000
-db.pool.config.validationTimeout=10000
-db.pool.config.maximumPoolSize=20
-db.pool.config.minimumIdle=2
-
-#*************** Naming Module Related Configurations ***************#
-
-### If enable data warmup. If set to false, the server would accept request without local data preparation:
-# nacos.naming.data.warmup=true
-
-### If enable the instance auto expiration, kind like of health check of instance:
-# nacos.naming.expireInstance=true
-
-### Add in 2.0.0
-### The interval to clean empty service, unit: milliseconds.
-# nacos.naming.clean.empty-service.interval=60000
-
-### The expired time to clean empty service, unit: milliseconds.
-# nacos.naming.clean.empty-service.expired-time=60000
-
-### The interval to clean expired metadata, unit: milliseconds.
-# nacos.naming.clean.expired-metadata.interval=5000
-
-### The expired time to clean metadata, unit: milliseconds.
-# nacos.naming.clean.expired-metadata.expired-time=60000
-
-### The delay time before push task to execute from service changed, unit: milliseconds.
-# nacos.naming.push.pushTaskDelay=500
-
-### The timeout for push task execute, unit: milliseconds.
-# nacos.naming.push.pushTaskTimeout=5000
-
-### The delay time for retrying failed push task, unit: milliseconds.
-# nacos.naming.push.pushTaskRetryDelay=1000
-
-### Since 2.0.3
-### The expired time for inactive client, unit: milliseconds.
-# nacos.naming.client.expired.time=180000
-
-#*************** CMDB Module Related Configurations ***************#
-### The interval to dump external CMDB in seconds:
-# nacos.cmdb.dumpTaskInterval=3600
-
-### The interval of polling data change event in seconds:
-# nacos.cmdb.eventTaskInterval=10
-
-### The interval of loading labels in seconds:
-# nacos.cmdb.labelTaskInterval=300
-
-### If turn on data loading task:
-# nacos.cmdb.loadDataAtStart=false
-
-
-#*************** Metrics Related Configurations ***************#
-### Metrics for prometheus
-#management.endpoints.web.exposure.include=*
-
-### Metrics for elastic search
-management.metrics.export.elastic.enabled=false
-#management.metrics.export.elastic.host=http://localhost:9200
-
-### Metrics for influx
-management.metrics.export.influx.enabled=false
-#management.metrics.export.influx.db=springboot
-#management.metrics.export.influx.uri=http://localhost:8086
-#management.metrics.export.influx.auto-create-db=true
-#management.metrics.export.influx.consistency=one
-#management.metrics.export.influx.compressed=true
-
-#*************** Access Log Related Configurations ***************#
-### If turn on the access log:
-server.tomcat.accesslog.enabled=true
-
-### The access log pattern:
-server.tomcat.accesslog.pattern=%h %l %u %t &#34;%r&#34; %s %b %D %{User-Agent}i %{Request-Source}i
-
-### The directory of access log:
-server.tomcat.basedir=file:.
-
-#*************** Access Control Related Configurations ***************#
-### If enable spring security, this option is deprecated in 1.2.0:
-#spring.security.enabled=false
-
-### The ignore urls of auth
-nacos.security.ignore.urls=/,/error,/**/*.css,/**/*.js,/**/*.html,/**/*.map,/**/*.svg,/**/*.png,/**/*.ico,/console-ui/public/**,/v1/auth/**,/v1/console/health/**,/actuator/**,/v1/console/server/**
-
-### The auth system to use, currently only &#39;nacos&#39; and &#39;ldap&#39; is supported:
-nacos.core.auth.system.type=nacos
-
-### If turn on auth system:
-nacos.core.auth.enabled=true
-
-### Turn on/off caching of auth information. By turning on this switch, the update of auth information would have a 15 seconds delay.
-nacos.core.auth.caching.enabled=true
-
-### Since 1.4.1, Turn on/off white auth for user-agent: nacos-server, only for upgrade from old version.
-nacos.core.auth.enable.userAgentAuthWhite=false
-
-### Since 1.4.1, worked when nacos.core.auth.enabled=true and nacos.core.auth.enable.userAgentAuthWhite=false.
-### The two properties is the white list for auth and used by identity the request from other server.
-nacos.core.auth.server.identity.key=test
-nacos.core.auth.server.identity.value=test
-
-### worked when nacos.core.auth.system.type=nacos
-### The token expiration in seconds:
-nacos.core.auth.plugin.nacos.token.cache.enable=false
-nacos.core.auth.plugin.nacos.token.expire.seconds=18000
-### The default token (Base64 String):
-nacos.core.auth.plugin.nacos.token.secret.key=ab2345678901234567890123456789012345678901234567890123456789
-
-### worked when nacos.core.auth.system.type=ldap，{0} is Placeholder,replace login username
-#nacos.core.auth.ldap.url=ldap://localhost:389
-#nacos.core.auth.ldap.basedc=dc=example,dc=org
-#nacos.core.auth.ldap.userDn=cn=admin,${nacos.core.auth.ldap.basedc}
-#nacos.core.auth.ldap.password=admin
-#nacos.core.auth.ldap.userdn=cn={0},dc=example,dc=org
-#nacos.core.auth.ldap.filter.prefix=uid
-#nacos.core.auth.ldap.case.sensitive=true
-
-
-#*************** Istio Related Configurations ***************#
-### If turn on the MCP server:
-nacos.istio.mcp.server.enabled=false
-
-#*************** Core Related Configurations ***************#
-
-### set the WorkerID manually
-# nacos.core.snowflake.worker-id=
-
-### Member-MetaData
-# nacos.core.member.meta.site=
-# nacos.core.member.meta.adweight=
-# nacos.core.member.meta.weight=
-
-### MemberLookup
-### Addressing pattern category, If set, the priority is highest
-# nacos.core.member.lookup.type=[file,address-server]
-## Set the cluster list with a configuration file or command-line argument
-nacos.member.list=192.168.16.101:8847?raft_port=8807,192.168.16.101?raft_port=8808,192.168.16.101:8849?raft_port=8809
-## for AddressServerMemberLookup
-# Maximum number of retries to query the address server upon initialization
-# nacos.core.address-server.retry=5
-## Server domain name address of [address-server] mode
-# address.server.domain=jmenv.tbsite.net
-## Server port of [address-server] mode
-# address.server.port=8080
-## Request address of [address-server] mode
-# address.server.url=/nacos/serverlist
-
-#*************** JRaft Related Configurations ***************#
-
-### Sets the Raft cluster election timeout, default value is 5 second
-# nacos.core.protocol.raft.data.election_timeout_ms=5000
-### Sets the amount of time the Raft snapshot will execute periodically, default is 30 minute
-# nacos.core.protocol.raft.data.snapshot_interval_secs=30
-### raft internal worker threads
-# nacos.core.protocol.raft.data.core_thread_num=8
-### Number of threads required for raft business request processing
-# nacos.core.protocol.raft.data.cli_service_thread_num=4
-### raft linear read strategy. Safe linear reads are used by default, that is, the Leader tenure is confirmed by heartbeat
-# nacos.core.protocol.raft.data.read_index_type=ReadOnlySafe
-### rpc request timeout, default 5 seconds
-# nacos.core.protocol.raft.data.rpc_request_timeout_ms=5000
-
-#*************** Distro Related Configurations ***************#
-
-### Distro data sync delay time, when sync task delayed, task will be merged for same data key. Default 1 second.
-# nacos.core.protocol.distro.data.sync.delayMs=1000
-
-### Distro data sync timeout for one sync data, default 3 seconds.
-# nacos.core.protocol.distro.data.sync.timeoutMs=3000
-
-### Distro data sync retry delay time when sync data failed or timeout, same behavior with delayMs, default 3 seconds.
-# nacos.core.protocol.distro.data.sync.retryDelayMs=3000
-
-### Distro data verify interval time, verify synced data whether expired for a interval. Default 5 seconds.
-# nacos.core.protocol.distro.data.verify.intervalMs=5000
-
-### Distro data verify timeout for one verify, default 3 seconds.
-# nacos.core.protocol.distro.data.verify.timeoutMs=3000
-
-### Distro data load retry delay when load snapshot data failed, default 30 seconds.
-# nacos.core.protocol.distro.data.load.retryDelayMs=30000
-
-### enable to support prometheus service discovery
-#nacos.prometheus.metrics.enabled=true
-
-### Since 2.3
-#*************** Grpc Configurations ***************#
-
-## sdk grpc(between nacos server and client) configuration
-## Sets the maximum message size allowed to be received on the server.
-#nacos.remote.server.grpc.sdk.max-inbound-message-size=10485760
-
-## Sets the time(milliseconds) without read activity before sending a keepalive ping. The typical default is two hours.
-#nacos.remote.server.grpc.sdk.keep-alive-time=7200000
-
-## Sets a time(milliseconds) waiting for read activity after sending a keepalive ping. Defaults to 20 seconds.
-#nacos.remote.server.grpc.sdk.keep-alive-timeout=20000
-
-
-## Sets a time(milliseconds) that specify the most aggressive keep-alive time clients are permitted to configure. The typical default is 5 minutes
-#nacos.remote.server.grpc.sdk.permit-keep-alive-time=300000
-
-## cluster grpc(inside the nacos server) configuration
-#nacos.remote.server.grpc.cluster.max-inbound-message-size=10485760
-
-## Sets the time(milliseconds) without read activity before sending a keepalive ping. The typical default is two hours.
-#nacos.remote.server.grpc.cluster.keep-alive-time=7200000
-
-## Sets a time(milliseconds) waiting for read activity after sending a keepalive ping. Defaults to 20 seconds.
-#nacos.remote.server.grpc.cluster.keep-alive-timeout=20000
-
-## Sets a time(milliseconds) that specify the most aggressive keep-alive time clients are permitted to configure. The typical default is 5 minutes
-#nacos.remote.server.grpc.cluster.permit-keep-alive-time=300000</code></pre></div></div></div><div class=pe-copyright><hr><blockquote><p>本文为原创内容，版权归作者所有。如需转载，请在文章中声明本文标题及链接。</p><p>文章标题：使用虚拟机部署nacos</p><p>文章链接：<a href=https://www.oomkill.com/nacos-deploy-with-vm/ target=_blank>https://www.oomkill.com/nacos-deploy-with-vm/</a></p><p>许可协议：<a href=https://creativecommons.org/licenses/by-nc/4.0/ target=_blank>CC BY-NC 4.0</a></p></blockquote></div><footer class=post-footer><ul class=post-tags><li><a href=https://www.oomkill.com/tags/middleware/>Middleware</a></li></ul><nav class=paginav><a class=prev href=https://www.oomkill.com/kubernetes-update-secert/><span class=title><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-left" style="user-select:text"><line x1="19" y1="12" x2="5" y2="12" style="user-select:text"/><polyline points="12 19 5 12 12 5" style="user-select:text"/></polyline></svg>&nbsp;</span>
+<span>text</span></div><div class=pe-code-block-header-center><span></span></div><div class=pe-code-block-header-right><i class="fas fa-ellipsis-h fa-fw" aria-hidden=true></i>
+<button class=pe-code-copy-button><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24" class="pe-icon"><path fill="currentcolor" fill-rule="evenodd" d="M7 5a3 3 0 013-3h9a3 3 0 013 3v9a3 3 0 01-3 3h-2v2a3 3 0 01-3 3H5a3 3 0 01-3-3v-9a3 3 0 013-3h2zm2 2h5a3 3 0 013 3v5h2a1 1 0 001-1V5a1 1 0 00-1-1h-9A1 1 0 009 5zM5 9a1 1 0 00-1 1v9a1 1 0 001 1h9a1 1 0 001-1v-9a1 1 0 00-1-1z" clip-rule="evenodd"/></svg></button></div></div><div class="pe-code-details-content scrollable"><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>  1
+</span><span class=lnt>  2
+</span><span class=lnt>  3
+</span><span class=lnt>  4
+</span><span class=lnt>  5
+</span><span class=lnt>  6
+</span><span class=lnt>  7
+</span><span class=lnt>  8
+</span><span class=lnt>  9
+</span><span class=lnt> 10
+</span><span class=lnt> 11
+</span><span class=lnt> 12
+</span><span class=lnt> 13
+</span><span class=lnt> 14
+</span><span class=lnt> 15
+</span><span class=lnt> 16
+</span><span class=lnt> 17
+</span><span class=lnt> 18
+</span><span class=lnt> 19
+</span><span class=lnt> 20
+</span><span class=lnt> 21
+</span><span class=lnt> 22
+</span><span class=lnt> 23
+</span><span class=lnt> 24
+</span><span class=lnt> 25
+</span><span class=lnt> 26
+</span><span class=lnt> 27
+</span><span class=lnt> 28
+</span><span class=lnt> 29
+</span><span class=lnt> 30
+</span><span class=lnt> 31
+</span><span class=lnt> 32
+</span><span class=lnt> 33
+</span><span class=lnt> 34
+</span><span class=lnt> 35
+</span><span class=lnt> 36
+</span><span class=lnt> 37
+</span><span class=lnt> 38
+</span><span class=lnt> 39
+</span><span class=lnt> 40
+</span><span class=lnt> 41
+</span><span class=lnt> 42
+</span><span class=lnt> 43
+</span><span class=lnt> 44
+</span><span class=lnt> 45
+</span><span class=lnt> 46
+</span><span class=lnt> 47
+</span><span class=lnt> 48
+</span><span class=lnt> 49
+</span><span class=lnt> 50
+</span><span class=lnt> 51
+</span><span class=lnt> 52
+</span><span class=lnt> 53
+</span><span class=lnt> 54
+</span><span class=lnt> 55
+</span><span class=lnt> 56
+</span><span class=lnt> 57
+</span><span class=lnt> 58
+</span><span class=lnt> 59
+</span><span class=lnt> 60
+</span><span class=lnt> 61
+</span><span class=lnt> 62
+</span><span class=lnt> 63
+</span><span class=lnt> 64
+</span><span class=lnt> 65
+</span><span class=lnt> 66
+</span><span class=lnt> 67
+</span><span class=lnt> 68
+</span><span class=lnt> 69
+</span><span class=lnt> 70
+</span><span class=lnt> 71
+</span><span class=lnt> 72
+</span><span class=lnt> 73
+</span><span class=lnt> 74
+</span><span class=lnt> 75
+</span><span class=lnt> 76
+</span><span class=lnt> 77
+</span><span class=lnt> 78
+</span><span class=lnt> 79
+</span><span class=lnt> 80
+</span><span class=lnt> 81
+</span><span class=lnt> 82
+</span><span class=lnt> 83
+</span><span class=lnt> 84
+</span><span class=lnt> 85
+</span><span class=lnt> 86
+</span><span class=lnt> 87
+</span><span class=lnt> 88
+</span><span class=lnt> 89
+</span><span class=lnt> 90
+</span><span class=lnt> 91
+</span><span class=lnt> 92
+</span><span class=lnt> 93
+</span><span class=lnt> 94
+</span><span class=lnt> 95
+</span><span class=lnt> 96
+</span><span class=lnt> 97
+</span><span class=lnt> 98
+</span><span class=lnt> 99
+</span><span class=lnt>100
+</span><span class=lnt>101
+</span><span class=lnt>102
+</span><span class=lnt>103
+</span><span class=lnt>104
+</span><span class=lnt>105
+</span><span class=lnt>106
+</span><span class=lnt>107
+</span><span class=lnt>108
+</span><span class=lnt>109
+</span><span class=lnt>110
+</span><span class=lnt>111
+</span><span class=lnt>112
+</span><span class=lnt>113
+</span><span class=lnt>114
+</span><span class=lnt>115
+</span><span class=lnt>116
+</span><span class=lnt>117
+</span><span class=lnt>118
+</span><span class=lnt>119
+</span><span class=lnt>120
+</span><span class=lnt>121
+</span><span class=lnt>122
+</span><span class=lnt>123
+</span><span class=lnt>124
+</span><span class=lnt>125
+</span><span class=lnt>126
+</span><span class=lnt>127
+</span><span class=lnt>128
+</span><span class=lnt>129
+</span><span class=lnt>130
+</span><span class=lnt>131
+</span><span class=lnt>132
+</span><span class=lnt>133
+</span><span class=lnt>134
+</span><span class=lnt>135
+</span><span class=lnt>136
+</span><span class=lnt>137
+</span><span class=lnt>138
+</span><span class=lnt>139
+</span><span class=lnt>140
+</span><span class=lnt>141
+</span><span class=lnt>142
+</span><span class=lnt>143
+</span><span class=lnt>144
+</span><span class=lnt>145
+</span><span class=lnt>146
+</span><span class=lnt>147
+</span><span class=lnt>148
+</span><span class=lnt>149
+</span><span class=lnt>150
+</span><span class=lnt>151
+</span><span class=lnt>152
+</span><span class=lnt>153
+</span><span class=lnt>154
+</span><span class=lnt>155
+</span><span class=lnt>156
+</span><span class=lnt>157
+</span><span class=lnt>158
+</span><span class=lnt>159
+</span><span class=lnt>160
+</span><span class=lnt>161
+</span><span class=lnt>162
+</span><span class=lnt>163
+</span><span class=lnt>164
+</span><span class=lnt>165
+</span><span class=lnt>166
+</span><span class=lnt>167
+</span><span class=lnt>168
+</span><span class=lnt>169
+</span><span class=lnt>170
+</span><span class=lnt>171
+</span><span class=lnt>172
+</span><span class=lnt>173
+</span><span class=lnt>174
+</span><span class=lnt>175
+</span><span class=lnt>176
+</span><span class=lnt>177
+</span><span class=lnt>178
+</span><span class=lnt>179
+</span><span class=lnt>180
+</span><span class=lnt>181
+</span><span class=lnt>182
+</span><span class=lnt>183
+</span><span class=lnt>184
+</span><span class=lnt>185
+</span><span class=lnt>186
+</span><span class=lnt>187
+</span><span class=lnt>188
+</span><span class=lnt>189
+</span><span class=lnt>190
+</span><span class=lnt>191
+</span><span class=lnt>192
+</span><span class=lnt>193
+</span><span class=lnt>194
+</span><span class=lnt>195
+</span><span class=lnt>196
+</span><span class=lnt>197
+</span><span class=lnt>198
+</span><span class=lnt>199
+</span><span class=lnt>200
+</span><span class=lnt>201
+</span><span class=lnt>202
+</span><span class=lnt>203
+</span><span class=lnt>204
+</span><span class=lnt>205
+</span><span class=lnt>206
+</span><span class=lnt>207
+</span><span class=lnt>208
+</span><span class=lnt>209
+</span><span class=lnt>210
+</span><span class=lnt>211
+</span><span class=lnt>212
+</span><span class=lnt>213
+</span><span class=lnt>214
+</span><span class=lnt>215
+</span><span class=lnt>216
+</span><span class=lnt>217
+</span><span class=lnt>218
+</span><span class=lnt>219
+</span><span class=lnt>220
+</span><span class=lnt>221
+</span><span class=lnt>222
+</span><span class=lnt>223
+</span><span class=lnt>224
+</span><span class=lnt>225
+</span><span class=lnt>226
+</span><span class=lnt>227
+</span><span class=lnt>228
+</span><span class=lnt>229
+</span><span class=lnt>230
+</span><span class=lnt>231
+</span><span class=lnt>232
+</span><span class=lnt>233
+</span><span class=lnt>234
+</span><span class=lnt>235
+</span><span class=lnt>236
+</span><span class=lnt>237
+</span><span class=lnt>238
+</span><span class=lnt>239
+</span><span class=lnt>240
+</span><span class=lnt>241
+</span><span class=lnt>242
+</span><span class=lnt>243
+</span><span class=lnt>244
+</span><span class=lnt>245
+</span><span class=lnt>246
+</span><span class=lnt>247
+</span><span class=lnt>248
+</span><span class=lnt>249
+</span><span class=lnt>250
+</span><span class=lnt>251
+</span><span class=lnt>252
+</span><span class=lnt>253
+</span><span class=lnt>254
+</span><span class=lnt>255
+</span><span class=lnt>256
+</span><span class=lnt>257
+</span><span class=lnt>258
+</span><span class=lnt>259
+</span><span class=lnt>260
+</span><span class=lnt>261
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-text data-lang=text><span class=line><span class=cl># Copyright 1999-2021 Alibaba Group Holding Ltd.
+</span></span><span class=line><span class=cl>#
+</span></span><span class=line><span class=cl># Licensed under the Apache License, Version 2.0 (the &#34;License&#34;);
+</span></span><span class=line><span class=cl># you may not use this file except in compliance with the License.
+</span></span><span class=line><span class=cl># You may obtain a copy of the License at
+</span></span><span class=line><span class=cl>#
+</span></span><span class=line><span class=cl>#      http://www.apache.org/licenses/LICENSE-2.0
+</span></span><span class=line><span class=cl>#
+</span></span><span class=line><span class=cl># Unless required by applicable law or agreed to in writing, software
+</span></span><span class=line><span class=cl># distributed under the License is distributed on an &#34;AS IS&#34; BASIS,
+</span></span><span class=line><span class=cl># WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+</span></span><span class=line><span class=cl># See the License for the specific language governing permissions and
+</span></span><span class=line><span class=cl># limitations under the License.
+</span></span><span class=line><span class=cl>#
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>#*************** Spring Boot Related Configurations ***************#
+</span></span><span class=line><span class=cl>### Default web context path:
+</span></span><span class=line><span class=cl>server.servlet.contextPath=/nacos
+</span></span><span class=line><span class=cl>### Include message field
+</span></span><span class=line><span class=cl>server.error.include-message=ALWAYS
+</span></span><span class=line><span class=cl>### Default web server port:
+</span></span><span class=line><span class=cl>server.port=8848
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>#*************** Network Related Configurations ***************#
+</span></span><span class=line><span class=cl>### If prefer hostname over ip for Nacos server addresses in cluster.conf:
+</span></span><span class=line><span class=cl># nacos.inetutils.prefer-hostname-over-ip=false
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>### Specify local server&#39;s IP:
+</span></span><span class=line><span class=cl># nacos.inetutils.ip-address=
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>#*************** Config Module Related Configurations ***************#
+</span></span><span class=line><span class=cl>### If use MySQL as datasource:
+</span></span><span class=line><span class=cl>### Deprecated configuration property, it is recommended to use `spring.sql.init.platform` replaced.
+</span></span><span class=line><span class=cl>#spring.datasource.platform=mysql
+</span></span><span class=line><span class=cl>spring.sql.init.platform=mysql
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>### Count of DB:
+</span></span><span class=line><span class=cl>db.num=1
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>### Connect URL of DB:
+</span></span><span class=line><span class=cl>db.url.0=jdbc:mysql://198.168.21.40:33064/nacos_config?characterEncoding=utf8&amp;connectTimeout=1000&amp;socketTimeout=3000&amp;autoReconnect=true&amp;useUnicode=true&amp;useSSL=false&amp;serverTimezone=UTC
+</span></span><span class=line><span class=cl>db.user.0=nacos
+</span></span><span class=line><span class=cl>db.password.0=nacos
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>### Connection pool configuration: hikariCP
+</span></span><span class=line><span class=cl>db.pool.config.connectionTimeout=30000
+</span></span><span class=line><span class=cl>db.pool.config.validationTimeout=10000
+</span></span><span class=line><span class=cl>db.pool.config.maximumPoolSize=20
+</span></span><span class=line><span class=cl>db.pool.config.minimumIdle=2
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>#*************** Naming Module Related Configurations ***************#
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>### If enable data warmup. If set to false, the server would accept request without local data preparation:
+</span></span><span class=line><span class=cl># nacos.naming.data.warmup=true
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>### If enable the instance auto expiration, kind like of health check of instance:
+</span></span><span class=line><span class=cl># nacos.naming.expireInstance=true
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>### Add in 2.0.0
+</span></span><span class=line><span class=cl>### The interval to clean empty service, unit: milliseconds.
+</span></span><span class=line><span class=cl># nacos.naming.clean.empty-service.interval=60000
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>### The expired time to clean empty service, unit: milliseconds.
+</span></span><span class=line><span class=cl># nacos.naming.clean.empty-service.expired-time=60000
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>### The interval to clean expired metadata, unit: milliseconds.
+</span></span><span class=line><span class=cl># nacos.naming.clean.expired-metadata.interval=5000
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>### The expired time to clean metadata, unit: milliseconds.
+</span></span><span class=line><span class=cl># nacos.naming.clean.expired-metadata.expired-time=60000
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>### The delay time before push task to execute from service changed, unit: milliseconds.
+</span></span><span class=line><span class=cl># nacos.naming.push.pushTaskDelay=500
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>### The timeout for push task execute, unit: milliseconds.
+</span></span><span class=line><span class=cl># nacos.naming.push.pushTaskTimeout=5000
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>### The delay time for retrying failed push task, unit: milliseconds.
+</span></span><span class=line><span class=cl># nacos.naming.push.pushTaskRetryDelay=1000
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>### Since 2.0.3
+</span></span><span class=line><span class=cl>### The expired time for inactive client, unit: milliseconds.
+</span></span><span class=line><span class=cl># nacos.naming.client.expired.time=180000
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>#*************** CMDB Module Related Configurations ***************#
+</span></span><span class=line><span class=cl>### The interval to dump external CMDB in seconds:
+</span></span><span class=line><span class=cl># nacos.cmdb.dumpTaskInterval=3600
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>### The interval of polling data change event in seconds:
+</span></span><span class=line><span class=cl># nacos.cmdb.eventTaskInterval=10
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>### The interval of loading labels in seconds:
+</span></span><span class=line><span class=cl># nacos.cmdb.labelTaskInterval=300
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>### If turn on data loading task:
+</span></span><span class=line><span class=cl># nacos.cmdb.loadDataAtStart=false
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>#*************** Metrics Related Configurations ***************#
+</span></span><span class=line><span class=cl>### Metrics for prometheus
+</span></span><span class=line><span class=cl>#management.endpoints.web.exposure.include=*
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>### Metrics for elastic search
+</span></span><span class=line><span class=cl>management.metrics.export.elastic.enabled=false
+</span></span><span class=line><span class=cl>#management.metrics.export.elastic.host=http://localhost:9200
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>### Metrics for influx
+</span></span><span class=line><span class=cl>management.metrics.export.influx.enabled=false
+</span></span><span class=line><span class=cl>#management.metrics.export.influx.db=springboot
+</span></span><span class=line><span class=cl>#management.metrics.export.influx.uri=http://localhost:8086
+</span></span><span class=line><span class=cl>#management.metrics.export.influx.auto-create-db=true
+</span></span><span class=line><span class=cl>#management.metrics.export.influx.consistency=one
+</span></span><span class=line><span class=cl>#management.metrics.export.influx.compressed=true
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>#*************** Access Log Related Configurations ***************#
+</span></span><span class=line><span class=cl>### If turn on the access log:
+</span></span><span class=line><span class=cl>server.tomcat.accesslog.enabled=true
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>### The access log pattern:
+</span></span><span class=line><span class=cl>server.tomcat.accesslog.pattern=%h %l %u %t &#34;%r&#34; %s %b %D %{User-Agent}i %{Request-Source}i
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>### The directory of access log:
+</span></span><span class=line><span class=cl>server.tomcat.basedir=file:.
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>#*************** Access Control Related Configurations ***************#
+</span></span><span class=line><span class=cl>### If enable spring security, this option is deprecated in 1.2.0:
+</span></span><span class=line><span class=cl>#spring.security.enabled=false
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>### The ignore urls of auth
+</span></span><span class=line><span class=cl>nacos.security.ignore.urls=/,/error,/**/*.css,/**/*.js,/**/*.html,/**/*.map,/**/*.svg,/**/*.png,/**/*.ico,/console-ui/public/**,/v1/auth/**,/v1/console/health/**,/actuator/**,/v1/console/server/**
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>### The auth system to use, currently only &#39;nacos&#39; and &#39;ldap&#39; is supported:
+</span></span><span class=line><span class=cl>nacos.core.auth.system.type=nacos
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>### If turn on auth system:
+</span></span><span class=line><span class=cl>nacos.core.auth.enabled=true
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>### Turn on/off caching of auth information. By turning on this switch, the update of auth information would have a 15 seconds delay.
+</span></span><span class=line><span class=cl>nacos.core.auth.caching.enabled=true
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>### Since 1.4.1, Turn on/off white auth for user-agent: nacos-server, only for upgrade from old version.
+</span></span><span class=line><span class=cl>nacos.core.auth.enable.userAgentAuthWhite=false
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>### Since 1.4.1, worked when nacos.core.auth.enabled=true and nacos.core.auth.enable.userAgentAuthWhite=false.
+</span></span><span class=line><span class=cl>### The two properties is the white list for auth and used by identity the request from other server.
+</span></span><span class=line><span class=cl>nacos.core.auth.server.identity.key=test
+</span></span><span class=line><span class=cl>nacos.core.auth.server.identity.value=test
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>### worked when nacos.core.auth.system.type=nacos
+</span></span><span class=line><span class=cl>### The token expiration in seconds:
+</span></span><span class=line><span class=cl>nacos.core.auth.plugin.nacos.token.cache.enable=false
+</span></span><span class=line><span class=cl>nacos.core.auth.plugin.nacos.token.expire.seconds=18000
+</span></span><span class=line><span class=cl>### The default token (Base64 String):
+</span></span><span class=line><span class=cl>nacos.core.auth.plugin.nacos.token.secret.key=ab2345678901234567890123456789012345678901234567890123456789
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>### worked when nacos.core.auth.system.type=ldap，{0} is Placeholder,replace login username
+</span></span><span class=line><span class=cl>#nacos.core.auth.ldap.url=ldap://localhost:389
+</span></span><span class=line><span class=cl>#nacos.core.auth.ldap.basedc=dc=example,dc=org
+</span></span><span class=line><span class=cl>#nacos.core.auth.ldap.userDn=cn=admin,${nacos.core.auth.ldap.basedc}
+</span></span><span class=line><span class=cl>#nacos.core.auth.ldap.password=admin
+</span></span><span class=line><span class=cl>#nacos.core.auth.ldap.userdn=cn={0},dc=example,dc=org
+</span></span><span class=line><span class=cl>#nacos.core.auth.ldap.filter.prefix=uid
+</span></span><span class=line><span class=cl>#nacos.core.auth.ldap.case.sensitive=true
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>#*************** Istio Related Configurations ***************#
+</span></span><span class=line><span class=cl>### If turn on the MCP server:
+</span></span><span class=line><span class=cl>nacos.istio.mcp.server.enabled=false
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>#*************** Core Related Configurations ***************#
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>### set the WorkerID manually
+</span></span><span class=line><span class=cl># nacos.core.snowflake.worker-id=
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>### Member-MetaData
+</span></span><span class=line><span class=cl># nacos.core.member.meta.site=
+</span></span><span class=line><span class=cl># nacos.core.member.meta.adweight=
+</span></span><span class=line><span class=cl># nacos.core.member.meta.weight=
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>### MemberLookup
+</span></span><span class=line><span class=cl>### Addressing pattern category, If set, the priority is highest
+</span></span><span class=line><span class=cl># nacos.core.member.lookup.type=[file,address-server]
+</span></span><span class=line><span class=cl>## Set the cluster list with a configuration file or command-line argument
+</span></span><span class=line><span class=cl>nacos.member.list=192.168.16.101:8847?raft_port=8807,192.168.16.101?raft_port=8808,192.168.16.101:8849?raft_port=8809
+</span></span><span class=line><span class=cl>## for AddressServerMemberLookup
+</span></span><span class=line><span class=cl># Maximum number of retries to query the address server upon initialization
+</span></span><span class=line><span class=cl># nacos.core.address-server.retry=5
+</span></span><span class=line><span class=cl>## Server domain name address of [address-server] mode
+</span></span><span class=line><span class=cl># address.server.domain=jmenv.tbsite.net
+</span></span><span class=line><span class=cl>## Server port of [address-server] mode
+</span></span><span class=line><span class=cl># address.server.port=8080
+</span></span><span class=line><span class=cl>## Request address of [address-server] mode
+</span></span><span class=line><span class=cl># address.server.url=/nacos/serverlist
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>#*************** JRaft Related Configurations ***************#
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>### Sets the Raft cluster election timeout, default value is 5 second
+</span></span><span class=line><span class=cl># nacos.core.protocol.raft.data.election_timeout_ms=5000
+</span></span><span class=line><span class=cl>### Sets the amount of time the Raft snapshot will execute periodically, default is 30 minute
+</span></span><span class=line><span class=cl># nacos.core.protocol.raft.data.snapshot_interval_secs=30
+</span></span><span class=line><span class=cl>### raft internal worker threads
+</span></span><span class=line><span class=cl># nacos.core.protocol.raft.data.core_thread_num=8
+</span></span><span class=line><span class=cl>### Number of threads required for raft business request processing
+</span></span><span class=line><span class=cl># nacos.core.protocol.raft.data.cli_service_thread_num=4
+</span></span><span class=line><span class=cl>### raft linear read strategy. Safe linear reads are used by default, that is, the Leader tenure is confirmed by heartbeat
+</span></span><span class=line><span class=cl># nacos.core.protocol.raft.data.read_index_type=ReadOnlySafe
+</span></span><span class=line><span class=cl>### rpc request timeout, default 5 seconds
+</span></span><span class=line><span class=cl># nacos.core.protocol.raft.data.rpc_request_timeout_ms=5000
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>#*************** Distro Related Configurations ***************#
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>### Distro data sync delay time, when sync task delayed, task will be merged for same data key. Default 1 second.
+</span></span><span class=line><span class=cl># nacos.core.protocol.distro.data.sync.delayMs=1000
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>### Distro data sync timeout for one sync data, default 3 seconds.
+</span></span><span class=line><span class=cl># nacos.core.protocol.distro.data.sync.timeoutMs=3000
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>### Distro data sync retry delay time when sync data failed or timeout, same behavior with delayMs, default 3 seconds.
+</span></span><span class=line><span class=cl># nacos.core.protocol.distro.data.sync.retryDelayMs=3000
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>### Distro data verify interval time, verify synced data whether expired for a interval. Default 5 seconds.
+</span></span><span class=line><span class=cl># nacos.core.protocol.distro.data.verify.intervalMs=5000
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>### Distro data verify timeout for one verify, default 3 seconds.
+</span></span><span class=line><span class=cl># nacos.core.protocol.distro.data.verify.timeoutMs=3000
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>### Distro data load retry delay when load snapshot data failed, default 30 seconds.
+</span></span><span class=line><span class=cl># nacos.core.protocol.distro.data.load.retryDelayMs=30000
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>### enable to support prometheus service discovery
+</span></span><span class=line><span class=cl>#nacos.prometheus.metrics.enabled=true
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>### Since 2.3
+</span></span><span class=line><span class=cl>#*************** Grpc Configurations ***************#
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>## sdk grpc(between nacos server and client) configuration
+</span></span><span class=line><span class=cl>## Sets the maximum message size allowed to be received on the server.
+</span></span><span class=line><span class=cl>#nacos.remote.server.grpc.sdk.max-inbound-message-size=10485760
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>## Sets the time(milliseconds) without read activity before sending a keepalive ping. The typical default is two hours.
+</span></span><span class=line><span class=cl>#nacos.remote.server.grpc.sdk.keep-alive-time=7200000
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>## Sets a time(milliseconds) waiting for read activity after sending a keepalive ping. Defaults to 20 seconds.
+</span></span><span class=line><span class=cl>#nacos.remote.server.grpc.sdk.keep-alive-timeout=20000
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>## Sets a time(milliseconds) that specify the most aggressive keep-alive time clients are permitted to configure. The typical default is 5 minutes
+</span></span><span class=line><span class=cl>#nacos.remote.server.grpc.sdk.permit-keep-alive-time=300000
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>## cluster grpc(inside the nacos server) configuration
+</span></span><span class=line><span class=cl>#nacos.remote.server.grpc.cluster.max-inbound-message-size=10485760
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>## Sets the time(milliseconds) without read activity before sending a keepalive ping. The typical default is two hours.
+</span></span><span class=line><span class=cl>#nacos.remote.server.grpc.cluster.keep-alive-time=7200000
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>## Sets a time(milliseconds) waiting for read activity after sending a keepalive ping. Defaults to 20 seconds.
+</span></span><span class=line><span class=cl>#nacos.remote.server.grpc.cluster.keep-alive-timeout=20000
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>## Sets a time(milliseconds) that specify the most aggressive keep-alive time clients are permitted to configure. The typical default is 5 minutes
+</span></span><span class=line><span class=cl>#nacos.remote.server.grpc.cluster.permit-keep-alive-time=300000</span></span></code></pre></td></tr></table></div></div></div></div></div><div class=pe-copyright><hr><blockquote><p>本文为原创内容，版权归作者所有。如需转载，请在文章中声明本文标题及链接。</p><p>文章标题：使用虚拟机部署nacos</p><p>文章链接：<a href=https://www.oomkill.com/nacos-deploy-with-vm/ target=_blank>https://www.oomkill.com/nacos-deploy-with-vm/</a></p><p>许可协议：<a href=https://creativecommons.org/licenses/by-nc/4.0/ target=_blank>CC BY-NC 4.0</a></p></blockquote></div><footer class=post-footer><ul class=post-tags><li><a href=https://www.oomkill.com/tags/middleware/>Middleware</a></li></ul><nav class=paginav><a class=prev href=https://www.oomkill.com/kubernetes-update-secert/><span class=title><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-left" style="user-select:text"><line x1="19" y1="12" x2="5" y2="12" style="user-select:text"/><polyline points="12 19 5 12 12 5" style="user-select:text"/></polyline></svg>&nbsp;</span>
 <span>Kubernetes维护 - secret批量更新</span>
 </a><a class=next href=https://www.oomkill.com/k8s-jsonnet/><span class=title></span>
 <span>k8s - jsonnet从入门到放弃&nbsp;<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-right" style="user-select:text"><line x1="5" y1="12" x2="19" y2="12" style="user-select:text"/><polyline points="12 5 19 12 12 19" style="user-select:text"/></svg></span></a></nav></footer><div class=pe-comments-decoration><p class=pe-comments-title></p><p class=pe-comments-subtitle></p></div><div id=pe-comments></div><script src=/js/pe-go-comment.min.86a214102576ba5f9b7bdc29eed8d58dd56e34aef80b3c65c73ea9cc88443696.js integrity="sha256-hqIUECV2ul+be9wp7tjVjdVuNK74Czxlxz6pzIhENpY="></script><script>const getStoredTheme=()=>localStorage.getItem("pref-theme")==="dark"?"dark":"light",setGiscusTheme=()=>{const e=e=>{const t=document.querySelector("iframe.giscus-frame");t&&t.contentWindow.postMessage({giscus:e},"https://giscus.app")};e({setConfig:{theme:getStoredTheme()}})};document.addEventListener("DOMContentLoaded",()=>{const s={src:"https://giscus.app/client.js","data-repo":"cylonchau/blogs","data-repo-id":"R_kgDOIRlNSQ","data-category":"Announcements","data-category-id":"DIC_kwDOIRlNSc4CXy1U","data-mapping":"pathname","data-term":"posts/nacos-deploy-with-vm","data-strict":"0","data-reactions-enabled":"1","data-emit-metadata":"0","data-input-position":"bottom","data-theme":getStoredTheme(),"data-lang":"zh-TW","data-loading":"lazy",crossorigin:"anonymous",async:""},e=document.createElement("script");Object.entries(s).forEach(([t,n])=>e.setAttribute(t,n)),document.querySelector("#pe-comments").appendChild(e);const t=document.querySelector("#theme-toggle");t&&t.addEventListener("click",setGiscusTheme);const n=document.querySelector("#theme-toggle-float");n&&n.addEventListener("click",setGiscusTheme)})</script></article></main><footer class=footer><span>&copy; 2025 <a href=https://www.oomkill.com/>Cylon's Collection</a></span> ·
 <span>Powered by
 <a href=https://gohugo.io/ rel="noopener noreferrer" target=_blank>Hugo</a> on
 <a href=https://pages.github.com/ rel=noopener target=_blank>GitHub Pages</a> & Theme
-        <a href=https://github.com/tofuwine/PaperMod-PE rel=noopener target=_blank>PaperMod-PE</a></span></footer><div class=pe-right-sidebar><a href=javascript:void(0); id=theme-toggle-float class=pe-float-btn><svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg>
+        <a href=https://github.com/tofuwine/PaperMod-PE rel=noopener target=_blank>PaperMod-PE</a></span></footer><div class=pe-right-sidebar><a href=#pe-comments class=pe-float-btn id=comments-link style=visibility:visible;opacity:1><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 29.338 29.338" fill="currentcolor"><path d="M27.184 1.605H2.156C.967 1.605.0 2.572.0 3.76v17.572c0 1.188.967 2.155 2.156 2.155h13.543l5.057 3.777c.414.31.842.468 1.268.468.789.0 1.639-.602 1.637-1.923v-2.322h3.523c1.188.0 2.154-.967 2.154-2.155V3.76C29.338 2.572 28.371 1.605 27.184 1.605zM27.34 21.332c0 .085-.068.155-.154.155h-5.523v3.955l-5.297-3.956H2.156c-.086.0-.154-.07-.154-.155V3.759c0-.085.068-.155.154-.155v.001h25.029c.086.0.154.07.154.155L27.34 21.332zM5.505 10.792h4.334v4.333H5.505V10.792zm7 0h4.334v4.333h-4.334V10.792zm7 0h4.334v4.333h-4.334V10.792z"/></svg>
+</a><a href=javascript:void(0); id=theme-toggle-float class=pe-float-btn><svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg>
 <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
 </a><a href=#top class=pe-float-btn id=top-link><span id=pe-read-progress></span></a></div><script>document.getElementById("theme-toggle").addEventListener("click",()=>{document.body.className.includes("dark")?(document.body.classList.remove("dark"),localStorage.setItem("pref-theme","light")):(document.body.classList.add("dark"),localStorage.setItem("pref-theme","dark"))})</script></body></html>
