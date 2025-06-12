@@ -49,7 +49,7 @@ text 1 2 3 withCredentials([[ $class: &amp;#39;AmazonWebServicesCredentialsBindi
       <link>https://www.oomkill.com/coredns-serial-02-coredns-plugins/</link>
       <pubDate>Wed, 04 Jun 2025 00:00:00 +0000</pubDate>
       <guid>https://www.oomkill.com/coredns-serial-02-coredns-plugins/</guid>
-      <description>本文是CoreDNS 开发系列第1章 CoreDNS 开发系列-1：CoreDNS核心概念和安装配置说明 CoreDNS 开发系列-2：CoreDNS插件详解 CoreDNS 开发系列-3：开发自定义插件 [CoreDNS 开发系列-4：高并发域名平台架构设计](/relref &amp;ldquo;coredns-serial-04-system-design) CoreDNS 开发系列-5：高性能域名平台项目开发 在上一篇文章中，我们了解了 CoreDNS 的基本概念、安装和配置文件的说明。在本文将深入探讨 CoreDNS 的插件 (Plugins)，这是 CoreDNS 强大功能的核心所在。通过理解插件机制和核心插件的工作原理，我们将为后续开发自定义插件和构建 DNS 平台奠定坚实基础。
+      <description>本文是CoreDNS 开发系列第2章 CoreDNS 开发系列-1：CoreDNS核心概念和安装配置说明 CoreDNS 开发系列-2：CoreDNS插件详解 CoreDNS 开发系列-3：开发自定义插件 CoreDNS 开发系列-4：高并发域名平台架构设计 CoreDNS 开发系列-5：高性能域名平台项目开发 在上一篇文章中，我们了解了 CoreDNS 的基本概念、安装和配置文件的说明。在本文将深入探讨 CoreDNS 的插件 (Plugins)，这是 CoreDNS 强大功能的核心所在。通过理解插件机制和核心插件的工作原理，我们将为后续开发自定义插件和构建 DNS 平台奠定坚实基础。
 插件系统设计理念 通常情况下，CoreDNS Plugins在设计上围绕下面的原则进行的
 单一职责：每个插件只负责自己负责的功能 链式处理：插件按配置顺序执行链处理请求 可插拔性：插件可以灵活组合和替换 扩展性：支持用户自定义插件开发插件来扩展功能 基于这些原则，使得 CoreDNS 非常强大，非常易于扩展性（对比与最流行的两款开源 DNS 产品来说，Bind, PowerDNS）。
 CoreDNS与主流DNS服务产品的对比 下表是调研了三款最流行的 DNS 开源产品来对最符合本项目的后端作为对比，CoreDNS的灵活性相对比较适宜
@@ -69,7 +69,7 @@ text 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 libcrypto from either of Libre
       <link>https://www.oomkill.com/coredns-serial-01-coredns-concept/</link>
       <pubDate>Tue, 20 May 2025 00:00:00 +0000</pubDate>
       <guid>https://www.oomkill.com/coredns-serial-01-coredns-concept/</guid>
-      <description>本文是CoreDNS 开发系列第1章 CoreDNS 开发系列-1：CoreDNS核心概念和安装配置说明 CoreDNS 开发系列-2：CoreDNS插件详解 CoreDNS 开发系列-3：开发自定义插件 [CoreDNS 开发系列-4：高并发域名平台架构设计](/relref &amp;ldquo;coredns-serial-04-system-design) CoreDNS 开发系列-5：高性能域名平台项目开发 CoreDNS 概述 什么是CoreDNS CoreDNS 是一个由 Go 编写的灵活、可扩展的 DNS 服务器。他非常灵活，几乎全部功能都由 plugin 来实现，CoreDNS 官网也有说 “CoreDNS is powered by plugins.” 。Plugins 能够作为 “独立” 或和 CoreDNS “共同” 来执行 “DNS Function” 在 CoreDNS 中被设计为是一个由 “软件实现的 CoreDNS Plugin API”，例如 Kubernetes Provider 可以提供在 k8s 集群里的服务发现。再例如 file 可以提供作为一个 DB 来使用。
+      <description>本文是CoreDNS 开发系列第1章 CoreDNS 开发系列-1：CoreDNS核心概念和安装配置说明 CoreDNS 开发系列-2：CoreDNS插件详解 CoreDNS 开发系列-3：开发自定义插件 CoreDNS 开发系列-4：高并发域名平台架构设计 CoreDNS 开发系列-5：高性能域名平台项目开发 CoreDNS 概述 什么是CoreDNS CoreDNS 是一个由 Go 编写的灵活、可扩展的 DNS 服务器。他非常灵活，几乎全部功能都由 plugin 来实现，CoreDNS 官网也有说 “CoreDNS is powered by plugins.” 。Plugins 能够作为 “独立” 或和 CoreDNS “共同” 来执行 “DNS Function” 在 CoreDNS 中被设计为是一个由 “软件实现的 CoreDNS Plugin API”，例如 Kubernetes Provider 可以提供在 k8s 集群里的服务发现。再例如 file 可以提供作为一个 DB 来使用。
 CoreDNS 的设计与 与 Caddy 一样也是通过 “插件” 进行扩展，并原生支持 Prometheus 也是 CoreDNS 的一大优势，这意味着我们可以将其连接到现有的 Prometheus 基础架构中进行监控、警报和仪表板管理。
 CoreDNS 核心架构 Server：负责监听 DNS 查询请求 Plugins Chain：按照配置顺序串联起来的插件序列 Handler：每个插件实现的请求处理器 Middleware：在请求处理过程中的中间件 DNS 请求在 CoreDNS 中的处理流程如下：</description>
     </item>
