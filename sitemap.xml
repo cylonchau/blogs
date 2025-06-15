@@ -4,9 +4,19 @@
   
   
   <url>
+    <loc>https://www.oomkill.com/coredns-serial-04-system-design/</loc>
+    
+    <lastmod>2025-06-15T23:00:36+08:00</lastmod>
+    
+    
+  </url>
+  
+  
+  
+  <url>
     <loc>https://www.oomkill.com/</loc>
     
-    <lastmod>2025-06-08T23:10:36+08:00</lastmod>
+    <lastmod>2025-06-15T23:00:36+08:00</lastmod>
     
     
   </url>
@@ -14,6 +24,18 @@
   
   
   
+  
+  
+  
+  
+  
+  <url>
+    <loc>https://www.oomkill.com/coredns-serial-03-custom-plugin/</loc>
+    
+    <lastmod>2025-06-15T23:00:36+08:00</lastmod>
+    
+    
+  </url>
   
   
   
@@ -58,12 +80,10 @@
   <url>
     <loc>https://www.oomkill.com/coredns-serial-02-coredns-plugins/</loc>
     
-    <lastmod>2025-06-04T23:00:36+08:00</lastmod>
+    <lastmod>2025-06-15T23:00:36+08:00</lastmod>
     
     
   </url>
-  
-  
   
   
   
@@ -82,7 +102,7 @@
   <url>
     <loc>https://www.oomkill.com/coredns-serial-01-coredns-concept/</loc>
     
-    <lastmod>2025-05-20T23:00:36+08:00</lastmod>
+    <lastmod>2025-06-15T23:00:36+08:00</lastmod>
     
     
   </url>
@@ -2668,7 +2688,7 @@
   
   
   <url>
-    <loc>https://www.oomkill.com/dns/</loc>
+    <loc>https://www.oomkill.com/bind9-master-slave/</loc>
     
     <lastmod>2022-12-15T23:10:36+08:00</lastmod>
     
