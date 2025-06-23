@@ -6,7 +6,7 @@
     <description>Recent content in Databases on Cylon&#39;s Collection</description>
     <generator>Hugo -- 0.125.7</generator>
     <language>zh</language>
-    <lastBuildDate>Thu, 05 Oct 2023 23:00:36 +0800</lastBuildDate>
+    <lastBuildDate>Sat, 18 Mar 2023 23:00:36 +0800</lastBuildDate>
     <atom:link href="https://www.oomkill.com/tags/databases/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>理解ldap - 使用SSSD接入OpenLDAP实现身份验证</title>
@@ -16,19 +16,6 @@
       <description>openldap合集 ch1 理解ldap - 什么是ldap ch2 理解ldap - OpenLDAP安装 ch3 理解ldap - OpenLDAP客户端命令行使用 ch4 理解ldap - OpenLDAP架构与Schema设计 ch5 理解ldap - OpenLDAP使用SSL/TLS通信安全 ch6 理解ldap - OpenLDAP中的4种复制机制 ch7 理解ldap - OpenLDAP访问控制(ACL) ch8 理解ldap - OpenLDAP备份与恢复策略 ch9 理解ldap - openldap中的一些高级配置 ch10 理解ldap - Linux系统接入OpenLDAP做认证后端 ch11 理解ldap - 使用SSSD接入OpenLDAP实现身份验证 Overview SSSD (System Security Services Daemon) 是一套用于远程身份验证的套件服务，为使用SSSD服务的客户端提供了远程访问身份认证服务来获取权限，其后端包括AD, LDAP等，本文将围绕下列方向来阐述SSSD：
 为什么需要SSSD，以及使用SSSD来解决什么 使用SSSD的好处 SSSD服务工作原理及架构 如何在Linux上配置SSSD+LDAP 为什么需要SSSD SSSD设计主要是为了传统使用身份认证服务，例如PAM+NSS架构中存在的一些问题：
 PAM+NSS扩展性差，并配置较为复杂，尽管提供了 authconfig ，通常在大多数教程中以及不同的系统中配置都不相同 PAM+NSS不是真正意义上的离线身份认证，如果当 nslcd 或者 slapd 等服务异常时，无法完成用户认证 以及越来越多的后端，例如LDAP, AD, IPA, IdM,Kerberos等无法做到很好的适配 SSSD就是为了解决上述的问题，对于Linux平台中，SSSD拥有比传统PAM+NSS更好的优势：</description>
-    </item>
-    <item>
-      <title>Docker运行PostgreSQL</title>
-      <link>https://www.oomkill.com/postgresql-docker-setup/</link>
-      <pubDate>Mon, 05 Oct 2020 00:00:00 +0000</pubDate>
-      <guid>https://www.oomkill.com/postgresql-docker-setup/</guid>
-      <description>在本文，尝试使用 Docker 运行 PostgreSQL ，为了适配 goalert 项目，因为从来没有尝试过使用 PostgreSQL
-了解PostgreSQL数据库 在我们继续运行 PostgreSQL 数据库的 Docker 容器之前，我们先来了解一下 PostgreSQL 数据库。 PostgreSQL 是一个开源 RDMS，类似于 MySQL。 它是一个面向对象的数据库，但我们可以处理结构化和非结构化数据。
-PostgreSQL 数据库可以运行在各种平台上，包括 Windows、Mac OS X 和 Linux。它还提供高级数据类型和性能优化功能来存储和扩展复杂的数据库工作负载。
-使用公共镜像运行PostgreSQL 要使用 Docker 运行 PostgreSQL，我们首先需要拉取 Docker Hub 上可用的 postgres 公共镜像：
-bash 1 docker pull postgres 在上面的命令中，我们拉取了 postgres 最新的稳定版镜像。 如果要指定版本的 postgres 镜像，可以使用以下命令
-bash 1 docker pull postgres:14.2 这里将使用 postgres:14.2 版本来运行 Postgres 的容器，这里命令主要为 Linux
-bash 1 docker run -d -e POSTGRES_USER=admin -e POSTGRES_PASSWORD=111111 -p 5432:5432 -v /data:/var/lib/postgresql/data --name postgresql postgres 如果在 window 或 wsl 上运行，可以执行下面命令</description>
     </item>
     <item>
       <title>理解ldap - Linux系统接入OpenLDAP做认证后端</title>

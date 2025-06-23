@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Postgres on Cylon&#39;s Collection</title>
+    <link>https://www.oomkill.com/tags/postgres/</link>
+    <description>Recent content in Postgres on Cylon&#39;s Collection</description>
+    <generator>Hugo -- 0.125.7</generator>
+    <language>zh</language>
+    <lastBuildDate>Thu, 05 Oct 2023 23:00:36 +0800</lastBuildDate>
+    <atom:link href="https://www.oomkill.com/tags/postgres/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Docker运行PostgreSQL</title>
+      <link>https://www.oomkill.com/postgresql-docker-setup/</link>
+      <pubDate>Thu, 05 Oct 2023 00:00:00 +0000</pubDate>
+      <guid>https://www.oomkill.com/postgresql-docker-setup/</guid>
+      <description>在本文，尝试使用 Docker 运行 PostgreSQL ，为了适配 goalert 项目，因为从来没有尝试过使用 PostgreSQL
+了解PostgreSQL数据库 在我们继续运行 PostgreSQL 数据库的 Docker 容器之前，我们先来了解一下 PostgreSQL 数据库。 PostgreSQL 是一个开源 RDMS，类似于 MySQL。它是一个面向对象的数据库，但我们可以处理结构化和非结构化数据。
+PostgreSQL 数据库可以运行在各种平台上，包括 Windows、Mac OS X 和 Linux。它还提供高级数据类型和性能优化功能来存储和扩展复杂的数据库工作负载。
+一些常见的 postgres 镜像
+镜像 说明 postgres:latest 最新的一个稳定版本 postgres:17 PostgreSQL version 14.x （x为最近的一次 patch） postgres:17.4 17.4 一个具体的版本 postgres:bookworm 使用 Debian Bookworm (12) 构建的 PostgreSQL postgres:15-bookworm 使用 Debian Bookworm (12) 构建的 PostgreSQL 15 使用公共镜像运行PostgreSQL 要使用 Docker 运行 PostgreSQL，我们首先需要拉取 Docker Hub 上可用的 postgres 公共镜像：
+bash 1 docker pull postgres 在上面的命令中，我们拉取了 postgres 最新的稳定版镜像。 如果要指定版本的 postgres 镜像，可以使用以下命令</description>
+    </item>
+  </channel>
+</rss>

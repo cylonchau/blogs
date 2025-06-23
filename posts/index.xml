@@ -15,7 +15,7 @@
       <guid>https://www.oomkill.com/coredns-serial-04-system-design/</guid>
       <description>本文是CoreDNS 开发系列第4章 CoreDNS 开发系列-1：CoreDNS核心概念和安装配置说明 CoreDNS 开发系列-2：CoreDNS插件详解 CoreDNS 开发系列-3：开发自定义插件 CoreDNS 开发系列-4：高并发域名平台架构设计 在本章节中将创建一个项目，旨在构建一个基于 CoreDNS 的域名系统，该项目目的是可以构建一个完整的 DNS 平台而不是管理平台，可以作为独立的 DNS Provider 运行业务域名解析；也可以作为企业内部 DNS的使用。
 分层架构设计 系统采用四层架构设计：
-视图层：也称为 API 层，负责提供 DNS 的管理后台， API 接口。 业务层：主要作为 CoreDNS Plugins 实现，用于集成 DNS Server。 数据层：视图层与业务层的联动，多数据库支持（SQLite/MySQL/PostgreSQL）、Redis 缓存、数据同步。 基础设施层：提供 command line 工具，并为 DNS Server 提供四层防火墙、监控告警数据。并提供整个公司生态的服务注册、服务发现等功能。 系统功能需求 功能模块 详细描述 优先级 View 支持多视图配置，智能解析 高 Zone 管理 DNS 区域管理与配置 高 域名管理 管理域中的域名解析 高 Transfer 与云 DNS 供应商数据同步 高 白名单 域名解析黑白名单控制 高 证书管理 Let&amp;rsquo;s Encrypt 证书自动申请与续期 高 解析切换 提供多解析功能，实现故障切换 高 域名检测 域名可用性检测，可以配合切换功能完成故障自动切换 高 CDN 集成 CDN 切换与管理功能 中 运维工具 提供命令行工具 中 GeoIP 基于地理位置的智能 DNS 解析 低 外部系统注册 服务自动注册与发现 低 性能需求 性能指标 目标值 备注 QPS 100,000 一个 view 内的集群至少达到的值 项目分模块设计 视图层 模块名称 功能描述 域、域名管理 完成基础 Zone, Domain的管理功能 证书管理 Let&amp;rsquo;s Encrypt 证书自动申请与续期 View管理 管理域与业务层插件进行联动 白名单管理 域名解析黑白名单控制 Geo 管理 基于地理位置的智能 DNS 解析 CDN 集成 集成CDN联动功能 服务注册插件 提供全企业内的服务注册功能（View+业务） 业务层 模块名称 功能描述 实现方式 DNS 服务 DNS 查询处理、插件加载管理 原生 coredns 数据库 Zone, Domain 信息入库，通过库 Custom Plugin Redis 缓存插件 Zone, Domain 的热点缓存功能 Custom Plugin GeoIP 插件 基于地理位置的智能解析 Custom Plugin View View 的管理和配置 Custom Plugin 白名单 域名访问控制 Custom Plugin Transfer 区域传送与同步 Custom Plugin 基础设施层 模块名称 功能描述 实现技术 服务发现 服务注册与发现 Nacos DNS查询流程设计 多级缓存策略</description>
+视图层：也称为 API 层，负责提供 DNS 的管理后台， API 接口。 业务层：主要作为 CoreDNS Plugins 实现，用于集成 DNS Server。 数据层：视图层与业务层的联动，多数据库支持（SQLite/MySQL/PostgreSQL）、Redis 缓存、数据同步。 基础设施层：提供 command line 工具，并为 DNS Server 提供四层防火墙、监控告警数据。并提供整个公司生态的服务注册、服务发现等功能。 系统功能需求 功能模块 详细描述 优先级 View 支持多视图配置，智能解析 高 Zone 管理 DNS 区域管理与配置 高 域名管理 管理域中的域名解析 高 Transfer 与云 DNS 供应商数据同步 高 白名单 域名解析黑白名单控制，包含全局和单域名 高 证书管理 Let&amp;rsquo;s Encrypt 证书自动申请与续期 高 解析切换 提供多解析功能，实现故障切换 高 域名检测 域名可用性检测，可以配合切换功能完成故障自动切换 高 CDN 集成 CDN 切换与管理功能 中 运维工具 提供命令行工具 中 GeoIP 基于地理位置的智能 DNS 解析 低 外部系统注册 服务自动注册与发现 低 性能需求 性能指标 目标值 备注 QPS 100,000 一个 view 内的集群至少达到的值 项目分模块设计 视图层 模块名称 功能描述 域、域名管理 完成基础 Zone, Domain的管理功能 证书管理 Let&amp;rsquo;s Encrypt 证书自动申请与续期 View管理 管理域与业务层插件进行联动 白名单管理 域名解析黑白名单控制 Geo 管理 基于地理位置的智能 DNS 解析 CDN 集成 集成CDN联动功能 服务注册插件 提供全企业内的服务注册功能（View+业务） 业务层 模块名称 功能描述 实现方式 DNS 服务 DNS 查询处理、插件加载管理 原生 coredns 数据库 Zone, Domain 信息入库，通过库 Custom Plugin Redis 缓存插件 Zone, Domain 的热点缓存功能 Custom Plugin GeoIP 插件 基于地理位置的智能解析 Custom Plugin View View 的管理和配置 Custom Plugin 白名单 域名访问控制 Custom Plugin Transfer 区域传送与同步 Custom Plugin 基础设施层 模块名称 功能描述 实现技术 服务发现 服务注册与发现 Nacos DNS查询流程设计 多级缓存策略</description>
     </item>
     <item>
       <title>CoreDNS 开发系列-3：开发自定义插件</title>
@@ -798,6 +798,18 @@ Argo 架构 Argo CD 时最常见的三种架构：单实例方案, 集群级方�
 CVE-2023-38545: This flaw makes curl overflow a heap based buffer in the SOCKS5 proxy handshake. [1] CVE-2023-38546: This flaw allows an attacker to insert cookies at will into a running program using libcurl, if the specific series of conditions are met. [2] 安装方式有两种，“编译” 与 “更新RPM”，本文以 RPM 方式更新 curl 到 8.4.0 版本
 下载curl源码包 升级至少需要更新至 curl 8.4 ，首先从官网下载源码包 [3]
 将curl打包为rpm 因为 curl 源码包内没有提供 rpm 的规格文件，所以我们需要自己编写，但是比较麻烦，可以让 chatgpt 生成一个，这里使用 centos7 的 curl.</description>
+    </item>
+    <item>
+      <title>Docker运行PostgreSQL</title>
+      <link>https://www.oomkill.com/postgresql-docker-setup/</link>
+      <pubDate>Thu, 05 Oct 2023 00:00:00 +0000</pubDate>
+      <guid>https://www.oomkill.com/postgresql-docker-setup/</guid>
+      <description>在本文，尝试使用 Docker 运行 PostgreSQL ，为了适配 goalert 项目，因为从来没有尝试过使用 PostgreSQL
+了解PostgreSQL数据库 在我们继续运行 PostgreSQL 数据库的 Docker 容器之前，我们先来了解一下 PostgreSQL 数据库。 PostgreSQL 是一个开源 RDMS，类似于 MySQL。它是一个面向对象的数据库，但我们可以处理结构化和非结构化数据。
+PostgreSQL 数据库可以运行在各种平台上，包括 Windows、Mac OS X 和 Linux。它还提供高级数据类型和性能优化功能来存储和扩展复杂的数据库工作负载。
+一些常见的 postgres 镜像
+镜像 说明 postgres:latest 最新的一个稳定版本 postgres:17 PostgreSQL version 14.x （x为最近的一次 patch） postgres:17.4 17.4 一个具体的版本 postgres:bookworm 使用 Debian Bookworm (12) 构建的 PostgreSQL postgres:15-bookworm 使用 Debian Bookworm (12) 构建的 PostgreSQL 15 使用公共镜像运行PostgreSQL 要使用 Docker 运行 PostgreSQL，我们首先需要拉取 Docker Hub 上可用的 postgres 公共镜像：
+bash 1 docker pull postgres 在上面的命令中，我们拉取了 postgres 最新的稳定版镜像。 如果要指定版本的 postgres 镜像，可以使用以下命令</description>
     </item>
     <item>
       <title>探索kubectl - 巧用jsonpath提取有用数据</title>
@@ -3207,19 +3219,6 @@ CFB模式：Cipher FeedBack mode（密文反馈模式） 密文反馈模式 CFB�
 在ECB和CBC中，明文分组都是通过密码算法进行加密的，然而，在CFB模式中，明文分组和密文分组之间并没有经过&amp;quot;加密&amp;quot;这一步骤，明文分和密文分组之间只有一个XOR。
 OFB模式：Output FeedBack mode（输出反馈模式） 输出反馈模式, OFB。在OFB模式中，上一个分组密码算法的输出是当前分组密码算法的输入（下图）
 CTR模式：CounTeR mode（计数器模式） CTR是一种通过将逐次累加的计数器进行加密来生成密钥流的流密码；即每个分组对应一个逐次累加的计数器，并通过对计数器进行加密来生成密钥流。也就是说，最终的密文分组是通过将计数器加密得到的比特序列，与明文分组进行XOR而得到的。</description>
-    </item>
-    <item>
-      <title>Docker运行PostgreSQL</title>
-      <link>https://www.oomkill.com/postgresql-docker-setup/</link>
-      <pubDate>Mon, 05 Oct 2020 00:00:00 +0000</pubDate>
-      <guid>https://www.oomkill.com/postgresql-docker-setup/</guid>
-      <description>在本文，尝试使用 Docker 运行 PostgreSQL ，为了适配 goalert 项目，因为从来没有尝试过使用 PostgreSQL
-了解PostgreSQL数据库 在我们继续运行 PostgreSQL 数据库的 Docker 容器之前，我们先来了解一下 PostgreSQL 数据库。 PostgreSQL 是一个开源 RDMS，类似于 MySQL。 它是一个面向对象的数据库，但我们可以处理结构化和非结构化数据。
-PostgreSQL 数据库可以运行在各种平台上，包括 Windows、Mac OS X 和 Linux。它还提供高级数据类型和性能优化功能来存储和扩展复杂的数据库工作负载。
-使用公共镜像运行PostgreSQL 要使用 Docker 运行 PostgreSQL，我们首先需要拉取 Docker Hub 上可用的 postgres 公共镜像：
-bash 1 docker pull postgres 在上面的命令中，我们拉取了 postgres 最新的稳定版镜像。 如果要指定版本的 postgres 镜像，可以使用以下命令
-bash 1 docker pull postgres:14.2 这里将使用 postgres:14.2 版本来运行 Postgres 的容器，这里命令主要为 Linux
-bash 1 docker run -d -e POSTGRES_USER=admin -e POSTGRES_PASSWORD=111111 -p 5432:5432 -v /data:/var/lib/postgresql/data --name postgresql postgres 如果在 window 或 wsl 上运行，可以执行下面命令</description>
     </item>
     <item>
       <title>将traefik部署为传统web架构模式</title>
