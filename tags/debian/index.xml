@@ -41,7 +41,7 @@ Tips: 这里建议设置密码，不设置密码会导致安装完成后无法�
 设置Root密码 设置Root密码 - 二次确认 设置非ROOT用户名、账户和密码 下一步创建一个非ROOT用户，这个步骤是必须的，并为这个新创建的帐户分配一个密码。以下截图将描述将如何完成此操作。</description>
     </item>
     <item>
-      <title>Unix归档模式 Unix ar - 深入剖析与构建deb包</title>
+      <title>Unix归档模式Unix ar - 深入剖析与构建deb包</title>
       <link>https://www.oomkill.com/deb-package/</link>
       <pubDate>Wed, 29 Mar 2023 00:00:00 +0000</pubDate>
       <guid>https://www.oomkill.com/deb-package/</guid>
