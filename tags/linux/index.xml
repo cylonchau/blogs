@@ -41,18 +41,6 @@ Tips: 这里建议设置密码，不设置密码会导致安装完成后无法�
 设置Root密码 设置Root密码 - 二次确认 设置非ROOT用户名、账户和密码 下一步创建一个非ROOT用户，这个步骤是必须的，并为这个新创建的帐户分配一个密码。以下截图将描述将如何完成此操作。</description>
     </item>
     <item>
-      <title>Unix归档模式Unix ar - 深入剖析与构建deb包</title>
-      <link>https://www.oomkill.com/deb-package/</link>
-      <pubDate>Wed, 29 Mar 2023 00:00:00 +0000</pubDate>
-      <guid>https://www.oomkill.com/deb-package/</guid>
-      <description>deb 概述 deb包（.deb）是 Debian 和基于 Debian衍生操作系统（如Ubuntu）中使用的一种软件包的格式。deb是一种基于 Unix ar [3] (Unix archiver) 的归档文件。其中包含二进制文件、配置文件和其他软件所需的资源。deb包可用于安装、升级和卸载软件包。通常，Debian操作系统的用户使用apt（Advanced Package Tool）等软件包管理器工具来管理deb包。通过这些工具，用户可以轻松下载、安装和管理软件包，而无需手动编译、安装和解决软件包之间的依赖关系。
-deb VS rpm 包的归档格式不同：deb是基于 ar 的归档模式，而RPM是基于 cpio 的归档模式 包的结构不同：deb包要求必须包含一个 DEBIAN 目录；而RPM不需要以来额外的目录结构 包的依赖机制不同： Deb使用epoch，而RPM使用build number：在Deb中，epoch是一个可选的字段，它允许呈现基准日期之前的先前版本。而在RPM中，build number表示软件包编译的次数。因此，在Deb中，为了解决版本控制问题，epoch是非常重要的，而在RPM中，则更关注build number。 Deb使用逆向依赖关系，而RPM使用依赖关系：在Deb中，依赖项是从包本身向外扩展，在解决依赖问题时可以通过逆向依赖关系进行。而在RPM中，则更喜欢使用依赖关系直接指向其他包。 Deb允许代理软件包，而RPM则不允许代理软件包：Deb中，软件包可以使用另一种软件包的代理来提供功能。在RPM中，软件包需要直接引用相关的软件包。这意味着在Deb中，对于版本控制，可以用另一种代理软件包来解决问题，而在RPM中必须直接引用包。 Deb允许多重依赖关系，RPM则不允许：Deb允许使用多个依赖项列表，以便包与不同版本的库兼容。在RPM中，需要在每个包中定义依赖项和其版本，不能使用多重依赖。 deb包的分析 deb包的结构 deb 最重要的是 控制文件 Control ，该文件记录了deb包与其安装的程序的信息。
-在deb包内部包含一组模拟 Linux 文件系统的文件夹，例如 /usr, /usr/bin, /opt等等。 放置在其中一个目录中的文件将在安装期间复制到实际文件系统中的相同位置。 因此，例如将二进制文件放入 &amp;lt;.deb&amp;gt;/usr/local/bin/binaryfile 将被安装到 /usr/local/bin/binaryfile.
-对于deb 包的命名是遵循着一个特定的格式：
-text 1 &amp;lt;name&amp;gt;_&amp;lt;version&amp;gt;-&amp;lt;revision&amp;gt;_&amp;lt;architecture&amp;gt;.deb &amp;lt;name&amp;gt; 构建的deb包名称，如nginx &amp;lt;version&amp;gt; 程序的版本号 ，如1.20 &amp;lt;revision&amp;gt; 当前 deb 包的版本号 &amp;lt;architecture&amp;gt; 表示构建出的包的操作系统架构，如，amd64、i386 如果你构建一个nginx-1.20的arm操作系统下的，那么deb包名格式则为 nginx_1.20-1_arm64.deb
-control文件 [2] Deb软件包（.</description>
-    </item>
-    <item>
       <title>长期总结 - Linux性能分析命令</title>
       <link>https://www.oomkill.com/performance-command/</link>
       <pubDate>Mon, 12 Dec 2022 00:00:00 +0000</pubDate>
@@ -158,32 +146,6 @@ http://www.openldap.org/faq/data/cache/595.html 什么是ldap？ 目录服务有
 LDAP是 Lightweight Directory Access Protocol（轻量级目录访问协议）的缩写。正如它的名字所表明的那样，它是一个轻量级的目录访问协议，特指基于X.500的目录访问协议的简化版本。LDAP运行在 TCP/IP 或者其他的面向连接的传输服务之上。LDAP完整的技术规范由RFC2251“The Lightweight Directory Access Protocol（v3）”和其他几个在RFC3377中定义的文档组成。</description>
     </item>
     <item>
-      <title>Unix归档模式cpio - 深入剖析与构建rpm包</title>
-      <link>https://www.oomkill.com/rpm-package/</link>
-      <pubDate>Sat, 15 Sep 2018 00:00:00 +0000</pubDate>
-      <guid>https://www.oomkill.com/rpm-package/</guid>
-      <description>RPM概述 RPM (Red Hat Package Manager)，几乎所有的 Linux 发行版本都使用这种形式的软件包管理安装、更新和卸载软件。对于最终用户来说，使用RPM所提供的功能来维护系统是比较容易和轻松的。安装、卸载和升级RPM软件包只需一条命令就可以搞定。RPM维护了一个所有已安装的软件包和文件的数据库，可以让用户进行查询和验证工作。在软件包升级过程中，RPM会对配置文件进行特别处理，绝对不会丢失以往的定制信息。对于程序员RPM可以让我们连同软件的源代码打包成源代码和二进制软件包供最终用户使用。
-一般而言制作一个RPM包包含以下几个步骤
-计划你想要建立什么 收集软件包 根据需要修补软件 计划升级旧有的包 创建可重现的软件构建 概述任何依赖关系 构建rpm 测试rpm（能否安装、升级） RPM capability 能力 运行或安装需要依赖于其他的RPM包本身或所提供的文件为基础的现象被称之为依赖关系。但在制作RPM包时，依赖关系有两类编译依赖与安装依赖。
-自身名字所包含的意义 它提供的文件也有可能被其他软件所依赖，文件本身也能识别成一种能力 编译依赖和安装依赖
-每一个RPM包都提供一种能够完成任务的功能，此种能力很可能被其他RPM所依赖，此能力大多数情况下和RPM名字是相同的。
-制作RPM包的纲要有如下四部
-设定RPM包制作的目录结构（制作车间） 将原材料（源码包、配置文件、补丁包）放置规划好的目录当中。 创建spec文件，指挥如何使用原材料将其制作成rpm包。 编译源代码生成rpm包 在一个特定的目录中提供如下5个子目录 redhat上默认在/usr/src/reahat BUILD 源代码解压以后放置的位置，仅需提供目录。 RPMS 放置制作完成后的RPM包 SOURCES 原材料放置目录（配置文件、源码包、补丁包） SPECS 放置spec文件（纲领性文件）的。 SRPMS SRC rpm包存放位置 RPM优缺点 优点：
-集中管理：RPM可以集中管理安装、升级和删除软件包，保证系统的干净和稳定。 精确控制：RPM提供详细的软件包信息，可以对软件包的安装路径、依赖关系、版本等进行精确控制，使得软件安装更加灵活便捷。 简单易用：RPM提供了一套完整的命令行工具和图形化管理工具，对于普通用户来说，使用起来非常方便。 更新机制：RPM可以根据用户需要进行更新，包括安全更新、功能更新和修复错误等，可以更好地保证系统安全与稳定性。 缺点：
-依赖管理：RPM虽然可以管理软件包的依赖关系，但其解决依赖的方式容易出现问题，可能会出现某些软件包的依赖关系无法解决的情况。 更新速度：由于需要对软件包进行依赖检查等操作，升级软件包可能需要较长时间，特别是当软件包依赖比较复杂时。 存在问题：有时候使用RPM安装的软件包出现问题，需要手动卸载并重新安装，这会导致一些无法预测的麻烦。 兼容性：RPM采用了特定的软件包管理标准，要求安装的软件包必须符合这些标准。因此，RPM可能不太适用于其他Linux系统或自定义的软件包格式。 SPEC文件 制作RPM软件包的关键在于编写SPEC软件包描述文件。要想制作一个rpm软件包就必须写一个软件包描述文件（SPEC）。这个文件中包含了软件包的诸多信息，如软件包的名字、版本、类别、说明摘要、创建时要执行什么指令、安装时要执行什么操作、以及软件包所要包含的文件列表等等。
-SPEC文件通常包括以下几个部分：
-头文件：包括软件包的名称、版本、发布号、授权等信息。
-%description：包括软件包的描述、依赖关系、构建环境等信息。
-%prep：指定源代码的来源和如何解压缩及准备源代码。
-%build：指定如何编译源代码。
-%install：指定如何安装编译好的软件包。
-%check：指定测试源代码的特定部分，通常是用来运行单元测试。
-%clean：指定清除构建过程中产生的临时文件和目录的方法。
-%files：指定哪些文件应该包括在最终的RPM文件中。
-%changelog：记录软件包的变更历史。
-SPEC文件中常用的宏变量 宏变量 说明 %{name} 软件包的名称，如 myapp。 %{version} 软件包的版本号，如 1.</description>
-    </item>
-    <item>
       <title>SSH客户端应用场景</title>
       <link>https://www.oomkill.com/ssh-client-application/</link>
       <pubDate>Fri, 18 May 2018 00:00:00 +0000</pubDate>
@@ -209,22 +171,6 @@ Notes：由于伟大的 people‘s leader president xi 网站已经无法中国�
 所以目前只能下载到一些镜像站上4.x版本，截止到2022年11月的6.2.7相差很多，windows客户端版本可以通过chocolate 安装
 rsync使用说明 rsync命令语法
 选项 注释说明 rsync rsync同步命令 option 为同步时的选项参数 src 为源，及待拷贝的分区、文件或目录等 dest 为目标分区、文件或目录等 rsync参数说明</description>
-    </item>
-    <item>
-      <title>使用fpm制作rpm包与搭建本地yum源</title>
-      <link>https://www.oomkill.com/fpm/</link>
-      <pubDate>Fri, 16 Dec 2016 00:00:00 +0000</pubDate>
-      <guid>https://www.oomkill.com/fpm/</guid>
-      <description>rpm 与 fpm 软件的安装方式 编译安装：优点是可以定制化安装目录、按需开启功能等，缺点是需要查找并实验出适合的编译参数，诸如MySQL之类的软件编译耗时过长 yum安装：优点是全自动化安装，不需要为依赖问题发愁，缺点是自主性太差，软件的功能、存放位置都已经固定好了，不易变更。 编译源码：根据自己的需求做成 RMP包 ==&amp;gt; 搭建yum仓库 ==&amp;gt; yum安装。结合前两者的优点，暂未发现什么缺点。可能的缺点就是RPM包的通用性差，一般人不会定制RPM包。 RPM概述 RPM全称是Red Hat Package Manager(RedHat包管理器)。几乎所有的Linux发型版本都使用这种形式的软件包管理安装、更新和卸载软件。
-rpm命令有5种基本功能（不包括创建软件包）：安装、卸载、升级、查询和验证。
-关于rpm命令的使用可以用rpm &amp;ndash;help来获得
-rpmbuild rpmbuild是reahat系的原声打包命令，这个命令的使用难点主要在于spec文件编写，一个类似于kickstart的ks.cfg文件。
-作为一个使用工具，种种繁琐，在没有替代品时还能存活。当有了其他简易工具时，他就到了完蛋的时候
-fpm fpm 是将一种类型的包转换成另一种类型
-支持的源类型包
-类型 说明 dir 将目录打包成所需要的类型，可以用于源码编译安装的软件包 rpm 对rpm进行转换 gem 对rubygem包进行转换 python 将python模块打包成相对应的类型 支持目标类型包 rpm 转换为rpm包 deb 转换为deb包 solaris 装环卫solaris包 puppet 转换为puppet模块 fpm安装 fpm是ruby写的，因此系统环境需要ruby，而且ruby版本号大于bshards运行的版本。
-yum安装ruby模块 bash 1 yum install ruby rubygems ruby-devel -y 查看ruby的版本
-bash 1 2 3 4 5 6 7 $ rpm -qa|grep ruby ruby-libs-1.</description>
     </item>
     <item>
       <title>ch1 iptables介绍</title>
