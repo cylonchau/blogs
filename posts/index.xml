@@ -6,8 +6,20 @@
     <description>Recent content in Posts on Cylon&#39;s Collection</description>
     <generator>Hugo -- 0.125.7</generator>
     <language>zh</language>
-    <lastBuildDate>Wed, 01 Apr 2026 23:00:36 +0800</lastBuildDate>
+    <lastBuildDate>Thu, 30 Apr 2026 12:00:36 +0800</lastBuildDate>
     <atom:link href="https://www.oomkill.com/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>域名系统面试预测</title>
+      <link>https://www.oomkill.com/interview-domain-dns/</link>
+      <pubDate>Thu, 30 Apr 2026 00:00:00 +0000</pubDate>
+      <guid>https://www.oomkill.com/interview-domain-dns/</guid>
+      <description>你这个 DNS 系统的核心定位是什么？ 答：这是一个控制面的 DNS 平台，核心不是单纯的记录管理后台，而是“本地期望态管理 + 多 Provider 聚合 + 私有DNS + 注册中心 + 运维工具 + 防攻击 + 域名优化的平台”。
+提供了：
+智能DNS，geo+view+isp Provider 聚合：反向控制器 证书托管 域名资产管理 域名托底 高级功能：LB，状态，防封等 运维自动化 高级安全防护，解耦+ACL 为什么要自己做一层 DNS 控制面，而不是直接用 Cloudflare 控制台？ 答：因为企业场景通常有多云、多账号、多环境隔离和统一审计需求。 直接用各家 Provider 控制台会带来几个问题：
+入口分散，缺少统一权限和审计 多 Provider 切换成本高 无法做统一的记录模型和调度策略 无法做企业内部自动化，比如批量变更、回滚、任务化切换、漂移检测 他价值就是把这些统一起来。
+你这个 DNS 系统和普通 DNS 管理后台最大的区别是什么？ 答：普通管理后台更多是 CRUD 记录，而这个系统是一个完整的 DNS 控制面。除了 Zone 和 Record 管理，还包括多 Provider 聚合、任务调度、HTTPDNS、证书管理、智能 DNS、防封防污染、私有 DNS、服务注册发现等能力。 也就是说，它不是“改记录的页面”，而是“统一的 DNS 治理平台”。
+为什么要做多 Provider 聚合，而不是绑定单一厂商？ 答：多 Provider 聚合主要解决三类问题：</description>
+    </item>
     <item>
       <title>macOS上免费解锁bitlocker</title>
       <link>https://www.oomkill.com/macos-unlock-bitlocker/</link>
