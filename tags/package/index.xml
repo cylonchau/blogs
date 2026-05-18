@@ -2,26 +2,26 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Package on Cylon&#39;s Collection</title>
-    <link>https://www.oomkill.com/tags/package/</link>
+    <link>https://www.161616.top/tags/package/</link>
     <description>Recent content in Package on Cylon&#39;s Collection</description>
     <generator>Hugo -- 0.125.7</generator>
     <language>zh</language>
     <lastBuildDate>Mon, 30 Jun 2025 22:10:36 +0800</lastBuildDate>
-    <atom:link href="https://www.oomkill.com/tags/package/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://www.161616.top/tags/package/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>利用github构建个人yum仓库</title>
-      <link>https://www.oomkill.com/utilize-github-yum-repo/</link>
+      <link>https://www.161616.top/utilize-github-yum-repo/</link>
       <pubDate>Mon, 30 Jun 2025 00:00:00 +0000</pubDate>
-      <guid>https://www.oomkill.com/utilize-github-yum-repo/</guid>
+      <guid>https://www.161616.top/utilize-github-yum-repo/</guid>
       <description>为什么选择 GitHub 作为 YUM 仓库？ 免费托管：GitHub 提供免费的文件存储和 HTTP 服务。 CDN：结合 jsDelivr 等 CDN 服务，可以加速用户的访问速度。 无成本：无需自己搭建服务器，降低维护成本。 使用便利：可以一条命令完成安装，无需再上传安装包了，也可以用来制作下线版本的 yum 仓库。 基本思路 YUM 仓库的核心是文件索引（repodata）和 HTTP 服务。GitHub 提供静态文件托管和 HTTP 访问支持，可以作为 YUM 仓库的存储平台。此外，可以通过 CDN 服务（如 jsDelivr）加速访问（可选）。
 存储：将 RPM 包和仓库索引文件存储在 GitHub 仓库中。 访问：通过 GitHub 的 raw 文件访问路径或 jsDelivr 提供 HTTP 服务。 生成索引：使用 createrepo 工具生成 YUM 仓库的元数据（repodata）。 步骤 1：生成 repodata 安装 createrepo 工具 确保已安装 createrepo 工具，用于生成 YUM 仓库的元数据。
 bash 1 sudo yum install createrepo -y 创建目录结构 为不同发行版（这里为 CentOS 7 和 Rocky 9）创建对应的目录结构：</description>
     </item>
     <item>
       <title>Unix归档模式Unix ar - 深入剖析与构建deb包</title>
-      <link>https://www.oomkill.com/deb-package/</link>
+      <link>https://www.161616.top/deb-package/</link>
       <pubDate>Wed, 29 Mar 2023 00:00:00 +0000</pubDate>
-      <guid>https://www.oomkill.com/deb-package/</guid>
+      <guid>https://www.161616.top/deb-package/</guid>
       <description>deb 概述 deb包（.deb）是 Debian 和基于 Debian衍生操作系统（如Ubuntu）中使用的一种软件包的格式。deb是一种基于 Unix ar [3] (Unix archiver) 的归档文件。其中包含二进制文件、配置文件和其他软件所需的资源。deb包可用于安装、升级和卸载软件包。通常，Debian操作系统的用户使用apt（Advanced Package Tool）等软件包管理器工具来管理deb包。通过这些工具，用户可以轻松下载、安装和管理软件包，而无需手动编译、安装和解决软件包之间的依赖关系。
 deb VS rpm 包的归档格式不同：deb是基于 ar 的归档模式，而RPM是基于 cpio 的归档模式 包的结构不同：deb包要求必须包含一个 DEBIAN 目录；而RPM不需要以来额外的目录结构 包的依赖机制不同： Deb使用epoch，而RPM使用build number：在Deb中，epoch是一个可选的字段，它允许呈现基准日期之前的先前版本。而在RPM中，build number表示软件包编译的次数。因此，在Deb中，为了解决版本控制问题，epoch是非常重要的，而在RPM中，则更关注build number。 Deb使用逆向依赖关系，而RPM使用依赖关系：在Deb中，依赖项是从包本身向外扩展，在解决依赖问题时可以通过逆向依赖关系进行。而在RPM中，则更喜欢使用依赖关系直接指向其他包。 Deb允许代理软件包，而RPM则不允许代理软件包：Deb中，软件包可以使用另一种软件包的代理来提供功能。在RPM中，软件包需要直接引用相关的软件包。这意味着在Deb中，对于版本控制，可以用另一种代理软件包来解决问题，而在RPM中必须直接引用包。 Deb允许多重依赖关系，RPM则不允许：Deb允许使用多个依赖项列表，以便包与不同版本的库兼容。在RPM中，需要在每个包中定义依赖项和其版本，不能使用多重依赖。 deb包的分析 deb包的结构 deb 最重要的是 控制文件 Control ，该文件记录了deb包与其安装的程序的信息。
 在deb包内部包含一组模拟 Linux 文件系统的文件夹，例如 /usr, /usr/bin, /opt等等。 放置在其中一个目录中的文件将在安装期间复制到实际文件系统中的相同位置。 因此，例如将二进制文件放入 &amp;lt;.deb&amp;gt;/usr/local/bin/binaryfile 将被安装到 /usr/local/bin/binaryfile.
@@ -31,9 +31,9 @@ control文件 [2] Deb软件包（.</description>
     </item>
     <item>
       <title>Unix归档模式cpio - 深入剖析与构建rpm包</title>
-      <link>https://www.oomkill.com/rpm-package/</link>
+      <link>https://www.161616.top/rpm-package/</link>
       <pubDate>Sat, 15 Sep 2018 00:00:00 +0000</pubDate>
-      <guid>https://www.oomkill.com/rpm-package/</guid>
+      <guid>https://www.161616.top/rpm-package/</guid>
       <description>RPM概述 RPM (Red Hat Package Manager)，几乎所有的 Linux 发行版本都使用这种形式的软件包管理安装、更新和卸载软件。对于最终用户来说，使用RPM所提供的功能来维护系统是比较容易和轻松的。安装、卸载和升级RPM软件包只需一条命令就可以搞定。RPM维护了一个所有已安装的软件包和文件的数据库，可以让用户进行查询和验证工作。在软件包升级过程中，RPM会对配置文件进行特别处理，绝对不会丢失以往的定制信息。对于程序员RPM可以让我们连同软件的源代码打包成源代码和二进制软件包供最终用户使用。
 一般而言制作一个RPM包包含以下几个步骤
 计划你想要建立什么 收集软件包 根据需要修补软件 计划升级旧有的包 创建可重现的软件构建 概述任何依赖关系 构建rpm 测试rpm（能否安装、升级） RPM capability 能力 运行或安装需要依赖于其他的RPM包本身或所提供的文件为基础的现象被称之为依赖关系。但在制作RPM包时，依赖关系有两类编译依赖与安装依赖。
@@ -57,9 +57,9 @@ SPEC文件中常用的宏变量 宏变量 说明 %{name} 软件包的名称，�
     </item>
     <item>
       <title>使用fpm制作rpm包与搭建本地yum源</title>
-      <link>https://www.oomkill.com/fpm/</link>
+      <link>https://www.161616.top/fpm/</link>
       <pubDate>Fri, 16 Dec 2016 00:00:00 +0000</pubDate>
-      <guid>https://www.oomkill.com/fpm/</guid>
+      <guid>https://www.161616.top/fpm/</guid>
       <description>rpm 与 fpm 软件的安装方式 编译安装：优点是可以定制化安装目录、按需开启功能等，缺点是需要查找并实验出适合的编译参数，诸如MySQL之类的软件编译耗时过长 yum安装：优点是全自动化安装，不需要为依赖问题发愁，缺点是自主性太差，软件的功能、存放位置都已经固定好了，不易变更。 编译源码：根据自己的需求做成 RMP包 ==&amp;gt; 搭建yum仓库 ==&amp;gt; yum安装。结合前两者的优点，暂未发现什么缺点。可能的缺点就是RPM包的通用性差，一般人不会定制RPM包。 RPM概述 RPM全称是Red Hat Package Manager(RedHat包管理器)。几乎所有的Linux发型版本都使用这种形式的软件包管理安装、更新和卸载软件。
 rpm命令有5种基本功能（不包括创建软件包）：安装、卸载、升级、查询和验证。
 关于rpm命令的使用可以用rpm &amp;ndash;help来获得

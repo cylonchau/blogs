@@ -1,43 +1,286 @@
 ---
 title: interview retrospective 2304
-author: cylon           
+author: cylon
 date: 2023-05-01
 lastmod: 2023-05-01T23:00:36+08:00
-slug: interview retrospective 2304
+slug: interview-retrospective-2304
 password: mtnmdn535125
-tags:              
+tags:
   - Interview
-categories:   
+  - Kubernetes
+  - CloudNative
+categories:
   - Interview
-keywords: 
-  - kubernentes
+keywords:
+  - kubernetes
+  - containerd
+  - cloud-controller-manager
+  - loadbalancer
 ---
 
 
 
-## cloud-controller-manage
 
-controller相关 `cloud-controller-manage` 没有听清楚名称
+# 面试复盘（2304）
 
-## 云平台LB
+本次面试主要集中在 Kubernetes、云平台、容器运行时以及 Linux 基础能力等方向。整体来看，部分问题答题方向出现偏差，也暴露出基础知识掌握不够扎实的问题，后续需要针对性补强。
 
-答的方向是metalLB设计，而interviewer想听的是云平台方向
+---
 
-## 容器底座实现技术方向
+## cloud-controller-manager
 
-contrainerd方向问题
+面试中提到了 controller 相关组件，但当时没有听清具体名称，后续回忆应该是：
 
-## Linux内存和cpu的调度问题
+- `cloud-controller-manager`
 
-没有答上
+### 需要补充的内容
 
-## kubernetes集群在扩容需要考虑到的问题
+重点需要理解：
 
-- APIServer方向：kubernetes官方提供了集群规模的配置
-- 控制平面方向： contorller, sheduler 日志的输出（可以不需要管理）
-- worker节点： 镜像仓库的压力（P2P仓库）
+- Kubernetes 为什么要将 cloud provider 逻辑拆分出去
+- `cloud-controller-manager` 的职责
+- 常见 controller：
+  - Node Controller
+  - Route Controller
+  - Service Controller
+  - Cloud Node Lifecycle Controller
+- 与云厂商 API 的交互方式
+- 云平台 LoadBalancer 的自动创建流程
 
+### 后续学习建议
 
+建议阅读：
 
+- Kubernetes 官方文档
+- cloud-provider 相关源码
+- 各云厂商 CCM 实现（阿里云、AWS、腾讯云等）
 
+---
 
+## 云平台 LoadBalancer
+
+这一题回答偏向了 MetalLB 的设计实现，但面试官更想听的是：
+
+- 云平台 LoadBalancer 的实现机制
+- Kubernetes Service `type=LoadBalancer` 的工作流程
+
+### 回答偏差
+
+当时重点讲了：
+
+- MetalLB Layer2 / BGP 模式
+- 裸金属环境下的 LB 实现
+
+但没有回答：
+
+- 云厂商如何创建 LB
+- CCM 如何调用云 API
+- Service 与 SLB/NLB 的绑定过程
+
+### 应该补充的方向
+
+重点理解：
+
+```text
+Service -> cloud-controller-manager -> Cloud API -> LoadBalancer
+````
+
+包括：
+
+* External IP 分配
+* 健康检查
+* 后端节点注册
+* 四层 / 七层 LB 区别
+* 公网 / 内网 LB
+
+---
+
+## 容器底座实现技术
+
+主要问到了：
+
+* containerd 方向
+* 容器运行时实现
+
+### 暴露的问题
+
+对容器运行时链路理解不够系统。
+
+### 需要掌握的内容
+
+建议梳理完整链路：
+
+```text
+kubectl
+  -> kubelet
+  -> CRI
+  -> containerd
+  -> runc
+  -> Linux Namespace / Cgroup
+```
+
+重点包括：
+
+* CRI / OCI 标准
+* containerd 架构
+* shim 的作用
+* runc 工作流程
+* Namespace 隔离
+* Cgroup 资源限制
+* overlayfs
+
+### 后续建议
+
+可以结合：
+
+* `ctr`
+* `crictl`
+* `nerdctl`
+
+进行实际调试。
+
+---
+
+## Linux 内存与 CPU 调度
+
+这一部分基本没有答上来，说明 Linux 基础仍然较弱。
+
+### 需要补充的内容
+
+#### CPU 调度
+
+重点：
+
+* CFS 调度器
+* 时间片
+* 上下文切换
+* load average
+* CPU affinity
+* 多核调度
+
+#### 内存管理
+
+重点：
+
+* 虚拟内存
+* 页缓存（Page Cache）
+* slab
+* swap
+* OOM Killer
+* NUMA
+
+#### 容器相关
+
+需要结合：
+
+* cgroup CPU quota
+* memory limit
+* kubelet eviction
+
+理解 Kubernetes 的资源管理。
+
+---
+
+## Kubernetes 集群扩容需要考虑的问题
+
+这一题回答相对还可以，但不够体系化。
+
+### 可以从以下几个方向展开
+
+### 1. API Server
+
+Kubernetes 官方提供了集群规模建议，需要关注：
+
+* API QPS
+* etcd 压力
+* watch 数量
+* informer 同步
+
+重点：
+
+* Horizontal scaling
+* APIServer HA
+* etcd 性能
+
+---
+
+### 2. 控制平面
+
+包括：
+
+* controller-manager
+* scheduler
+
+需要考虑：
+
+* leader election
+* 调度吞吐
+* controller 队列积压
+* 日志量与监控
+
+---
+
+### 3. Worker 节点
+
+重点问题：
+
+* 镜像分发压力
+* 网络压力
+* Pod 启动速度
+
+当时提到了：
+
+* P2P 镜像仓库
+
+这个方向是正确的。
+
+还可以补充：
+
+* image pre-pull
+* lazy pull
+* registry cache
+
+---
+
+### 4. 网络方向
+
+容易遗漏：
+
+* CNI 扩展能力
+* Service 数量限制
+* kube-proxy 性能
+* iptables vs ipvs
+* eBPF 方案
+
+---
+
+### 5. 存储方向
+
+包括：
+
+* CSI 扩展
+* PV/PVC 数量
+* IO 吞吐
+* 分布式存储瓶颈
+
+---
+
+# 总结
+
+这次面试暴露出的核心问题：
+
+1. Kubernetes 底层原理理解不够系统
+2. Linux 基础能力薄弱
+3. 回答容易偏离面试官预期
+4. 缺少云平台实际实现视角
+
+后续建议：
+
+* 补 Kubernetes 核心组件源码
+* 深入 containerd / CRI
+* 系统学习 Linux 调度与内存管理
+* 强化云平台架构理解
+* 回答问题时先确认面试官关注的方向，再展开细节
+
+```
+```
