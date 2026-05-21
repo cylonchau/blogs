@@ -1,0 +1,124 @@
+---
+title: CoreDNS 开发系列-5：高性能域名平台项目开发
+author: cylon           
+date: 2025-05-20
+lastmod: 2025-05-20T23:00:36+08:00
+slug: coredns-serial-05-project-development
+tags:
+  - dns
+categories:
+  - dns
+keywords: 
+  - domain system
+  - coredns
+  - dns
+---
+{{< admonition type=abstract title="本文是CoreDNS 开发系列第5章" open=false >}}
+
+- [CoreDNS 开发系列-1：CoreDNS核心概念和安装配置说明]({{</* relref "coredns-serial-01-coredns-concept" */>}})
+- [CoreDNS 开发系列-2：CoreDNS插件详解]({{</* relref "coredns-serial-02-coredns-plugins" */>}})
+- [CoreDNS 开发系列-3：开发自定义插件]({{</* relref "coredns-serial-03-custom-plugin" */>}})
+- [CoreDNS 开发系列-4：高并发域名平台架构设计]({{</* relref "coredns-serial-04-system-design" */>}})
+- [CoreDNS 开发系列-5：高性能域名平台项目开发]({{</* relref "coredns-serial-05-project-development" */>}})
+
+{{< /admonition >}}
+
+
+
+在前面四篇文章中，我们已经详细讨论了 CoreDNS 基础、插件机制、自定义插件开发和系统架构设计。本文将介绍如何将这些概念落地为具体代码，实现一个高性能 DNS 域名平台。
+
+## 项目结构设计
+
+首先规划项目的整体结构，采用模块化设计：
+
+```
+dns-platform/
+├── cmd/                      # 命令行入口
+│   ├── coredns/              # CoreDNS 服务入口
+│   └── api/                  # API 服务入口
+├── internal/                 # 内部包
+│   ├── plugin/               # 自定义插件
+│   │   └── domainstore/      # 域名存储插件
+│   ├── model/                # 数据模型
+│   ├── repository/           # 数据仓库层
+│   │   ├── mysql/            # MySQL 实现
+│   │   └── redis/            # Redis 实现
+│   ├── service/              # 业务服务层
+│   └── api/                  # API 控制器
+├── pkg/                      # 公共包
+│   ├── cache/                # 缓存组件
+│   ├── config/               # 配置管理
+│   └── log/                  # 日志组件
+├── deploy/                   # 部署配置
+│   ├── docker/               # Docker 配置
+│   └── kubernetes/           # K8s 配置
+└── go.mod                    # Go 模块定义
+```
+
+## 数据模型设计
+
+定义核心数据模型：
+
+```
+// internal/model/domain.go
+package model
+
+import "time"
+
+type Domain struct {
+    ID        uint      `json:"id" gorm:"primaryKey"`
+    Name      string    `json:"name" gorm:"uniqueIndex"`
+    UserID    uint      `json:"user_id"`
+    CreatedAt time.Time `json:"created_at"`
+    UpdatedAt time.Time `json:"updated_at"`
+}
+
+type Record struct {
+    ID        uint      `json:"id" gorm:"primaryKey"`
+    DomainID  uint      `json:"domain_id" gorm:"index"`
+    Name      string    `json:"name" gorm:"index"`
+    Type      string    `json:"type" gorm:"index"`
+    Content   string    `json:"content"`
+    TTL       int       `json:"ttl"`
+    Priority  int       `json:"priority"`
+    CreatedAt time.Time `json:"created_at"`
+    UpdatedAt time.Time `json:"updated_at"`
+}
+```
+
+## 数据库层实现
+
+实现 MySQL 数据访问层：
+
+```
+// internal/repository/mysql/record.go
+package mysql
+
+import (
+    "context"
+    "gorm.io/gorm"
+    "dns-platform/internal/model"
+)
+
+type RecordRepository struct {
+    db *gorm.DB
+}
+
+func NewRecordRepository(db *gorm.DB) *RecordRepository {
+    return &RecordRepository{db: db}
+}
+
+func (r *RecordRepository) FindByDomainAn
+```
+
+
+
+
+
+## Reference
+
+<sup id="1">[1]</sup> [***Containerd Brings More Container Runtime Options for Kubernetes***](https://github.com/flannel-io/flannel/blob/v0.26.4/Documentation/backends.md#vxlan)
+
+<sup id="2">[2]</sup> [***arista.comWhite PaperVirtual Extensible LAN (VXLAN) Overview***](https://www.arista.com/assets/data/pdf/Whitepapers/Arista_Networks_VXLAN_White_Paper.pdf)
+
+<sup id="3">[3]</sup> [***rtnetlink.h***](https://sites.uclouvain.be/SystInfo/usr/include/linux/rtnetlink.h.html)

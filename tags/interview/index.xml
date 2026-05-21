@@ -21,42 +21,6 @@
 为什么要做多 Provider 聚合，而不是绑定单一厂商？ 答：多 Provider 聚合主要解决三类问题：</description>
     </item>
     <item>
-      <title>interview retrospective 2411</title>
-      <link>https://www.161616.top/interview-retrospective-2411/</link>
-      <pubDate>Thu, 31 Oct 2024 00:00:00 +0000</pubDate>
-      <guid>https://www.161616.top/interview-retrospective-2411/</guid>
-      <description>面试复盘（2411） 总结 整体感觉偏向工具使用类问答，技术深度较弱，问题主要集中在：
-XXX 会不会写 XXX 会不会用 例如：
-nginx 会不会配置 Dockerfile 会不会写 这类问题偏向经验确认，没有太多技术讨论。
-Kubernetes：Pod 处于 Terminating 状态 其中一个相对有效的问题：
-删除 Pod 时，Pod 一直处于 Terminating 怎么办？
-回答
-Terminating 状态有多种情况，需要先确认具体原因。
-例如：
-Node 节点异常，无法与 APIServer 通讯 Pod 挂载的 Volume 无法卸载 Finalizer 未清理完成 kubelet 无法完成 Pod 删除流程 如果无法优雅删除，可以使用：
-bash 1 kubectl delete pod xxx --force --grace-period=0 进行强制删除。
-Finalizers 面试过程中提到了 finalizers。
-text 1 2 3 4 5 6 7 finalizers in the metadata.finalizers field. When you attempt to delete the resource, the API server handling the delete request notices the values in the finalizers field and does the following: - Modifies the object to add a metadata.</description>
-    </item>
-    <item>
-      <title>interview retrospective 2604</title>
-      <link>https://www.161616.top/interview-retrospective-260412/</link>
-      <pubDate>Thu, 31 Oct 2024 00:00:00 +0000</pubDate>
-      <guid>https://www.161616.top/interview-retrospective-260412/</guid>
-      <description>12 Api 2026 面试问题 整体问题偏向项目追问，主要围绕实际使用场景展开。
-1. 你这个做了什么 主要是项目经历追问。
-更关注：
-实际负责内容 是否真正参与核心实现 在项目中的角色 注释 这类问题通常需要提前整理：
-项目背景 自己负责的模块 技术选型原因 遇到的问题 如何解决 最终效果 避免只描述：
-text 1 用了什么技术 而需要强调：
-text 1 2 为什么这么做 解决了什么问题 2. Elasticsearch 丢日志怎么处理 知识点补充
-日志丢失通常需要从几个方向排查：
-数据写入链路 例如：
-text 1 应用 -&amp;gt; Filebeat/FluentBit -&amp;gt; Kafka -&amp;gt; Logstash -&amp;gt; Elasticsearch 需要确认：
-哪一层出现丢失 是否存在 buffer 满 是否出现 backpressure Elasticsearch 本身 重点包括：
-磁盘是否写满 JVM Heap 是否不足 是否触发 GC refresh / flush 压力 shard 是否过多 replica 是否异常 常见排查命令 bash 1 2 3 GET _cluster/health GET _cat/nodes?</description>
-    </item>
-    <item>
       <title>go面试题收集</title>
       <link>https://www.161616.top/interview-go/</link>
       <pubDate>Fri, 01 Oct 2021 00:00:00 +0000</pubDate>
