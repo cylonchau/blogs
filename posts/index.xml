@@ -6,7 +6,7 @@
     <description>Recent content in Posts on Cylon&#39;s Collection</description>
     <generator>Hugo -- 0.125.7</generator>
     <language>zh</language>
-    <lastBuildDate>Fri, 19 Jun 2026 23:00:36 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 13 Jul 2026 23:00:36 +0800</lastBuildDate>
     <atom:link href="https://www.161616.top/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>从零学习envoy笔记 - 实验 Client Traffic Policy</title>
@@ -92,9 +92,9 @@ Envoy Gateway API 是 Envoy Gateway 自己扩展出来的一组 CRD，用来补�
     </item>
     <item>
       <title>ES阶段2 - 理解集群与节点</title>
-      <link>https://www.161616.top/phrase-2-cluster-and-node/</link>
+      <link>https://www.161616.top/es-phrase-2-cluster-and-node/</link>
       <pubDate>Thu, 11 Jun 2026 00:00:00 +0000</pubDate>
-      <guid>https://www.161616.top/phrase-2-cluster-and-node/</guid>
+      <guid>https://www.161616.top/es-phrase-2-cluster-and-node/</guid>
       <description>本文用以深度学习ES elasticsearch 所涉及版本为 9.0 理解 ES 到底在解决什么问题 假设需求一个日志系统，每天承载数据量如下：
 写入：500GB 日志 查询：数千用户同时搜索 机器：10 台 如果只有一台 ES 实例，他的数据完成流程是
 text 1 用户 -&amp;gt; ES -&amp;gt; 磁盘 此时存在问题，
