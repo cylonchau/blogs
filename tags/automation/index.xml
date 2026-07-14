@@ -10,9 +10,9 @@
     <atom:link href="https://www.161616.top/tags/automation/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>StackStorm自动化 - 工作流模型</title>
-      <link>https://www.161616.top/stackstorm-sensors/</link>
+      <link>https://www.161616.top/stackstorm-workflow-model/</link>
       <pubDate>Fri, 24 May 2024 00:00:00 +0000</pubDate>
-      <guid>https://www.161616.top/stackstorm-sensors/</guid>
+      <guid>https://www.161616.top/stackstorm-workflow-model/</guid>
       <description>工作流模型是指 Stackstorm 中 Orquesta 工作流的定义，包含工作流的执行方式，也可以理解为工作流模型就是 Workflow DSL 定义任务执行的有向图
 工作流模型 下表是工作流模型 (Workflow Model) 的属性。工作流接受 Input，按预定义顺序执行一组任务 (Task)，并返回输出 (Output)。此处的工作流模型是一个有向图 (directed graph)，其中 Task 是节点，Taskt 之间的转换及其条件形成边。组成工作流的任务将在 DSL 中定义为名为 Task 的字典， 其中 Key 和 Value 分别是任务名称和任务模型。
 Attribute Required Description version Yes The version of the spec being used in this workflow DSL. description No The description of the workflow. input No A list of input arguments for this workflow. vars No A list of variables defined for the scope of this workflow.</description>

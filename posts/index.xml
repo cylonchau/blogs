@@ -10,9 +10,9 @@
     <atom:link href="https://www.161616.top/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>从零学习envoy笔记 - 实验 Client Traffic Policy</title>
-      <link>https://www.161616.top/envoy/</link>
+      <link>https://www.161616.top/envoy-gateway-client-traffic-policy/</link>
       <pubDate>Fri, 19 Jun 2026 00:00:00 +0000</pubDate>
-      <guid>https://www.161616.top/envoy/</guid>
+      <guid>https://www.161616.top/envoy-gateway-client-traffic-policy/</guid>
       <description>本文是从零学习envoy笔记第四章 - Client Traffic Policy 从零学习envoy笔记 - Gateway总览 从零学习envoy笔记 - 学习EG API和Gateway API 从零学习envoy笔记 - 快速部署实验环境 从零学习envoy笔记 - 官方Task Backend Routing 从零学习envoy笔记 - 官方Task Backend Utilization Load Balancing 从零学习envoy笔记 - 官方Task Bandwidth Limit 从零学习envoy笔记 - 官方Task Client Traffic Policy ClientTrafficPolicy
 ClientTrafficPolicy 用于管理客户端到 Envoy Proxy 之间的行为，例如控制访问 Gateway 的客户端连接，例如 TCP keepalive、Proxy Protocol、XFF 客户端 IP 识别、客户端请求超时、连接 idle timeout、连接 buffer limit。
 注意：这些都挂在 Gateway 上，不挂在 HTTPRoute (BackendTrafficPolicy ) 或 backend service 上 [1]
@@ -20,9 +20,9 @@ yaml 1 2 3 4 targetRefs: - group: gateway.</description>
     </item>
     <item>
       <title>从零学习envoy笔记 - 实验 断路器Circuit Breaker</title>
-      <link>https://www.161616.top/envoy/</link>
+      <link>https://www.161616.top/envoy-gateway-circuit-breaker/</link>
       <pubDate>Fri, 19 Jun 2026 00:00:00 +0000</pubDate>
-      <guid>https://www.161616.top/envoy/</guid>
+      <guid>https://www.161616.top/envoy-gateway-circuit-breaker/</guid>
       <description>本文是从零学习envoy笔记第四章 - 断路器 从零学习envoy笔记 - Gateway总览 从零学习envoy笔记 - 学习EG API和Gateway API 从零学习envoy笔记 - 快速部署实验环境 从零学习envoy笔记 - 官方Task Backend Routing 从零学习envoy笔记 - 官方Task Backend Utilization Load Balancing 从零学习envoy笔记 - 官方Task Bandwidth Limit 从零学习envoy笔记 - 官方Task Client Traffic Policy BackendTrafficPolicy
 断路器是指，当后端压力过大时，Envoy 主动限制继续打到后端的请求数量，让一部分请求快速失败，用于保护后端。
 Envoy Gateway 支持如下断路器阈值
@@ -32,9 +32,9 @@ yaml 1 2 3 4 circuitBreaker: maxConnections: 0 #Envoy 到后端最多建立多�
     </item>
     <item>
       <title>从零学习envoy笔记 - 实验 Backend Utilization Load Balancing</title>
-      <link>https://www.161616.top/envoy/</link>
+      <link>https://www.161616.top/envoy-gateway-backend-utilization-load-balancing/</link>
       <pubDate>Thu, 18 Jun 2026 00:00:00 +0000</pubDate>
-      <guid>https://www.161616.top/envoy/</guid>
+      <guid>https://www.161616.top/envoy-gateway-backend-utilization-load-balancing/</guid>
       <description>本文是从零学习envoy笔记第四章 - Backend Utilization 从零学习envoy笔记 - Gateway总览 从零学习envoy笔记 - 学习EG API和Gateway API 从零学习envoy笔记 - 快速部署实验环境 从零学习envoy笔记 - 官方Task Backend Routing 从零学习envoy笔记 - 官方Task Backend Utilization Load Balancing 从零学习envoy笔记 - 官方Task Bandwidth Limit 从零学习envoy笔记 - 官方Task Client Traffic Policy BackendTrafficPolicy
 Backend Utilization Load Balancing 就是根据服务利用率来动态调整负载均衡权重 (使用ORCA load metrics)
 ORCA Open Request Cost Aggregation在 Envoy/gRPC 生态里通常是一种让 backend 向 L7 负载均衡器汇报自身负载的标准。gRPC 官方也把 ORCA 描述为一种传递 backend metrics 的开放标准。
@@ -42,9 +42,9 @@ ORCA Open Request Cost Aggregation在 Envoy/gRPC 生态里通常是一种让 bac
     </item>
     <item>
       <title>从零学习envoy笔记 - 快速部署实验环境</title>
-      <link>https://www.161616.top/envoy/</link>
+      <link>https://www.161616.top/envoy-gateway-lab-environment/</link>
       <pubDate>Tue, 16 Jun 2026 00:00:00 +0000</pubDate>
-      <guid>https://www.161616.top/envoy/</guid>
+      <guid>https://www.161616.top/envoy-gateway-lab-environment/</guid>
       <description>本文是从零学习envoy笔记第三章 从零学习envoy笔记 - Gateway总览 从零学习envoy笔记 - 学习EG API和Gateway API 从零学习envoy笔记 - 快速部署实验环境 从零学习envoy笔记 - 官方Task Backend Routing 从零学习envoy笔记 - 官方Task Backend Utilization Load Balancing 从零学习envoy笔记 - 官方Task Bandwidth Limit 从零学习envoy笔记 - 官方Task Client Traffic Policy 本文通过 Kind 来完成快速部署 Envoy Gateway
 kind helm Envoy Gateway 1.81 准备 kind 环境 这里使用 kind 创建一个本地 Kubernetes 集群。
 示例中准备两个节点，1 个 control-plane；2 个 worker
@@ -53,9 +53,9 @@ yaml 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 
     </item>
     <item>
       <title>从零学习envoy笔记 - 实验 Backend Routing</title>
-      <link>https://www.161616.top/envoy/</link>
+      <link>https://www.161616.top/envoy-gateway-backend-routing/</link>
       <pubDate>Tue, 16 Jun 2026 00:00:00 +0000</pubDate>
-      <guid>https://www.161616.top/envoy/</guid>
+      <guid>https://www.161616.top/envoy-gateway-backend-routing/</guid>
       <description>本文是从零学习envoy笔记第四章 - 后端路由 从零学习envoy笔记 - Gateway总览 从零学习envoy笔记 - 学习EG API和Gateway API 从零学习envoy笔记 - 快速部署实验环境 从零学习envoy笔记 - 官方Task Backend Routing 从零学习envoy笔记 - 官方Task Backend Utilization Load Balancing 从零学习envoy笔记 - 官方Task Bandwidth Limit 从零学习envoy笔记 - 官方Task Client Traffic Policy BackendTrafficPolicy
 Backend 是 Envoy Gateway 扩展 CRD，用于直接配置后端 endpoint，比如外部域名、外部 IP、Unix Socket 等。
 Backend 更方便的理解是，用于指向一个后端服务
@@ -63,9 +63,9 @@ Backend 更方便的理解是，用于指向一个后端服务
     </item>
     <item>
       <title>从零学习envoy笔记 - 实验 Bandwidth Limit</title>
-      <link>https://www.161616.top/envoy/</link>
+      <link>https://www.161616.top/envoy-gateway-bandwidth-limit/</link>
       <pubDate>Tue, 16 Jun 2026 00:00:00 +0000</pubDate>
-      <guid>https://www.161616.top/envoy/</guid>
+      <guid>https://www.161616.top/envoy-gateway-bandwidth-limit/</guid>
       <description>本文是从零学习envoy笔记第四章 - 带宽限制 从零学习envoy笔记 - Gateway总览 从零学习envoy笔记 - 学习EG API和Gateway API 从零学习envoy笔记 - 快速部署实验环境 从零学习envoy笔记 - 官方Task Backend Routing 从零学习envoy笔记 - 官方Task Backend Utilization Load Balancing 从零学习envoy笔记 - 官方Task Bandwidth Limit 从零学习envoy笔记 - 官方Task Client Traffic Policy BackendTrafficPolicy
 带宽限制 (Bandwidth Limit) 是指 Envoy Gateway 允许用户配置发送到后端和从后端接受的流量的吞吐量。这里不是指限速返回 429，而是 Envoy 会在带宽 token 用完后暂停数据传输，等 token 补充后继续 [1] 。
 带宽限制主要是为了下面一些考虑：
@@ -74,17 +74,17 @@ Note: The bandwidth limit is applied per Envoy proxy instance.</description>
     </item>
     <item>
       <title>从零学习envoy笔记 - Gateway总览</title>
-      <link>https://www.161616.top/envoy/</link>
+      <link>https://www.161616.top/envoy-gateway-overview/</link>
       <pubDate>Sun, 14 Jun 2026 00:00:00 +0000</pubDate>
-      <guid>https://www.161616.top/envoy/</guid>
+      <guid>https://www.161616.top/envoy-gateway-overview/</guid>
       <description>本文是从零学习envoy笔记第一章 从零学习envoy笔记 - Gateway总览 从零学习envoy笔记 - 学习EG API和Gateway API 从零学习envoy笔记 - 快速部署实验环境 从零学习envoy笔记 - 官方Task Backend Routing 从零学习envoy笔记 - 官方Task Backend Utilization Load Balancing 从零学习envoy笔记 - 官方Task Bandwidth Limit 从零学习envoy笔记 - 官方Task Client Traffic Policy Envoy Gateway 是什么？ 一句话来说：Envoy Gateway = Gateway API 标准资源 + Envoy Gateway 扩展 CRD + Envoy Proxy 数据面
 Envoy Gateway 是一个 Kubernetes-native 的 API Gateway / 反向代理控制平面。它的作用不是自己直接处理业务流量，而是监听 Kubernetes 里的 Gateway API 和 Envoy Gateway 扩展资源，然后把这些声明式配置翻译成 Envoy Proxy 可以理解的 xDS 配置，最后由 Envoy Proxy 实例真正接收和转发流量。</description>
     </item>
     <item>
       <title>从零学习envoy笔记 - 学习EG API和Gateway API</title>
-      <link>https://www.161616.top/envoy/</link>
+      <link>https://www.161616.top/envoy-gateway-api/</link>
       <pubDate>Sun, 14 Jun 2026 00:00:00 +0000</pubDate>
-      <guid>https://www.161616.top/envoy/</guid>
+      <guid>https://www.161616.top/envoy-gateway-api/</guid>
       <description>本文是从零学习envoy笔记第二章 从零学习envoy笔记 - Gateway总览 从零学习envoy笔记 - 学习EG API和Gateway API 从零学习envoy笔记 - 快速部署实验环境 从零学习envoy笔记 - 官方Task Backend Routing 从零学习envoy笔记 - 官方Task Backend Utilization Load Balancing 从零学习envoy笔记 - 官方Task Bandwidth Limit 从零学习envoy笔记 - 官方Task Client Traffic Policy 本文通过几个示例来完成对 Gateway API 和 EG API 的印象加深学习
 使用Envoy Gateway 中主要会接触两类 API：
 Gateway API 在常规情况下接触的还是原生的比较高 EG API (Envoy Gateway API)：一些高级特性会使用到 Gateway API 是 Kubernetes SIG Network 定义的标准网关 API，例如 GatewayClass、Gateway、HTTPRoute 等。
@@ -135,9 +135,9 @@ jsx 1 2 3 % sudo cp ~/Downloads/Microsoft-Windows-LanguageFeatures-Basic-en-us-P
     </item>
     <item>
       <title>记录haproxy在个别k8s集群上异常OOM问题</title>
-      <link>https://www.161616.top/haproxy-http-connection-mode/</link>
+      <link>https://www.161616.top/haproxy-kubernetes-oom-troubleshooting/</link>
       <pubDate>Sat, 14 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>https://www.161616.top/haproxy-http-connection-mode/</guid>
+      <guid>https://www.161616.top/haproxy-kubernetes-oom-troubleshooting/</guid>
       <description>问题描述 在使用 haproxy 驱动 Pod 代理时，在个别 k8s 集群中 haproxy 容器 (haproxytech/haproxy-debian:2.7) 在启动时出现 OOM 秒重启，即使配置了 16GB 的内存限制依然被杀掉。而同样的镜像和配置在其他 Rocky Linux 9 集群中运行正常。
 关键症状 内存占用异常：
 内存配置 症状 2GB OOM 8GB OOM 15GB OOM 就是配置多大的内存都会被吞掉。当时日志记录如下
@@ -633,9 +633,9 @@ Kubernetes将系统指标分为两部分：
     </item>
     <item>
       <title>StackStorm自动化 - 工作流模型</title>
-      <link>https://www.161616.top/stackstorm-sensors/</link>
+      <link>https://www.161616.top/stackstorm-workflow-model/</link>
       <pubDate>Fri, 24 May 2024 00:00:00 +0000</pubDate>
-      <guid>https://www.161616.top/stackstorm-sensors/</guid>
+      <guid>https://www.161616.top/stackstorm-workflow-model/</guid>
       <description>工作流模型是指 Stackstorm 中 Orquesta 工作流的定义，包含工作流的执行方式，也可以理解为工作流模型就是 Workflow DSL 定义任务执行的有向图
 工作流模型 下表是工作流模型 (Workflow Model) 的属性。工作流接受 Input，按预定义顺序执行一组任务 (Task)，并返回输出 (Output)。此处的工作流模型是一个有向图 (directed graph)，其中 Task 是节点，Taskt 之间的转换及其条件形成边。组成工作流的任务将在 DSL 中定义为名为 Task 的字典， 其中 Key 和 Value 分别是任务名称和任务模型。
 Attribute Required Description version Yes The version of the spec being used in this workflow DSL. description No The description of the workflow. input No A list of input arguments for this workflow. vars No A list of variables defined for the scope of this workflow.</description>
@@ -1284,16 +1284,16 @@ text 1 Nginx &amp;#34;rewrite or internal redirection cycle while internally red
     </item>
     <item>
       <title>Awesome kubernetes</title>
-      <link>https://www.161616.top/awesome-kubernetes/</link>
+      <link>https://www.161616.top/awesome-kubernetes-concepts/</link>
       <pubDate>Wed, 03 May 2023 00:00:00 +0000</pubDate>
-      <guid>https://www.161616.top/awesome-kubernetes/</guid>
+      <guid>https://www.161616.top/awesome-kubernetes-concepts/</guid>
       <description>Deployment Recommended Cluster Architecture - rancher Hardware recommendations - etcd A simple shell script for backing up etcd v2 and v3 datastores Considerations for large clusters - kubernetes cluster Operating etcd clusters for Kubernetes Recommended performance and scalability practices Binary deploy script pure shell Managing Kubernetes Traffic with F5 NGINX Eraser - Cleaning up Images from Kubernetes Nodes 对于不同规模的 Kubernetes 集群所需要的 etcd 规模推荐 datree: allowing you to scan your k8s configs during development Performance etcd: getting 30% more write/s 蚂蚁集团万级规模 K8s 集群 etcd 高可用建设之路 各组件参数配置调优 万级K8s集群背后etcd稳定性及性能优化实践 K8s 集群稳定性：LIST 请求源码分析、性能评估与大规模基础服务部署调优 Comparing comparing Kubernetes ingress controller Troubleshooting 一次Etcd集群宕机引发的思考 Stern: allows you to tail multiple pods on Kubernetes Diagnosis Kubernetes 自动化诊断工具：k8sgpt-operator ktop: displays useful metrics information about kubernetes cluster Dashboard KDash - A fast and simple dashboard for Kubernetes Security Kubernetes 加固指南 Popeye 扫描实时 Kubernetes 集群并报告已部署资源和配置的潜在问题 Test kube-monkey It randomly deletes Kubernetes (k8s) pods in the cluster encouraging and validating the development of failure-resilient services.</description>
     </item>
     <item>
       <title>Awesome kubernetes</title>
-      <link>https://www.161616.top/awesome-kubernetes/</link>
+      <link>https://www.161616.top/awesome-kubernetes-methodology/</link>
       <pubDate>Wed, 03 May 2023 00:00:00 +0000</pubDate>
-      <guid>https://www.161616.top/awesome-kubernetes/</guid>
+      <guid>https://www.161616.top/awesome-kubernetes-methodology/</guid>
       <description>Deployment Recommended Cluster Architecture - rancher Hardware recommendations - etcd A simple shell script for backing up etcd v2 and v3 datastores Considerations for large clusters - kubernetes cluster Operating etcd clusters for Kubernetes Recommended performance and scalability practices Binary deploy script pure shell Managing Kubernetes Traffic with F5 NGINX Eraser - Cleaning up Images from Kubernetes Nodes 对于不同规模的 Kubernetes 集群所需要的 etcd 规模推荐 datree: allowing you to scan your k8s configs during development Performance etcd: getting 30% more write/s 蚂蚁集团万级规模 K8s 集群 etcd 高可用建设之路 各组件参数配置调优 万级K8s集群背后etcd稳定性及性能优化实践 K8s 集群稳定性：LIST 请求源码分析、性能评估与大规模基础服务部署调优 Comparing comparing Kubernetes ingress controller Troubleshooting 一次Etcd集群宕机引发的思考 Stern: allows you to tail multiple pods on Kubernetes Diagnosis Kubernetes 自动化诊断工具：k8sgpt-operator ktop: displays useful metrics information about kubernetes cluster Dashboard KDash - A fast and simple dashboard for Kubernetes Security Kubernetes 加固指南 Popeye 扫描实时 Kubernetes 集群并报告已部署资源和配置的潜在问题 Test kube-monkey It randomly deletes Kubernetes (k8s) pods in the cluster encouraging and validating the development of failure-resilient services.</description>
     </item>
     <item>

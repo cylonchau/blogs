@@ -10,9 +10,9 @@
     <atom:link href="https://www.161616.top/tags/ha/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>记录haproxy在个别k8s集群上异常OOM问题</title>
-      <link>https://www.161616.top/haproxy-http-connection-mode/</link>
+      <link>https://www.161616.top/haproxy-kubernetes-oom-troubleshooting/</link>
       <pubDate>Sat, 14 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>https://www.161616.top/haproxy-http-connection-mode/</guid>
+      <guid>https://www.161616.top/haproxy-kubernetes-oom-troubleshooting/</guid>
       <description>问题描述 在使用 haproxy 驱动 Pod 代理时，在个别 k8s 集群中 haproxy 容器 (haproxytech/haproxy-debian:2.7) 在启动时出现 OOM 秒重启，即使配置了 16GB 的内存限制依然被杀掉。而同样的镜像和配置在其他 Rocky Linux 9 集群中运行正常。
 关键症状 内存占用异常：
 内存配置 症状 2GB OOM 8GB OOM 15GB OOM 就是配置多大的内存都会被吞掉。当时日志记录如下
