@@ -1,17 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-  xmlns:xhtml="http://www.w3.org/1999/xhtml">
-  
-  
-  
-  
-  <url>
+  xmlns:xhtml="http://www.w3.org/1999/xhtml"><url>
     <loc>https://www.161616.top/en/</loc>
-    
     <lastmod>2024-08-23T23:00:36+08:00</lastmod>
-    
-    
-    
+    <priority>1.0</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
@@ -22,46 +14,13 @@
                 hreflang="en"
                 href="https://www.161616.top/en/"
                 />
-  </url>
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  <url>
+    <xhtml:link
+                rel="alternate"
+                hreflang="x-default"
+                href="https://www.161616.top/"
+                />
+  </url><url>
     <loc>https://www.161616.top/en/uranus-installation/</loc>
-    
-    <lastmod>2024-08-23T23:00:36+08:00</lastmod>
-    
-    
+    <lastmod>2024-08-23T23:00:36+08:00</lastmod><priority>0.5</priority>
   </url>
-  
-  
-  
-  
-  
-  
-  
-  <url>
-    <loc>https://www.161616.top/en/series/</loc>
-    
-    
-    
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh"
-                href="https://www.161616.top/series/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://www.161616.top/en/series/"
-                />
-  </url>
-  
-  
 </urlset>
