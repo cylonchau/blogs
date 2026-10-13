@@ -6,8 +6,31 @@
     <description>Recent content on Cylon&#39;s Collection</description>
     <generator>Hugo -- 0.125.7</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Mon, 20 Jul 2026 23:00:36 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 12 Oct 2026 23:00:36 +0800</lastBuildDate>
     <atom:link href="https://www.161616.top/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Kyverno速成 - 选型与安装模式</title>
+      <link>https://www.161616.top/kyberno-selection-installtion/</link>
+      <pubDate>Mon, 12 Oct 2026 00:00:00 +0000</pubDate>
+      <guid>https://www.161616.top/kyberno-selection-installtion/</guid>
+      <description>Kyverno 组件与安装方式总览 官方安装方式 方式 来源 适用场景 Helm helm 测试
+生产
+HA
+自定义 YAML github.com/kyverno/kyverno/releases/download//install.yaml 单文件快速安装 main github.com/kyverno/kyverno/raw/main/config/install-latest-testing.yaml 官方不建议使用在测试以外的环境
+DO NOT use this manifest for anything other than testing or experimental purposes! [1] 官方上的组件：
+Admission controller（必需）：处理 API server 的 webhook 回调，负责校验、变更、Policy Exceptions 与处理引擎。 Background controller（可选）：处理 generate 与 mutate-existing 规则。 Reports controller（可选）：处理 Policy Reports。 Cleanup controller（可选）：处理清理策略。 相关资源： Services（webhook 与指标） 每个 controller 一个 ServiceAccount 两个 ConfigMap，主配置和指标配置 webhook 注册与认证用 Secrets Roles 和 Bindings Validating/MutatingWebhookConfigurations CRDs K8S 版本兼容 Kyverno 版本 K8S 版本 v1.</description>
+    </item>
+    <item>
+      <title>ceph-exporter 指标异常排查记录</title>
+      <link>https://www.161616.top/ch10-3-troubeshooting-ceph-exporter-non-metrics/</link>
+      <pubDate>Wed, 09 Sep 2026 00:00:00 +0000</pubDate>
+      <guid>https://www.161616.top/ch10-3-troubeshooting-ceph-exporter-non-metrics/</guid>
+      <description>问题现象 ceph-exporter 只有自身指标
+text 1 2 3 4 5 curl localhost:9926/metrics # HELP ceph_exporter_scrape_time Time spent scraping and transforming perf counters to metrics # TYPE ceph_exporter_scrape_time gauge ceph_exporter_scrape_time{function=&amp;#34;dump_asok_metrics&amp;#34;,host=&amp;#34;xxxxxx&amp;#34;} 0.004840 ceph-exporter 进程存在，但没有成功取得本机 OSD 等 daemon 的性能计数器。
+排查过程 查看 ceph-exporter 服务状态
+text 1 2 3 4 5 6 7 8 ceph orch ps --daemon_type ceph-exporter ceph-exporter.xxxxx005 ceph-exporter.xxxxx006 ceph-exporter.xxxxx007 ceph-exporter.xxxxx010 ceph-exporter.xxxxx024 ceph-exporter.xxxxx025 ceph-exporter.xxxxx026 确认节点是否存在 OSD/MGR/MON 进程
+text 1 2 3 4 5 6 7 8 ceph orch ps --hostname xxxxx010 ceph-exporter.</description>
+    </item>
     <item>
       <title>阶段5 - Vector Transforms和VRL</title>
       <link>https://www.161616.top/vector-transforms/</link>

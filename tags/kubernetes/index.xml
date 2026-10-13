@@ -6,8 +6,20 @@
     <description>Recent content in Kubernetes on Cylon&#39;s Collection</description>
     <generator>Hugo -- 0.125.7</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Fri, 19 Jun 2026 23:00:36 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 12 Oct 2026 23:00:36 +0800</lastBuildDate>
     <atom:link href="https://www.161616.top/tags/kubernetes/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Kyverno速成 - 选型与安装模式</title>
+      <link>https://www.161616.top/kyberno-selection-installtion/</link>
+      <pubDate>Mon, 12 Oct 2026 00:00:00 +0000</pubDate>
+      <guid>https://www.161616.top/kyberno-selection-installtion/</guid>
+      <description>Kyverno 组件与安装方式总览 官方安装方式 方式 来源 适用场景 Helm helm 测试
+生产
+HA
+自定义 YAML github.com/kyverno/kyverno/releases/download//install.yaml 单文件快速安装 main github.com/kyverno/kyverno/raw/main/config/install-latest-testing.yaml 官方不建议使用在测试以外的环境
+DO NOT use this manifest for anything other than testing or experimental purposes! [1] 官方上的组件：
+Admission controller（必需）：处理 API server 的 webhook 回调，负责校验、变更、Policy Exceptions 与处理引擎。 Background controller（可选）：处理 generate 与 mutate-existing 规则。 Reports controller（可选）：处理 Policy Reports。 Cleanup controller（可选）：处理清理策略。 相关资源： Services（webhook 与指标） 每个 controller 一个 ServiceAccount 两个 ConfigMap，主配置和指标配置 webhook 注册与认证用 Secrets Roles 和 Bindings Validating/MutatingWebhookConfigurations CRDs K8S 版本兼容 Kyverno 版本 K8S 版本 v1.</description>
+    </item>
     <item>
       <title>从零学习envoy笔记 - 实验 Client Traffic Policy</title>
       <link>https://www.161616.top/envoy-gateway-client-traffic-policy/</link>
